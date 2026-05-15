@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPINS Private Limited | Engineering Advanced Logistics and Aerospace Systems</title>
+  <meta name="description" content="UPINS Private Limited - Engineering advanced logistics and aerospace systems. Shipping container manufacturing, BIKE MAX transport solutions, and satellite component development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --background: #1a1a1d;
+      --foreground: #fafafa;
+      --card: #222225;
+      --card-foreground: #fafafa;
+      --secondary: #2d2d31;
+      --secondary-foreground: #fafafa;
+      --muted-foreground: #a0a0a0;
+      --accent: #4ade80;
+      --accent-foreground: #1a1a1d;
+      --border: #3d3d42;
+      --input: #2d2d31;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Grid Background */
+    .bg-grid {
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 2rem;
+      }
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    header.scrolled {
+      background: rgba(26, 26, 29, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    @media (min-width: 640px) {
+      .header-inner {
+        height: 80px;
+      }
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    @media (min-width: 640px) {
+      .logo img {
+        height: 48px;
+      }
+    }
+
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted-foreground);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--foreground);
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background: var(--foreground);
+      color: var(--background);
+      transition: opacity 0.2s;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.9;
+    }
+
+    .cta-btn-outline {
+      background: transparent;
+      color: var(--foreground);
+      border: 1px solid var(--border);
+    }
+
+    .cta-btn-outline:hover {
+      background: var(--secondary);
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      color: var(--foreground);
+      cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      background: rgba(26, 26, 29, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.5rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--muted-foreground);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--foreground);
+    }
+
+    .mobile-cta {
+      margin-top: 1rem;
+      width: 100%;
+      justify-content: center;
+      padding: 0.75rem 1.25rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, var(--background), var(--background), rgba(26, 26, 29, 0.95));
+    }
+
+    .hero-glow-1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      background: rgba(74, 222, 128, 0.05);
+      filter: blur(120px);
+      border-radius: 50%;
+    }
+
+    .hero-glow-2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 33%;
+      height: 33%;
+      background: rgba(160, 160, 160, 0.2);
+      filter: blur(100px);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 56rem;
+      padding: 8rem 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-content {
+        padding: 10rem 1.5rem;
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted-foreground);
+      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3.75rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero h1 {
+        font-size: 4.5rem;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      max-width: 42rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    @media (min-width: 640px) {
+      .hero-subtitle {
+        font-size: 1.25rem;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-buttons {
+        flex-direction: row;
+      }
+    }
+
+    .hero-buttons .cta-btn {
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .scroll-indicator {
+        display: flex;
+      }
+    }
+
+    .scroll-indicator span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted-foreground);
+    }
+
+    .scroll-indicator svg {
+      color: var(--muted-foreground);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(6px);
+      }
+      60% {
+        transform: translateY(3px);
+      }
+    }
+
+    /* Section Styles */
+    section {
+      padding: 6rem 0;
+    }
+
+    @media (min-width: 640px) {
+      section {
+        padding: 8rem 0;
+      }
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.875rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .section-title {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section-title {
+        font-size: 3rem;
+      }
+    }
+
+    .section-subtitle {
+      color: var(--muted-foreground);
+      max-width: 42rem;
+    }
+
+    /* About Section */
+    .about {
+      position: relative;
+      background: linear-gradient(to bottom, var(--background), rgba(34, 34, 37, 0.5));
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .about-content p {
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: rgba(34, 34, 37, 0.5);
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .stat-value {
+        font-size: 1.875rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .stat-value {
+        font-size: 2.25rem;
+      }
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted-foreground);
+    }
+
+    @media (min-width: 640px) {
+      .stat-label {
+        font-size: 0.875rem;
+      }
+    }
+
+    /* Divisions Section */
+    .divisions {
+      position: relative;
+      background: rgba(34, 34, 37, 0.3);
+    }
+
+    .divisions-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .divisions-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .divisions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .division-card {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(26, 26, 29, 0.5);
+      transition: background 0.3s;
+    }
+
+    .division-card:hover {
+      background: rgba(34, 34, 37, 0.8);
+    }
+
+    .division-card-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .division-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      color: var(--muted-foreground);
+      transition: all 0.3s;
+    }
+
+    .division-card:hover .division-icon {
+      color: var(--foreground);
+      border-color: rgba(250, 250, 250, 0.3);
+    }
+
+    .division-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .division-desc {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .division-caps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .cap-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      background: var(--secondary);
+      color: var(--secondary-foreground);
+    }
+
+    /* BIKE MAX Section */
+    .bike-max {
+      position: relative;
+      background: linear-gradient(to bottom, rgba(34, 34, 37, 0.3), var(--background), var(--background));
+    }
+
+    .bike-max-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .patent-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      margin-bottom: 1rem;
+    }
+
+    .bike-max-grid {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .bike-max-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .bike-max-image {
+      position: relative;
+      aspect-ratio: 4/3;
+      background: var(--card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .bike-max-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
+    }
+
+    .bike-max-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .bike-max-content h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .bike-max-content > p {
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(34, 34, 37, 0.5);
+      border: 1px solid var(--border);
+    }
+
+    .feature-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary);
+      color: var(--foreground);
+    }
+
+    .feature-title {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .feature-desc {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    .engagement-section {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .engagement-section h4 {
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+    }
+
+    .engagement-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .engagement-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--secondary);
+      color: var(--foreground);
+      font-size: 0.875rem;
+    }
+
+    .engagement-item svg {
+      color: var(--accent);
+    }
+
+    /* Aerospace Section */
+    .aerospace {
+      position: relative;
+      background: rgba(34, 34, 37, 0.3);
+      overflow: hidden;
+    }
+
+    .aerospace-glow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24rem;
+      height: 24rem;
+      background: rgba(74, 222, 128, 0.05);
+      filter: blur(150px);
+      border-radius: 50%;
+    }
+
+    .aerospace-header {
+      max-width: 48rem;
+      margin-bottom: 4rem;
+    }
+
+    .aerospace-header p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    .aerospace-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .aerospace-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .aerospace-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .aerospace-card {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: rgba(26, 26, 29, 0.5);
+      transition: border-color 0.3s;
+    }
+
+    .aerospace-card:hover {
+      border-color: rgba(250, 250, 250, 0.2);
+    }
+
+    .aerospace-card-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+    }
+
+    .aerospace-card:hover .aerospace-card-icon {
+      color: var(--foreground);
+      border-color: rgba(250, 250, 250, 0.3);
+    }
+
+    .aerospace-card h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .aerospace-card p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    .aerospace-banner {
+      margin-top: 4rem;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(26, 26, 29, 0.8);
+    }
+
+    @media (min-width: 640px) {
+      .aerospace-banner {
+        padding: 3rem;
+      }
+    }
+
+    .aerospace-banner-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .aerospace-banner-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .aerospace-banner h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .aerospace-banner h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .aerospace-banner p {
+      color: var(--muted-foreground);
+      max-width: 36rem;
+    }
+
+    .active-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      color: var(--accent);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Leadership Section */
+    .leadership {
+      position: relative;
+      background: linear-gradient(to bottom, rgba(34, 34, 37, 0.3), var(--background));
+    }
+
+    .leadership-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .leadership-grid {
+      display: grid;
+      gap: 2rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .leader-card {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(34, 34, 37, 0.5);
+      transition: border-color 0.3s;
+    }
+
+    .leader-card:hover {
+      border-color: rgba(250, 250, 250, 0.2);
+    }
+
+    .leader-avatar {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary);
+      color: var(--foreground);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .leader-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .leader-role {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .leader-desc {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .leader-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      transition: color 0.2s;
+    }
+
+    .leader-linkedin:hover {
+      color: var(--foreground);
+    }
+
+    /* Contact Section */
+    .contact {
+      position: relative;
+      background: rgba(34, 34, 37, 0.3);
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .contact-info p {
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary);
+      color: var(--foreground);
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-item p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin: 0;
+    }
+
+    /* Form */
+    .contact-form {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      background: rgba(26, 26, 29, 0.5);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-label svg {
+      color: var(--muted-foreground);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--input);
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--muted-foreground);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: rgba(250, 250, 250, 0.5);
+    }
+
+    .form-textarea {
+      resize: none;
+      min-height: 100px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-submit {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: var(--foreground);
+      color: var(--background);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .form-submit:hover {
+      opacity: 0.9;
+    }
+
+    .form-submit:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-success {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      padding: 3rem;
+      border: 1px solid var(--border);
+      background: rgba(26, 26, 29, 0.5);
+      text-align: center;
+    }
+
+    .form-success-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(74, 222, 128, 0.2);
+      color: var(--accent);
+    }
+
+    .form-success h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success p {
+      color: var(--muted-foreground);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--background);
+    }
+
+    .footer-main {
+      padding: 4rem 0;
+      display: grid;
+      gap: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-main {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-main {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand img {
+      height: 56px;
+      width: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      max-width: 24rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      color: var(--muted-foreground);
+      transition: all 0.2s;
+    }
+
+    .footer-social a:hover {
+      color: var(--foreground);
+      border-color: rgba(250, 250, 250, 0.3);
+    }
+
+    .footer-links h4 {
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--foreground);
+    }
+
+    .footer-bottom {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (min-width: 640px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Utility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(26, 26, 29, 0.3);
+      border-top-color: var(--background);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited">
+        </a>
+        <nav class="nav-desktop">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#divisions" class="nav-link">Divisions</a>
+          <a href="#bike-max" class="nav-link">BIKE MAX</a>
+          <a href="#aerospace" class="nav-link">Aerospace</a>
+          <a href="#leadership" class="nav-link">Leadership</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <a href="#contact" class="cta-btn" style="display: none;">Inquire Now</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+          <svg id="closeIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#divisions">Divisions</a>
+      <a href="#bike-max">BIKE MAX</a>
+      <a href="#aerospace">Aerospace</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="cta-btn mobile-cta">Inquire Now</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero bg-grid">
+    <div class="hero-bg"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">Est. 2021 — Engineering Excellence</span>
+      <h1>Engineering Advanced <span class="text-gradient">Logistics</span> and <span class="text-gradient">Aerospace</span> Systems.</h1>
+      <p class="hero-subtitle">Shipping container manufacturing, mobility transport systems, and aerospace engineering solutions.</p>
+      <div class="hero-buttons">
+        <a href="#divisions" class="cta-btn">
+          Explore Solutions
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="#contact" class="cta-btn cta-btn-outline">Contact Us</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m6 9 6 6 6-6"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-eyebrow">About UPINS</span>
+          <h2 class="section-title">Up India Solutions</h2>
+          <p>UPINS Private Limited is an engineering-driven company delivering advanced solutions across industrial logistics, container manufacturing, and aerospace systems.</p>
+          <p>Founded in 2021, we operate at the intersection of industrial engineering and technological innovation—building systems that enable efficient global commerce and contribute to national aerospace capabilities.</p>
+          <p>Our technical teams execute projects spanning container engineering, mobility logistics systems, and satellite component development—serving OEMs, shipping enterprises, government agencies, and international clients.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">2021</div>
+            <div class="stat-label">Founded</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">4+</div>
+            <div class="stat-label">Business Verticals</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">Global</div>
+            <div class="stat-label">Market Reach</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisions -->
+  <section id="divisions" class="divisions bg-grid">
+    <div class="container">
+      <div class="divisions-header">
+        <span class="section-eyebrow">Business Divisions</span>
+        <h2 class="section-title">Engineering Capabilities</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Integrated solutions across industrial logistics and aerospace sectors</p>
+      </div>
+      <div class="divisions-grid">
+        <div class="division-card">
+          <div class="division-card-inner">
+            <div class="division-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                <path d="m3.3 7 8.7 5 8.7-5"></path>
+                <path d="M12 22V12"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="division-title">Container Engineering</h3>
+              <p class="division-desc">Manufacturing industrial shipping containers and transport systems. Engineering solutions for global logistics infrastructure.</p>
+              <div class="division-caps">
+                <span class="cap-tag">20ft &amp; 40ft Containers</span>
+                <span class="cap-tag">Custom Specifications</span>
+                <span class="cap-tag">Industrial Transport</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="division-card">
+          <div class="division-card-inner">
+            <div class="division-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                <path d="M12 2v2"></path>
+                <path d="M12 22v-2"></path>
+                <path d="m17 20.66-1-1.73"></path>
+                <path d="M11 10.27 7 3.34"></path>
+                <path d="m20.66 17-1.73-1"></path>
+                <path d="m3.34 7 1.73 1"></path>
+                <path d="M14 12h8"></path>
+                <path d="M2 12h2"></path>
+                <path d="m20.66 7-1.73 1"></path>
+                <path d="m3.34 17 1.73-1"></path>
+                <path d="m17 3.34-1 1.73"></path>
+                <path d="m7 20.66 1-1.73"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="division-title">Container Components</h3>
+              <p class="division-desc">Precision-engineered structural components and systems for the container industry. Supporting global manufacturing supply chains.</p>
+              <div class="division-caps">
+                <span class="cap-tag">Structural Systems</span>
+                <span class="cap-tag">Corner Castings</span>
+                <span class="cap-tag">Flooring Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="division-card">
+          <div class="division-card-inner">
+            <div class="division-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                <path d="M15 18H9"></path>
+                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                <circle cx="17" cy="18" r="2"></circle>
+                <circle cx="7" cy="18" r="2"></circle>
+              </svg>
+            </div>
+            <div>
+              <h3 class="division-title">Logistics Engineering</h3>
+              <p class="division-desc">Advanced engineering solutions for mobility and cargo transport. Optimizing supply chain efficiency through technical innovation.</p>
+              <div class="division-caps">
+                <span class="cap-tag">Supply Chain Solutions</span>
+                <span class="cap-tag">Transport Optimization</span>
+                <span class="cap-tag">Loading Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="division-card">
+          <div class="division-card-inner">
+            <div class="division-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="division-title">Aerospace Systems</h3>
+              <p class="division-desc">Satellite components and aerospace engineering. Contributing to national space programs and advanced technology development.</p>
+              <div class="division-caps">
+                <span class="cap-tag">Satellite Components</span>
+                <span class="cap-tag">Systems Engineering</span>
+                <span class="cap-tag">Advanced Materials</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIKE MAX -->
+  <section id="bike-max" class="bike-max">
+    <div class="container">
+      <div class="bike-max-header">
+        <span class="patent-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+          </svg>
+          Patent Applied
+        </span>
+        <h2 class="section-title">BIKE MAX</h2>
+        <p class="section-subtitle" style="font-size: 1.125rem; max-width: 48rem; margin: 0 auto;">Advanced bike transportation system designed for containerized logistics</p>
+      </div>
+      <div class="bike-max-grid">
+        <div class="bike-max-image">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BIKE%20MAX%20-bdybsqHTjgdSTDauvP8j6QJED1FlIH.png" alt="BIKE MAX - Advanced bike transportation system showing two-tier scooter stacking in shipping container">
+        </div>
+        <div class="bike-max-content">
+          <h3>Engineered Mobility Logistics</h3>
+          <p>BIKE MAX is a patent-applied advanced transportation system engineered for efficient two-wheeler logistics. The system enables optimized stacking configurations within standard shipping containers, maximizing transport capacity while ensuring vehicle security.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="feature-title">Optimized Capacity</div>
+                <div class="feature-desc">Maximize container utilization with engineered stacking systems</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div class="feature-title">Operational Efficiency</div>
+                <div class="feature-desc">Streamlined loading and unloading processes</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="feature-title">Secure Transport</div>
+                <div class="feature-desc">Engineered stability for safe two-wheeler logistics</div>
+              </div>
+            </div>
+          </div>
+          <div class="engagement-section">
+            <h4>Industry Engagement</h4>
+            <div class="engagement-list">
+              <span class="engagement-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                TVS Motor Company
+              </span>
+              <span class="engagement-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                Container Corporation of India (CONCOR)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aerospace -->
+  <section id="aerospace" class="aerospace bg-grid">
+    <div class="aerospace-glow"></div>
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="aerospace-header">
+        <span class="section-eyebrow">Aerospace Division</span>
+        <h2 class="section-title">Satellite Systems &amp; Aerospace Engineering</h2>
+        <p>Contributing to national aerospace programs through precision engineering. Our aerospace division develops satellite components and systems, supporting the advancement of space technology capabilities.</p>
+      </div>
+      <div class="aerospace-grid">
+        <div class="aerospace-card">
+          <div class="aerospace-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 7 9 3 5 7l4 4"></path>
+              <path d="m17 11 4 4-4 4-4-4"></path>
+              <path d="m8 12 4 4 6-6-4-4Z"></path>
+              <path d="m16 8 3-3"></path>
+              <path d="M9 21a6 6 0 0 0-6-6"></path>
+            </svg>
+          </div>
+          <h3>Satellite Components</h3>
+          <p>Precision-engineered components for satellite systems and space applications</p>
+        </div>
+        <div class="aerospace-card">
+          <div class="aerospace-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+              <rect width="6" height="6" x="9" y="9" rx="1"></rect>
+              <path d="M15 2v2"></path>
+              <path d="M15 20v2"></path>
+              <path d="M2 15h2"></path>
+              <path d="M2 9h2"></path>
+              <path d="M20 15h2"></path>
+              <path d="M20 9h2"></path>
+              <path d="M9 2v2"></path>
+              <path d="M9 20v2"></path>
+            </svg>
+          </div>
+          <h3>Systems Engineering</h3>
+          <p>Integrated aerospace systems design and development</p>
+        </div>
+        <div class="aerospace-card">
+          <div class="aerospace-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+              <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+              <circle cx="12" cy="12" r="2"></circle>
+              <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+              <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+            </svg>
+          </div>
+          <h3>Communication Systems</h3>
+          <p>RF and communication subsystems for aerospace applications</p>
+        </div>
+        <div class="aerospace-card">
+          <div class="aerospace-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+              <path d="M11 9h4a2 2 0 0 0 2-2V3"></path>
+              <circle cx="9" cy="9" r="2"></circle>
+              <path d="M7 21v-4a2 2 0 0 1 2-2h4"></path>
+              <circle cx="15" cy="15" r="2"></circle>
+            </svg>
+          </div>
+          <h3>Advanced Materials</h3>
+          <p>Aerospace-grade materials and manufacturing processes</p>
+        </div>
+      </div>
+      <div class="aerospace-banner">
+        <div class="aerospace-banner-inner">
+          <div>
+            <h3>Engineering for Space</h3>
+            <p>Delivering aerospace-grade engineering solutions for satellite systems, contributing to India's growing space technology sector.</p>
+          </div>
+          <span class="active-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 7 9 3 5 7l4 4"></path>
+              <path d="m17 11 4 4-4 4-4-4"></path>
+              <path d="m8 12 4 4 6-6-4-4Z"></path>
+              <path d="m16 8 3-3"></path>
+              <path d="M9 21a6 6 0 0 0-6-6"></path>
+            </svg>
+            Active Development
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section id="leadership" class="leadership">
+    <div class="container">
+      <div class="leadership-header">
+        <span class="section-eyebrow">Leadership</span>
+        <h2 class="section-title">Founding Team</h2>
+        <p class="section-subtitle" style="max-width: 36rem; margin: 0 auto;">Technical leadership building industrial engineering capabilities</p>
+      </div>
+      <div class="leadership-grid">
+        <div class="leader-card">
+          <div class="leader-avatar">AH</div>
+          <h3 class="leader-name">Avanidhar Havaldar</h3>
+          <p class="leader-role">Co-Founder</p>
+          <p class="leader-desc">Engineering leadership driving technical innovation across logistics and aerospace verticals.</p>
+          <a href="#" class="leader-linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar">DH</div>
+          <h3 class="leader-name">Deepak Hurakadali</h3>
+          <p class="leader-role">Co-Founder</p>
+          <p class="leader-desc">Industrial operations and business development across container manufacturing and technology sectors.</p>
+          <a href="#" class="leader-linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact bg-grid">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-eyebrow">Contact</span>
+          <h2 class="section-title">Business Inquiries</h2>
+          <p>Connect with UPINS for partnership discussions, technical inquiries, and business development opportunities across our logistics and aerospace divisions.</p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                  <path d="M10 6h4"></path>
+                  <path d="M10 10h4"></path>
+                  <path d="M10 14h4"></path>
+                  <path d="M10 18h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Headquarters</h4>
+                <p>India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                </svg>
+              </div>
+              <div>
+                <h4>Business Areas</h4>
+                <p>Container Engineering, Logistics, Aerospace</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Global Reach</h4>
+                <p>Serving international clients and partners</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="formContainer">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="name">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Full Name
+              </label>
+              <input type="text" id="name" name="name" required class="form-input" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="company">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                  <path d="M10 6h4"></path>
+                  <path d="M10 10h4"></path>
+                  <path d="M10 14h4"></path>
+                  <path d="M10 18h4"></path>
+                </svg>
+                Company
+              </label>
+              <input type="text" id="company" name="company" required class="form-input" placeholder="Company name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                Email
+              </label>
+              <input type="email" id="email" name="email" required class="form-input" placeholder="email@company.com">
+            </div>
+            <div class="form-row form-group">
+              <div>
+                <label class="form-label" for="country">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  Country
+                </label>
+                <select id="country" name="country" required class="form-select">
+                  <option value="">Select country</option>
+                  <option value="India">India</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label" for="industry">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                  </svg>
+                  Industry
+                </label>
+                <select id="industry" name="industry" required class="form-select">
+                  <option value="">Select industry</option>
+                  <option value="Shipping & Logistics">Shipping &amp; Logistics</option>
+                  <option value="Automotive OEM">Automotive OEM</option>
+                  <option value="Government / Defense">Government / Defense</option>
+                  <option value="Aerospace">Aerospace</option>
+                  <option value="Railway & Ports">Railway &amp; Ports</option>
+                  <option value="Investment">Investment</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Message
+              </label>
+              <textarea id="message" name="message" rows="4" required class="form-textarea" placeholder="Describe your inquiry..."></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">
+              Submit Inquiry
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited">
+          <p>Engineering advanced logistics and aerospace systems. Shipping container manufacturing, mobility transport solutions, and satellite component development.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Divisions</h4>
+          <ul>
+            <li><a href="#divisions">Container Engineering</a></li>
+            <li><a href="#divisions">Container Components</a></li>
+            <li><a href="#bike-max">BIKE MAX</a></li>
+            <li><a href="#aerospace">Aerospace Systems</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 UPINS Private Limited. All rights reserved.</p>
+        <p>Est. 2021 — India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuIcon.style.display = isOpen ? 'none' : 'block';
+      closeIcon.style.display = isOpen ? 'block' : 'none';
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    const formContainer = document.getElementById('formContainer');
+    const submitBtn = document.getElementById('submitBtn');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Show loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span> Submitting...';
+
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // Show success message
+      formContainer.innerHTML = `
+        <div class="form-success">
+          <div>
+            <div class="form-success-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+            </div>
+            <h3>Inquiry Submitted</h3>
+            <p>We will respond to your inquiry shortly.</p>
+          </div>
+        </div>
+      `;
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
