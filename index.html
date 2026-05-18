@@ -258,7 +258,8 @@
       position: relative;
       z-index: 10;
       max-width: 56rem;
-      padding: 9rem 1rem 6rem;
+      padding: 7rem 1rem 5rem;
+      width: 100%;
     }
 
     @media (min-width: 640px) {
@@ -347,9 +348,10 @@
     }
 
     /* ── Section Styles ── */
-    section { padding: 6rem 0; }
+    section { padding: 4rem 0; }
 
-    @media (min-width: 640px) { section { padding: 8rem 0; } }
+    @media (min-width: 640px) { section { padding: 6rem 0; } }
+    @media (min-width: 1024px) { section { padding: 8rem 0; } }
 
     .section-eyebrow {
       display: inline-block;
@@ -397,35 +399,47 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 400px) {
+      .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     }
 
     .stat-card {
       text-align: center;
-      padding: 1.5rem;
+      padding: 1.25rem 0.75rem;
       border: 1px solid var(--border);
       background: var(--background);
       border-radius: 4px;
     }
 
-    .stat-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
+    @media (min-width: 640px) {
+      .stat-card { padding: 1.5rem; }
     }
 
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--accent);
+      word-break: break-word;
+    }
+
+    @media (min-width: 400px) { .stat-value { font-size: 1.5rem; } }
     @media (min-width: 640px) { .stat-value { font-size: 1.875rem; } }
     @media (min-width: 1024px) { .stat-value { font-size: 2.25rem; } }
 
     .stat-label {
-      font-size: 0.75rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       color: var(--muted-foreground);
+      line-height: 1.3;
     }
 
+    @media (min-width: 400px) { .stat-label { font-size: 0.7rem; } }
     @media (min-width: 640px) { .stat-label { font-size: 0.875rem; } }
 
     /* ── Divisions ── */
@@ -446,11 +460,15 @@
     }
 
     .division-card {
-      padding: 2rem;
+      padding: 1.25rem;
       border: 1px solid var(--border);
       background: #ffffff;
       transition: all 0.3s;
       border-radius: 4px;
+    }
+
+    @media (min-width: 640px) {
+      .division-card { padding: 2rem; }
     }
 
     .division-card:hover {
@@ -685,14 +703,14 @@
     .aerospace-card p { font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.7; }
 
     .aerospace-banner {
-      margin-top: 4rem;
-      padding: 2rem;
+      margin-top: 3rem;
+      padding: 1.5rem;
       border: 1px solid rgba(37,99,235,0.2);
       background: linear-gradient(135deg, rgba(26,68,128,0.04) 0%, rgba(37,99,235,0.06) 100%);
       border-radius: 4px;
     }
 
-    @media (min-width: 640px) { .aerospace-banner { padding: 3rem; } }
+    @media (min-width: 640px) { .aerospace-banner { margin-top: 4rem; padding: 3rem; } }
 
     .aerospace-banner-inner {
       display: flex;
@@ -743,11 +761,15 @@
     }
 
     .leader-card {
-      padding: 2rem;
+      padding: 1.5rem;
       border: 1px solid var(--border);
       background: var(--background);
       transition: all 0.3s;
       border-radius: 4px;
+    }
+
+    @media (min-width: 640px) {
+      .leader-card { padding: 2rem; }
     }
 
     .leader-card:hover {
@@ -844,11 +866,15 @@
 
     /* ── Form ── */
     .contact-form {
-      padding: 2rem;
+      padding: 1.25rem;
       border: 1px solid var(--border);
       background: #ffffff;
       border-radius: 4px;
       box-shadow: 0 2px 16px rgba(26,68,128,0.06);
+    }
+
+    @media (min-width: 640px) {
+      .contact-form { padding: 2rem; }
     }
 
     .form-group { margin-bottom: 1.5rem; }
@@ -891,14 +917,25 @@
 
     .form-row {
       display: grid;
-      gap: 1.5rem;
+      gap: 1rem;
+      grid-template-columns: 1fr;
     }
 
-    @media (min-width: 640px) { .form-row { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 480px) { .form-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
 
     /* hCaptcha container */
     .captcha-wrapper {
       margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    /* Scale hCaptcha on very small screens so it doesn't overflow */
+    @media (max-width: 360px) {
+      .captcha-wrapper {
+        transform-origin: left top;
+        transform: scale(0.85);
+        height: 78px; /* 92px * 0.85 */
+      }
     }
 
     .form-submit {
@@ -975,20 +1012,28 @@
     }
 
     .footer-main {
-      padding: 4rem 0;
+      padding: 3rem 0;
       display: grid;
-      gap: 3rem;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .footer-main { padding: 4rem 0; }
     }
 
     @media (min-width: 768px) {
-      .footer-main { grid-template-columns: 2fr 1fr 1fr; }
+      .footer-main { grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
     }
 
     .footer-brand img {
-      height: 64px;
+      height: 48px;
       width: auto;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       filter: brightness(0) invert(1);
+    }
+
+    @media (min-width: 640px) {
+      .footer-brand img { height: 64px; margin-bottom: 1.5rem; }
     }
 
     .footer-brand p {
@@ -1690,24 +1735,13 @@
       });
     });
 
-    /* ── Contact form with EmailJS + hCaptcha ── */
-    (function(){
-      // Load EmailJS SDK
-      const ejsScript = document.createElement('script');
-      ejsScript.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-      ejsScript.onload = function() {
-        // PUBLIC KEY – replace with your own from emailjs.com
-        emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');
-      };
-      document.head.appendChild(ejsScript);
-    })();
-
-    const contactForm  = document.getElementById('contactForm');
+    /* ── Contact form with mailto + hCaptcha ── */
+    const contactForm   = document.getElementById('contactForm');
     const formContainer = document.getElementById('formContainer');
-    const submitBtn    = document.getElementById('submitBtn');
-    const formError    = document.getElementById('formError');
+    const submitBtn     = document.getElementById('submitBtn');
+    const formError     = document.getElementById('formError');
 
-    contactForm.addEventListener('submit', async function(e) {
+    contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       formError.style.display = 'none';
 
@@ -1719,46 +1753,49 @@
         return;
       }
 
-      // Loading state
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="spinner"></span> Sending…';
+      // Gather form values
+      const name     = document.getElementById('name').value.trim();
+      const company  = document.getElementById('company').value.trim();
+      const email    = document.getElementById('email').value.trim();
+      const country  = document.getElementById('country').value;
+      const industry = document.getElementById('industry').value;
+      const message  = document.getElementById('message').value.trim();
 
-      const templateParams = {
-        to_email:    'avanidhar@upins.in',
-        from_name:   document.getElementById('name').value,
-        from_company: document.getElementById('company').value,
-        from_email:  document.getElementById('email').value,
-        country:     document.getElementById('country').value,
-        industry:    document.getElementById('industry').value,
-        message:     document.getElementById('message').value,
-        'h-captcha-response': captchaResponse
-      };
+      // Build mailto
+      const subject = encodeURIComponent('Business Inquiry from ' + name + ' – ' + company);
+      const body    = encodeURIComponent(
+        'Name: '     + name     + '\n' +
+        'Company: '  + company  + '\n' +
+        'Email: '    + email    + '\n' +
+        'Country: '  + country  + '\n' +
+        'Industry: ' + industry + '\n\n' +
+        'Message:\n' + message
+      );
 
-      try {
-        // SERVICE ID and TEMPLATE ID – replace with your own from emailjs.com
-        await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams);
+      const mailtoLink = 'mailto:avanidhar@upins.in?subject=' + subject + '&body=' + body;
 
-        formContainer.innerHTML = `
-          <div class="form-success">
-            <div>
-              <div class="form-success-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <h3>Inquiry Submitted Successfully</h3>
-              <p>Thank you for reaching out. We will respond to your inquiry at the earliest.</p>
+      // Open mail client
+      const a = document.createElement('a');
+      a.href = mailtoLink;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      // Show success state
+      formContainer.innerHTML = `
+        <div class="form-success">
+          <div>
+            <div class="form-success-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
             </div>
-          </div>`;
-      } catch (err) {
-        console.error('EmailJS error:', err);
-        formError.textContent = 'Something went wrong. Please try again or email us directly at avanidhar@upins.in';
-        formError.style.display = 'block';
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = `Submit Inquiry <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>`;
-        hcaptcha.reset();
-      }
+            <h3>Inquiry Submitted Successfully</h3>
+            <p>Your email client has opened with the inquiry details. Please send the email to complete your submission. We will get back to you shortly.</p>
+          </div>
+        </div>`;
     });
   </script>
 </body>
