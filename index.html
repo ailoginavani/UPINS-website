@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ═══════════════════════════════════════════
-       PRIMARY SEO
-  ═══════════════════════════════════════════ -->
+  <!-- ==========================================
+       SEO 
+       ========================================== -->
+  <!-- SEO -->
   <title>UPINS Private Limited | Engineering Advanced Logistics and Aerospace Systems</title>
   <meta name="description" content="UPINS Private Limited is an India-based engineering company specialising in shipping container manufacturing, BIKE MAX two-wheeler transport systems, and satellite aerospace component development. Founded 2021.">
   <meta name="keywords" content="UPINS, UPINS Private Limited, shipping container manufacturer India, BIKE MAX, two wheeler logistics, container engineering, aerospace systems India, satellite components, logistics engineering, container components, Up India Solutions">
@@ -14,12 +15,10 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
 
-  <!-- Canonical URL – replace with your actual domain -->
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://www.upins.in/">
 
-  <!-- ═══════════════════════════════════════════
-       OPEN GRAPH (Facebook, LinkedIn, WhatsApp previews)
-  ═══════════════════════════════════════════ -->
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.upins.in/">
   <meta property="og:site_name" content="UPINS Private Limited">
@@ -29,24 +28,18 @@
   <meta property="og:image:alt" content="UPINS Private Limited Logo">
   <meta property="og:locale" content="en_IN">
 
-  <!-- ═══════════════════════════════════════════
-       TWITTER / X CARD
-  ═══════════════════════════════════════════ -->
+  <!-- TWITTER / X CARD -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="UPINS Private Limited | Engineering Advanced Logistics and Aerospace Systems">
   <meta name="twitter:description" content="India-based engineering company delivering shipping container manufacturing, BIKE MAX mobility logistics, and aerospace satellite component solutions.">
   <meta name="twitter:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png">
 
-  <!-- ═══════════════════════════════════════════
-       GEO / LOCAL SEO
-  ═══════════════════════════════════════════ -->
+  <!-- GEO / LOCAL SEO -->
   <meta name="geo.region" content="IN">
   <meta name="geo.country" content="India">
   <meta name="language" content="English">
 
-  <!-- ═══════════════════════════════════════════
-       STRUCTURED DATA – Organisation (JSON-LD)
-  ═══════════════════════════════════════════ -->
+  <!-- STRUCTURED DATA – Organisation (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,9 +105,7 @@
   }
   </script>
 
-  <!-- ═══════════════════════════════════════════
-       STRUCTURED DATA – WebPage (JSON-LD)
-  ═══════════════════════════════════════════ -->
+  <!-- STRUCTURED DATA – WebPage (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -146,1345 +137,916 @@
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts & CDN Imports -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- hCaptcha -->
-  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-
-  <!-- GSAP & ScrollTrigger for Scroll Animations -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
+  <!-- Premium High-Tech CSS Redesign -->
   <style>
-    /* Reset and Base */
+    :root {
+      --bg-dark: #030712;
+      --bg-dark-secondary: #0b0f19;
+      --accent: #00f2fe;
+      --accent-secondary: #0072ff;
+      --accent-amber: #f59e0b;
+      --accent-green: #10b981;
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    :root {
-      --background: #f4f6f9;
-      --foreground: #111827;
-      --card: #ffffff;
-      --card-foreground: #111827;
-      --secondary: #e8edf3;
-      --secondary-foreground: #111827;
-      --muted-foreground: #6b7280;
-      --accent: #1a4480;
-      --accent-light: #2563eb;
-      --accent-foreground: #ffffff;
-      --border: #d1d9e6;
-      --input: #f0f4f8;
-      --header-bg: rgba(244, 246, 249, 0.97);
-    }
-
     html {
       scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--background);
-      color: var(--foreground);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
       overflow-x: hidden;
     }
 
-    /* Custom Scrollbar */
+    body {
+      font-family: var(--font-display);
+      background-color: var(--bg-dark);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    /* Selection Color */
+    ::-selection {
+      background: rgba(0, 242, 254, 0.3);
+      color: #ffffff;
+    }
+
+    /* Custom Webkit Scrollbar */
     ::-webkit-scrollbar {
-      width: 10px;
+      width: 6px;
+      height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: var(--background);
+      background: var(--bg-dark);
     }
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
-      border-radius: 5px;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-secondary) 100%);
+      border-radius: 3px;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    /* Utility Layout Components */
+    .container {
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 5;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    section {
+      padding: 10rem 0;
+      position: relative;
+      overflow: hidden;
     }
 
-    h1, h2, h3, h4 {
-      line-height: 1.1;
-      font-weight: 600;
-    }
-
-    .text-gradient {
-      background: linear-gradient(135deg, #1a4480 0%, #2563eb 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Grid Background with radial mask */
-    .bg-grid {
-      background-image: 
-        linear-gradient(rgba(26, 68, 128, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(26, 68, 128, 0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
+    .border-gradient {
       position: relative;
     }
+    .border-gradient::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,242,254,0.15) 50%, rgba(255,255,255,0.05));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
 
-    /* Scroll Progress Glow Bar */
-    .scroll-progress-bar {
+    /* Typography Overhaul */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .mono-label::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .section-title {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      .section-title { font-size: 2.5rem; }
+    }
+
+    .section-desc {
+      font-size: 1.25rem;
+      max-width: 42rem;
+      margin-bottom: 4rem;
+    }
+
+    /* Three.js Canvas Elements */
+    .three-bg-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Cybernetic UI Indicators */
+    .cyber-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 50% 50%, transparent 60%, var(--bg-dark) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Buttons */
+    .btn-cyber {
+      position: relative;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1.25rem 2.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      clip-path: polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px);
+    }
+
+    .btn-cyber::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.2), transparent);
+      transition: all 0.6s ease;
+    }
+
+    .btn-cyber:hover::before {
+      left: 100%;
+    }
+
+    .btn-cyber:hover {
+      background: rgba(0, 242, 254, 0.08);
+      border-color: var(--accent);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.25);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-cyber-primary {
+      background: linear-gradient(135deg, rgba(0, 114, 255, 0.2) 0%, rgba(0, 242, 254, 0.2) 100%);
+      border-color: rgba(0, 242, 254, 0.4);
+    }
+
+    .btn-cyber-primary:hover {
+      background: linear-gradient(135deg, rgba(0, 114, 255, 0.4) 0%, rgba(0, 242, 254, 0.4) 100%);
+      border-color: var(--accent);
+    }
+
+    /* Header Nav */
+    header {
       position: fixed;
       top: 0;
       left: 0;
-      height: 4px;
-      width: 0%;
-      background: linear-gradient(90deg, #1a4480, #2563eb, #00ffcc);
+      right: 0;
       z-index: 100;
-      box-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
-    }
-
-    /* Container */
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    @media (min-width: 640px) {
-      .container { padding: 0 1.5rem; }
-    }
-    @media (min-width: 1024px) {
-      .container { padding: 0 2rem; }
-    }
-
-    /* ── Header ── */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 50;
-      transition: all 0.3s ease;
-      background: transparent;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border-bottom: 1px solid transparent;
     }
 
     header.scrolled {
-      background: var(--header-bg);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 16px rgba(26,68,128,0.07);
+      background: rgba(3, 7, 18, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.5rem 0;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 90px;
     }
 
-    @media (min-width: 640px) {
-      .header-inner { height: 88px; }
-    }
-
-    .logo img {
+    .logo-img {
       height: 56px;
       width: auto;
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    @media (min-width: 640px) {
-      .logo img { height: 68px; }
+    .logo-img:hover {
+      transform: scale(1.05);
     }
 
     .nav-desktop {
-      display: none;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    @media (min-width: 1024px) {
-      .nav-desktop { display: flex; }
-    }
-
-    .nav-link {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--muted-foreground);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-
-    .nav-link:hover { color: var(--accent); }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.625rem 1.25rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      background: var(--accent);
-      color: #fff;
-      transition: background 0.2s, box-shadow 0.2s;
-      border-radius: 2px;
-    }
-
-    .cta-btn:hover {
-      background: var(--accent-light);
-      box-shadow: 0 4px 16px rgba(37,99,235,0.25);
-    }
-
-    .cta-btn-outline {
-      background: transparent;
-      color: var(--accent);
-      border: 1.5px solid var(--accent);
-    }
-
-    .cta-btn-outline:hover {
-      background: var(--secondary);
-      box-shadow: none;
-    }
-
-    .mobile-menu-btn {
       display: flex;
-      padding: 0.5rem;
-      background: none;
-      border: none;
-      color: var(--foreground);
-      cursor: pointer;
-    }
-
-    @media (min-width: 1024px) {
-      .mobile-menu-btn { display: none; }
-    }
-
-    .mobile-menu {
-      display: none;
-      background: var(--header-bg);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 1.5rem 1rem;
-    }
-
-    .mobile-menu.open { display: block; }
-
-    @media (min-width: 1024px) {
-      .mobile-menu { display: none !important; }
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 0.5rem 0;
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--muted-foreground);
-      transition: color 0.2s;
-    }
-
-    .mobile-menu a:hover { color: var(--accent); }
-
-    .mobile-cta {
-      margin-top: 1rem;
-      width: 100%;
-      justify-content: center;
-      padding: 0.75rem 1.25rem;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: linear-gradient(160deg, #e8edf8 0%, #f4f6f9 50%, #eaf0fa 100%);
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-    }
-
-    .hero-glow-1 {
-      position: absolute;
-      top: -80px; right: -80px;
-      width: 520px; height: 520px;
-      background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .hero-glow-2 {
-      position: absolute;
-      bottom: -80px; left: -80px;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(26,68,128,0.09) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      max-width: 56rem;
-      padding: 7rem 1rem 5rem;
-      width: 100%;
-    }
-
-    @media (min-width: 640px) {
-      .hero-content { padding: 11rem 1.5rem 7rem; }
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.25rem 0.75rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      border: 1px solid rgba(26,68,128,0.25);
-      background: rgba(26,68,128,0.06);
-      margin-bottom: 1.5rem;
-      border-radius: 2px;
-    }
-
-    .hero h1 {
-      font-size: 2.25rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-      color: var(--foreground);
-    }
-
-    @media (min-width: 640px) { .hero h1 { font-size: 3rem; } }
-    @media (min-width: 768px) { .hero h1 { font-size: 3.75rem; } }
-    @media (min-width: 1024px) { .hero h1 { font-size: 4.5rem; } }
-
-    .hero-subtitle {
-      font-size: 1.125rem;
-      color: var(--muted-foreground);
-      max-width: 42rem;
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-    }
-
-    @media (min-width: 640px) { .hero-subtitle { font-size: 1.25rem; } }
-
-    .hero-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    @media (min-width: 640px) { .hero-buttons { flex-direction: row; } }
-
-    .hero-buttons .cta-btn {
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 2rem;
-    }
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    @media (min-width: 640px) { .scroll-indicator { display: flex; } }
-
-    .scroll-indicator span {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-foreground);
-    }
-
-    .scroll-indicator svg {
-      color: var(--accent);
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(6px); }
-      60% { transform: translateY(3px); }
-    }
-
-    /* ── Section Styles ── */
-    section { padding: 4rem 0; position: relative; }
-
-    @media (min-width: 640px) { section { padding: 6rem 0; } }
-    @media (min-width: 1024px) { section { padding: 8rem 0; } }
-
-    .section-eyebrow {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-size: 1.875rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      color: var(--foreground);
-    }
-
-    @media (min-width: 640px) { .section-title { font-size: 2.25rem; } }
-    @media (min-width: 1024px) { .section-title { font-size: 3rem; } }
-
-    .section-subtitle { color: var(--muted-foreground); max-width: 42rem; }
-
-    /* ── About ── */
-    .about {
-      position: relative;
-      background: #ffffff;
-    }
-
-    .about-grid {
-      display: grid;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-      .about-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .about-content p {
-      color: var(--muted-foreground);
-      line-height: 1.7;
-      margin-bottom: 1.25rem;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    @media (min-width: 400px) {
-      .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 1.25rem 0.75rem;
-      border: 1px solid var(--border);
-      background: var(--background);
-      border-radius: 4px;
-      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s;
-    }
-    .stat-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(26, 68, 128, 0.1);
-    }
-
-    @media (min-width: 640px) {
-      .stat-card { padding: 1.5rem; }
-    }
-
-    .stat-value {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-      color: var(--accent);
-      word-break: break-word;
-    }
-
-    @media (min-width: 400px) { .stat-value { font-size: 1.5rem; } }
-    @media (min-width: 640px) { .stat-value { font-size: 1.875rem; } }
-    @media (min-width: 1024px) { .stat-value { font-size: 2.25rem; } }
-
-    .stat-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--muted-foreground);
-      line-height: 1.3;
-    }
-
-    @media (min-width: 400px) { .stat-label { font-size: 0.7rem; } }
-    @media (min-width: 640px) { .stat-label { font-size: 0.875rem; } }
-
-    /* ── Divisions ── */
-    .divisions {
-      position: relative;
-      background: var(--background);
-    }
-
-    .divisions-header { text-align: center; margin-bottom: 4rem; }
-
-    .divisions-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .divisions-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-    }
-
-    .division-card {
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-      background: #ffffff;
-      transition: all 0.3s;
-      border-radius: 4px;
-      transform-style: preserve-3d;
-      perspective: 1000px;
-    }
-
-    @media (min-width: 640px) {
-      .division-card { padding: 2rem; }
-    }
-
-    .division-card:hover {
-      background: #f8faff;
-      border-color: rgba(37,99,235,0.3);
-      box-shadow: 0 10px 30px rgba(26,68,128,0.12);
-    }
-
-    .division-card-inner {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.25rem;
-      transform-style: preserve-3d;
-    }
-
-    .division-icon {
-      flex-shrink: 0;
-      width: 48px; height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      background: var(--background);
-      color: var(--accent);
-      transition: all 0.3s ease-out;
-      border-radius: 4px;
-    }
-
-    .division-card:hover .division-icon {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .division-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
-
-    .division-desc {
-      font-size: 0.875rem;
-      color: var(--muted-foreground);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .division-caps { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-
-    .cap-tag {
-      font-size: 0.75rem;
-      padding: 0.25rem 0.6rem;
-      background: rgba(26,68,128,0.07);
-      color: var(--accent);
-      border: 1px solid rgba(26,68,128,0.15);
-      border-radius: 2px;
-      font-weight: 500;
-    }
-
-    /* ── BIKE MAX ── */
-    .bike-max {
-      position: relative;
-      background: #ffffff;
-    }
-
-    .bike-max-header { text-align: center; margin-bottom: 4rem; }
-
-    .patent-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.25rem 0.75rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #059669;
-      border: 1px solid rgba(5,150,105,0.3);
-      background: rgba(5,150,105,0.06);
-      margin-bottom: 1rem;
-      border-radius: 2px;
-    }
-
-    .bike-max-grid {
-      display: grid;
       gap: 3rem;
       align-items: center;
     }
 
-    @media (min-width: 1024px) {
-      .bike-max-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
-    }
-
-    .bike-max-image {
-      position: relative;
-      aspect-ratio: 4/3;
-      background: var(--background);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      border-radius: 4px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .bike-max-image img {
-      width: 100%; height: 100%;
-      object-fit: contain;
-      padding: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Interactive Sparks Overlay */
-    #welding-canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .bike-max-content h3 { font-size: 1.25rem; margin-bottom: 1rem; }
-
-    @media (min-width: 640px) { .bike-max-content h3 { font-size: 1.5rem; } }
-
-    .bike-max-content > p {
-      color: var(--muted-foreground);
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-
-    .feature-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
-
-    .feature-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1rem;
-      background: var(--background);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      transition: all 0.3s;
-    }
-    .feature-item:hover {
-      border-color: rgba(26,68,128,0.25);
-      background: #f8faff;
-      transform: translateX(5px);
-    }
-
-    .feature-icon {
-      flex-shrink: 0;
-      width: 40px; height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(26,68,128,0.08);
-      color: var(--accent);
-      border-radius: 4px;
-    }
-
-    .feature-title { font-weight: 600; margin-bottom: 0.25rem; }
-    .feature-desc { font-size: 0.875rem; color: var(--muted-foreground); }
-
-    .engagement-section { padding-top: 1.5rem; border-top: 1px solid var(--border); }
-
-    .engagement-section h4 {
-      font-size: 0.875rem;
-      font-weight: 600;
+    .nav-link {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-secondary);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted-foreground);
-      margin-bottom: 1rem;
-    }
-
-    .engagement-list { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-
-    .engagement-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: var(--background);
-      border: 1px solid var(--border);
-      color: var(--foreground);
-      font-size: 0.875rem;
-      border-radius: 4px;
-      transition: all 0.3s;
-    }
-    .engagement-item:hover {
-      background: #ffffff;
-      border-color: #059669;
-      transform: translateY(-2px);
-    }
-
-    .engagement-item svg { color: #059669; }
-
-    /* ── Aerospace ── */
-    .aerospace {
+      letter-spacing: 0.15em;
       position: relative;
-      background: var(--background);
-      overflow: hidden;
+      transition: color 0.3s;
+      padding: 0.5rem 0;
     }
 
-    .aerospace-glow {
+    .nav-link::after {
+      content: '';
       position: absolute;
-      top: 0; right: 0;
-      width: 24rem; height: 24rem;
-      background: rgba(37,99,235,0.05);
-      filter: blur(150px);
-      border-radius: 50%;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
     }
 
-    .aerospace-header { max-width: 48rem; margin-bottom: 4rem; }
-
-    .aerospace-header p {
-      font-size: 1.125rem;
-      color: var(--muted-foreground);
-      line-height: 1.7;
+    .nav-link:hover {
+      color: #ffffff;
     }
 
-    .aerospace-grid {
-      display: grid;
-      gap: 1.5rem;
+    .nav-link:hover::after {
+      width: 100%;
     }
 
-    @media (min-width: 640px) { .aerospace-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .aerospace-grid { grid-template-columns: repeat(4, 1fr); } }
-
-    .aerospace-card {
-      padding: 1.5rem;
-      border: 1px solid var(--border);
-      background: #ffffff;
-      transition: all 0.3s;
-      border-radius: 4px;
-      transform-style: preserve-3d;
-      perspective: 1000px;
+    /* Mobile Menu Controls */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      z-index: 110;
     }
 
-    .aerospace-card:hover {
-      border-color: rgba(37,99,235,0.3);
-      box-shadow: 0 10px 30px rgba(26,68,128,0.12);
-    }
-
-    .aerospace-card-icon {
-      width: 48px; height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      background: var(--background);
-      color: var(--accent);
-      margin-bottom: 1rem;
-      transition: all 0.3s ease-out;
-      border-radius: 4px;
-    }
-
-    .aerospace-card:hover .aerospace-card-icon {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .aerospace-card h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .aerospace-card p { font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.7; }
-
-    .aerospace-banner {
-      margin-top: 3rem;
-      padding: 1.5rem;
-      border: 1px solid rgba(37,99,235,0.2);
-      background: linear-gradient(135deg, rgba(26,68,128,0.04) 0%, rgba(37,99,235,0.06) 100%);
-      border-radius: 4px;
-    }
-
-    @media (min-width: 640px) { .aerospace-banner { margin-top: 4rem; padding: 3rem; } }
-
-    .aerospace-banner-inner {
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-dark);
+      z-index: 95;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      transition: right 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .mobile-menu.open {
+      right: 0;
+    }
+
+    .mobile-menu .nav-link {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 1024px) {
+      .nav-desktop { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
+
+    /* Scroll Indicator Bar */
+    .scroll-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-secondary) 100%);
+      z-index: 101;
+      width: 0;
+    }
+
+    /* Cards - Cyber Styling */
+    .cyber-card {
+      background: rgba(11, 15, 25, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      padding: 3rem;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transform-style: preserve-3d;
+      will-change: transform, box-shadow;
+    }
+
+    .cyber-card:hover {
+      background: rgba(11, 15, 25, 0.8);
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 242, 254, 0.05);
+    }
+
+    /* About Section Grid */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+    }
+
+    /* Stats Block Grid */
+    .stats-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
 
-    @media (min-width: 768px) {
-      .aerospace-banner-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+    @media (max-width: 640px) {
+      .stats-layout { grid-template-columns: 1fr; }
     }
 
-    .aerospace-banner h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-    @media (min-width: 640px) { .aerospace-banner h3 { font-size: 1.5rem; } }
-    .aerospace-banner p { color: var(--muted-foreground); max-width: 36rem; }
-
-    .active-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem 1.5rem;
-      border: 1px solid rgba(5,150,105,0.3);
-      background: rgba(5,150,105,0.07);
-      color: #059669;
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-radius: 4px;
-    }
-
-    /* ── Leadership ── */
-    .leadership {
-      position: relative;
-      background: #ffffff;
-    }
-
-    .leadership-header { text-align: center; margin-bottom: 4rem; }
-
-    .leadership-grid {
-      display: grid;
-      gap: 2rem;
-      max-width: 56rem;
-      margin: 0 auto;
-    }
-
-    @media (min-width: 768px) {
-      .leadership-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    .leader-card {
-      padding: 1.5rem;
-      border: 1px solid var(--border);
-      background: var(--background);
-      transition: all 0.3s;
-      border-radius: 4px;
-      transform-style: preserve-3d;
-      perspective: 1000px;
-    }
-
-    @media (min-width: 640px) {
-      .leader-card { padding: 2rem; }
-    }
-
-    .leader-card:hover {
-      border-color: rgba(37,99,235,0.3);
-      box-shadow: 0 10px 30px rgba(26,68,128,0.12);
-    }
-
-    .leader-avatar {
-      width: 64px; height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--accent);
-      color: #fff;
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      border-radius: 4px;
-      transition: transform 0.3s ease-out;
-    }
-
-    .leader-name { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.25rem; }
-
-    .leader-role {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    .leader-desc {
-      font-size: 0.875rem;
-      color: var(--muted-foreground);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .leader-linkedin {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--accent-light);
-      transition: color 0.2s;
-      padding: 0.4rem 0.8rem;
-      border: 1px solid rgba(37,99,235,0.25);
-      border-radius: 4px;
-      background: rgba(37,99,235,0.05);
-    }
-
-    .leader-linkedin:hover {
-      color: var(--accent);
-      background: rgba(37,99,235,0.1);
-    }
-
-    /* ── Contact ── */
-    .contact {
-      position: relative;
-      background: var(--background);
-    }
-
-    .contact-grid {
-      display: grid;
-      gap: 4rem;
-    }
-
-    @media (min-width: 1024px) {
-      .contact-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .contact-info p {
-      color: var(--muted-foreground);
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-
-    .contact-list { display: flex; flex-direction: column; gap: 1.5rem; }
-
-    .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
-
-    .contact-icon {
-      width: 40px; height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(26,68,128,0.08);
-      color: var(--accent);
-      flex-shrink: 0;
-      border-radius: 4px;
-    }
-
-    .contact-item h4 { font-weight: 600; margin-bottom: 0.25rem; }
-    .contact-item p { font-size: 0.875rem; color: var(--muted-foreground); margin: 0; }
-
-    /* ── Form ── */
-    .contact-form {
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-      background: #ffffff;
-      border-radius: 4px;
-      box-shadow: 0 2px 16px rgba(26,68,128,0.06);
-    }
-
-    @media (min-width: 640px) {
-      .contact-form { padding: 2rem; }
-    }
-
-    .form-group { margin-bottom: 1.5rem; }
-
-    .form-label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--foreground);
-    }
-
-    .form-label svg { color: var(--muted-foreground); }
-
-    .form-input,
-    .form-select,
-    .form-textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background: var(--input);
-      border: 1px solid var(--border);
-      color: var(--foreground);
-      font-family: inherit;
-      font-size: 1rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      border-radius: 3px;
-    }
-
-    .form-input::placeholder, .form-textarea::placeholder { color: #9ca3af; }
-
-    .form-input:focus, .form-select:focus, .form-textarea:focus {
-      outline: none;
-      border-color: var(--accent-light);
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-    }
-
-    .form-textarea { resize: none; min-height: 100px; }
-
-    .form-row {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: 1fr;
-    }
-
-    @media (min-width: 480px) { .form-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
-
-    /* hCaptcha container */
-    .captcha-wrapper {
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-    }
-
-    /* Scale hCaptcha on very small screens so it doesn't overflow */
-    @media (max-width: 360px) {
-      .captcha-wrapper {
-        transform-origin: left top;
-        transform: scale(0.85);
-        height: 78px;
-      }
-    }
-
-    .form-submit {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 2rem;
-      background: var(--accent);
-      color: #fff;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, box-shadow 0.2s;
-      border-radius: 3px;
-    }
-
-    .form-submit:hover {
-      background: var(--accent-light);
-      box-shadow: 0 4px 16px rgba(37,99,235,0.3);
-    }
-
-    .form-submit:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-
-    .form-error {
-      margin-top: 1rem;
-      padding: 0.75rem 1rem;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      color: #dc2626;
-      border-radius: 3px;
-      font-size: 0.875rem;
-    }
-
-    .form-success {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 400px;
-      padding: 3rem;
-      border: 1px solid var(--border);
-      background: #ffffff;
+    .stat-container {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      padding: 2.5rem 1.5rem;
       text-align: center;
-      border-radius: 4px;
-      box-shadow: 0 2px 16px rgba(26,68,128,0.06);
+      transition: all 0.3s ease;
     }
 
-    .form-success-icon {
-      width: 64px; height: 64px;
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(5,150,105,0.12);
-      color: #059669;
-      border-radius: 50%;
+    .stat-container:hover {
+      background: rgba(0, 242, 254, 0.03);
+      border-color: rgba(0, 242, 254, 0.2);
     }
 
-    .form-success h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-    .form-success p { color: var(--muted-foreground); }
-
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid var(--border);
-      background: #111827;
-      color: #f9fafb;
+    .stat-num {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      font-family: var(--font-display);
+      background: linear-gradient(135deg, #ffffff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .footer-main {
-      padding: 3rem 0;
+    .stat-desc {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+    }
+
+    /* Divisions Redesign */
+    .divisions-grid {
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem;
     }
 
-    @media (min-width: 640px) {
-      .footer-main { padding: 4rem 0; }
+    @media (max-width: 1024px) {
+      .divisions-grid { grid-template-columns: 1fr; }
     }
 
-    @media (min-width: 768px) {
-      .footer-main { grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
-    }
-
-    .footer-brand img {
-      height: 48px;
-      width: auto;
-      margin-bottom: 1.25rem;
-      filter: brightness(0) invert(1);
-    }
-
-    @media (min-width: 640px) {
-      .footer-brand img { height: 64px; margin-bottom: 1.5rem; }
-    }
-
-    .footer-brand p {
-      font-size: 0.875rem;
-      color: #9ca3af;
-      max-width: 24rem;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-
-    .footer-links h4 {
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 1rem;
-      color: #f9fafb;
-    }
-
-    .footer-links ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .footer-links a {
-      font-size: 0.875rem;
-      color: #9ca3af;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover { color: #f9fafb; }
-
-    .footer-bottom {
-      padding: 1.5rem 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    @media (min-width: 640px) {
-      .footer-bottom { flex-direction: row; justify-content: space-between; }
-    }
-
-    .footer-bottom p { font-size: 0.75rem; color: #6b7280; }
-
-    /* Utility */
-    .sr-only {
-      position: absolute; width: 1px; height: 1px;
-      padding: 0; margin: -1px; overflow: hidden;
-      clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
-    }
-
-    .spinner {
-      width: 16px; height: 16px;
-      border: 2px solid rgba(255,255,255,0.3);
-      border-top-color: #fff;
+    .div-card-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(0, 242, 254, 0.05);
+      border: 1px solid rgba(0, 242, 254, 0.15);
       border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ═══════════════════════════════════════════
-       CSS 3D MODELS LAYER (Fixed Behind Content)
-       ═══════════════════════════════════════════ */
-    .scroll-3d-overlay {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 2; /* Sits behind headers and interactive cards */
-      overflow: hidden;
-    }
-
-    /* 3D Shipping Container */
-    .container-3d-wrapper {
-      position: absolute;
-      top: 40%;
-      left: -300px;
-      transform-style: preserve-3d;
-      perspective: 1200px;
-      opacity: 0;
-    }
-    .container-3d {
-      width: 220px;
-      height: 90px;
-      position: relative;
-      transform-style: preserve-3d;
-    }
-    .container-3d .face {
-      position: absolute;
-      box-sizing: border-box;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: inset 0 0 25px rgba(0,0,0,0.65);
       display: flex;
       align-items: center;
       justify-content: center;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+    }
+
+    .div-card-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .div-card-desc {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .div-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      background: rgba(0, 242, 254, 0.05);
+      border: 1px solid rgba(0, 242, 254, 0.1);
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+    }
+
+    /* BIKE MAX Segment */
+    .bike-max-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+      .bike-max-layout { grid-template-columns: 1fr; gap: 4rem; }
+    }
+
+    .visual-wrapper-3d {
+      width: 100%;
+      height: 500px;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(11, 15, 25, 0.3);
+    }
+
+    .badge-patent {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-green);
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-points {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .feat-point {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .feat-point:hover {
+      background: rgba(255, 255, 255, 0.02);
+      border-color: rgba(0, 242, 254, 0.1);
+    }
+
+    .feat-icon {
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .feat-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .partners-block {
+      border-top: 1px solid var(--border-color);
+      padding-top: 2rem;
+    }
+
+    .partner-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .partner-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .partner-pill {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
       color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .partner-pill:hover {
+      border-color: var(--accent);
+      background: rgba(0, 242, 254, 0.02);
+    }
+
+    .partner-pill::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent-green);
+      border-radius: 50%;
+    }
+
+    /* Aerospace Systems Section */
+    .aerospace-grid-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1200px) {
+      .aerospace-grid-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .aerospace-grid-cards { grid-template-columns: 1fr; }
+    }
+
+    .aero-banner {
+      margin-top: 4rem;
+      padding: 4rem;
+      background: linear-gradient(135deg, rgba(3, 7, 18, 0.95), rgba(11, 15, 25, 0.95));
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    @media (max-width: 1024px) {
+      .aero-banner { flex-direction: column; text-align: center; gap: 2.5rem; padding: 3rem; }
+    }
+
+    .active-dev-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-amber);
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      padding: 0.6rem 1.25rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Leadership Segment */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      max-width: 64rem;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .lead-grid { grid-template-columns: 1fr; }
+    }
+
+    .lead-card-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .lead-initials {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-secondary), var(--accent));
+      color: #ffffff;
+      font-size: 1.5rem;
       font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+    }
+
+    .lead-title-block h3 {
+      font-size: 1.5rem;
+    }
+
+    .lead-title-block p {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
       text-transform: uppercase;
     }
-    /* Ribbed/Corrugated Industrial Container texture */
-    .container-3d .front, .container-3d .back {
-      width: 220px;
-      height: 90px;
-      background: repeating-linear-gradient(90deg, #1e4480, #1e4480 8px, #15325c 8px, #15325c 10px);
-    }
-    .container-3d .left, .container-3d .right {
-      width: 90px;
-      height: 90px;
-      background: repeating-linear-gradient(90deg, #15325c, #15325c 8px, #102647 8px, #102647 10px);
-    }
-    .container-3d .top, .container-3d .bottom {
-      width: 220px;
-      height: 90px;
-      background: #1e4480;
-    }
-    /* Centering transformations */
-    .container-3d .front  { transform: rotateY(0deg) translateZ(45px); }
-    .container-3d .back   { transform: rotateY(180deg) translateZ(45px); }
-    .container-3d .left   { left: 65px; transform: rotateY(-90deg) translateZ(110px); }
-    .container-3d .right  { left: 65px; transform: rotateY(90deg) translateZ(110px); }
-    .container-3d .top    { top: 0; transform: rotateX(90deg) translateZ(45px); }
-    .container-3d .bottom { top: 0; transform: rotateX(-90deg) translateZ(45px); }
 
-    /* 3D Satellite */
-    .satellite-3d-wrapper {
-      position: absolute;
-      top: 25%;
-      right: -300px;
-      transform-style: preserve-3d;
-      perspective: 1200px;
-      opacity: 0;
+    /* Contact Block Redesign */
+    .contact-main-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 6rem;
     }
-    .satellite-3d {
-      width: 80px;
-      height: 80px;
-      position: relative;
-      transform-style: preserve-3d;
-    }
-    .satellite-3d .sat-core {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-    }
-    .satellite-3d .sat-core .face {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      box-sizing: border-box;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
-      /* Gold thermal space foil texture */
-      background: linear-gradient(135deg, #f59e0b 30%, #b45309 90%);
-    }
-    .satellite-3d .sat-core .front  { transform: rotateY(0deg) translateZ(40px); }
-    .satellite-3d .sat-core .back   { transform: rotateY(180deg) translateZ(40px); }
-    .satellite-3d .sat-core .left   { transform: rotateY(-90deg) translateZ(40px); }
-    .satellite-3d .sat-core .right  { transform: rotateY(90deg) translateZ(40px); }
-    .satellite-3d .sat-core .top    { transform: rotateX(90deg) translateZ(40px); }
-    .satellite-3d .sat-core .bottom { transform: rotateX(-90deg) translateZ(40px); }
 
-    .satellite-3d .solar-panel {
-      position: absolute;
-      width: 160px;
-      height: 32px;
-      background: repeating-linear-gradient(90deg, #1e3a8a, #1e3a8a 12px, #3b82f6 12px, #3b82f6 14px);
-      border: 1.5px solid #60a5fa;
-      border-radius: 2px;
-      box-shadow: 0 0 15px rgba(37,99,235,0.45);
-      top: 24px;
+    @media (max-width: 1024px) {
+      .contact-main-grid { grid-template-columns: 1fr; gap: 4rem; }
     }
-    .satellite-3d .left-panel { left: -165px; transform: rotateY(15deg); }
-    .satellite-3d .right-panel { right: -165px; transform: rotateY(-15deg); }
 
-    .satellite-3d .dish-antenna {
-      position: absolute;
-      width: 45px;
-      height: 45px;
+    .contact-item-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .c-item {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .c-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
       border-radius: 50%;
-      background: radial-gradient(circle, #e5e7eb 30%, #4b5563 80%);
-      top: -30px;
-      left: 17.5px;
-      transform: rotateX(90deg);
-      border: 1px solid #d1d5db;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .c-text h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .c-text p {
+      font-size: 1rem;
+    }
+
+    .form-wrapper {
+      background: rgba(11, 15, 25, 0.5);
+      backdrop-filter: blur(20px);
+      border-radius: 12px;
+      padding: 4rem;
+    }
+
+    @media (max-width: 640px) {
+      .form-wrapper { padding: 2rem; }
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .input-row { grid-template-columns: 1fr; }
+    }
+
+    .input-field-group {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .input-field-group input,
+    .input-field-group select,
+    .input-field-group textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: #ffffff;
+      transition: all 0.3s ease;
+    }
+
+    .input-field-group input:focus,
+    .input-field-group select:focus,
+    .input-field-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(0, 242, 254, 0.01);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+    }
+
+    .field-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .field-label svg {
+      color: var(--accent);
+    }
+
+    /* Footer structure styling */
+    footer {
+      background-color: #02040a;
+      border-top: 1px solid var(--border-color);
+      padding: 6rem 0 3rem;
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+
+    .foot-logo {
+      height: 52px;
+      margin-bottom: 1.5rem;
+    }
+
+    .foot-desc {
+      max-width: 24rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .foot-header {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .foot-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .foot-link {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    .foot-link:hover {
+      color: var(--accent);
+    }
+
+    .foot-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .foot-bottom p {
+      font-size: 0.9rem;
+    }
+
+    /* Hero visual design features */
+    .hero-panel {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .hero-tech-container {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45%;
+      height: 60vh;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-tech-container {
+        position: relative;
+        transform: none;
+        width: 100%;
+        height: 40vh;
+        top: 0;
+        right: 0;
+        margin-top: 2rem;
+      }
+      .hero-panel {
+        height: auto;
+        padding-top: 10rem;
+        padding-bottom: 6rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress-bar" id="scrollIndicator"></div>
+  <!-- Scroll Progress -->
+  <div class="scroll-bar" id="scrollBar"></div>
 
-  <!-- 3D Background Models Layer (Fixed behind text interactions) -->
-  <div class="scroll-3d-overlay">
-    <!-- Sliding CSS 3D Shipping Container -->
-    <div id="scrolling-container-3d" class="container-3d-wrapper">
-      <div class="container-3d">
-        <div class="face front"><span>UPINS</span></div>
-        <div class="face back"><span>UPINS</span></div>
-        <div class="face left"></div>
-        <div class="face right"></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-      </div>
-    </div>
-
-    <!-- Orbiting CSS 3D Space Satellite -->
-    <div id="scrolling-satellite-3d" class="satellite-3d-wrapper">
-      <div class="satellite-3d">
-        <div class="sat-core">
-          <div class="face front"></div>
-          <div class="face back"></div>
-          <div class="face left"></div>
-          <div class="face right"></div>
-          <div class="face top"></div>
-          <div class="face bottom"></div>
-        </div>
-        <div class="solar-panel left-panel"></div>
-        <div class="solar-panel right-panel"></div>
-        <div class="dish-antenna"></div>
-      </div>
-    </div>
-  </div>
-
+  <!-- ==========================================
+       Header
+       ========================================== -->
   <!-- Header -->
   <header id="header">
     <div class="container">
       <div class="header-inner">
         <a href="#" class="logo">
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited" class="logo-img">
         </a>
         <nav class="nav-desktop">
           <a href="#about" class="nav-link">About</a>
@@ -1494,14 +1056,13 @@
           <a href="#leadership" class="nav-link">Leadership</a>
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
-        <a href="#contact" class="cta-btn" style="display:none;">Inquire Now</a>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="4" x2="20" y1="12" y2="12"></line>
             <line x1="4" x2="20" y1="6" y2="6"></line>
             <line x1="4" x2="20" y1="18" y2="18"></line>
           </svg>
-          <svg id="closeIcon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg id="closeIcon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 6 6 18"></path>
             <path d="m6 6 12 12"></path>
           </svg>
@@ -1509,250 +1070,250 @@
       </div>
     </div>
     <nav class="mobile-menu" id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#divisions">Divisions</a>
-      <a href="#bike-max">BIKE MAX</a>
-      <a href="#aerospace">Aerospace</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="cta-btn mobile-cta">Inquire Now</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#divisions" class="nav-link">Divisions</a>
+      <a href="#bike-max" class="nav-link">BIKE MAX</a>
+      <a href="#aerospace" class="nav-link">Aerospace</a>
+      <a href="#leadership" class="nav-link">Leadership</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
 
   <main>
+  <!-- ==========================================
+       Hero
+       ========================================== -->
   <!-- Hero -->
-  <section class="hero bg-grid" aria-label="Introduction">
-    <div class="hero-bg"></div>
-    <div class="hero-glow-1"></div>
-    <div class="hero-glow-2"></div>
-    <div class="container hero-content">
-      <span class="eyebrow">Est. 2021 · Engineering Excellence</span>
-      <h1>Engineering Advanced <span class="text-gradient">Logistics</span> and <span class="text-gradient">Aerospace</span> Systems.</h1>
-      <p class="hero-subtitle">Shipping container manufacturing, mobility transport systems, and aerospace engineering solutions.</p>
-      <div class="hero-buttons">
-        <a href="#divisions" class="cta-btn">
-          Explore Solutions
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14"></path>
-            <path d="m12 5 7 7-7 7"></path>
-          </svg>
-        </a>
-        <a href="#contact" class="cta-btn cta-btn-outline">Contact Us</a>
+  <section class="hero-panel" aria-label="Introduction">
+    <div class="cyber-grid-overlay"></div>
+    <div id="hero-canvas" class="three-bg-canvas"></div>
+    
+    <div class="container">
+      <div style="max-width: 50rem;">
+        <span class="mono-label">UPINS ENTERPRISE CREDIBILITY</span>
+        <h1 style="font-size: 5.5rem; line-height: 1.0; margin-bottom: 2rem; background: linear-gradient(135deg, #ffffff 40%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Engineering<br>Advanced Systems.
+        </h1>
+        <p class="hero-subtitle" style="font-size: 1.4rem; max-width: 42rem; margin-bottom: 3.5rem; line-height: 1.6;">
+          Delivering shipping container manufacturing, advanced mobility logistics infrastructure, and satellite aerospace development at national scale.
+        </p>
+        <div class="hero-buttons" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <a href="#divisions" class="btn-cyber btn-cyber-primary">
+            Explore Solutions
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="#contact" class="btn-cyber">Contact Operations</a>
+        </div>
       </div>
     </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="m6 9 6 6 6-6"></path>
-      </svg>
+
+    <!-- Live Interactive Blueprint Render Frame -->
+    <div class="hero-tech-container">
+      <div id="hero-blueprint-canvas" style="width: 100%; height: 100%;"></div>
     </div>
   </section>
 
+  <!-- ==========================================
+       About
+       ========================================== -->
   <!-- About -->
-  <section id="about" class="about" aria-label="About UPINS">
+  <section id="about" style="background-color: var(--bg-dark-secondary);">
+    <div class="cyber-grid-overlay"></div>
     <div class="container">
       <div class="about-grid">
         <div class="about-content">
-          <span class="section-eyebrow">About UPINS</span>
+          <span class="mono-label">ENGINEERING PROFILE</span>
           <h2 class="section-title">Up India Solutions</h2>
-          <p>UPINS Private Limited is an engineering-driven company delivering advanced solutions across industrial logistics, container manufacturing, and aerospace systems.</p>
-          <p>Founded in 2021, we operate at the intersection of industrial engineering and technological innovation. We build systems that enable efficient global commerce and contribute to national aerospace capabilities.</p>
-          <p>Our technical teams execute projects spanning container engineering, mobility logistics systems, and satellite component development. We serve OEMs, shipping enterprises, government agencies, and international clients.</p>
+          <p style="margin-bottom: 1.5rem;">UPINS Private Limited is a high-tech engineering enterprise operating at the leading edge of heavy container structures, automated cargo configurations, and national aerospace systems.</p>
+          <p style="margin-bottom: 1.5rem;">Founded in 2021, we deploy advanced materials science, high-precision CAD modeling, and industrial operations methodology to supply commercial transport giants, defense units, and critical aerospace initiatives.</p>
+          <p>Our cross-functional technical teams deliver container engineering assemblies, dynamic loading systems, and orbit-qualified space mechanism modules.</p>
         </div>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">2021</div>
-            <div class="stat-label">Founded</div>
+        <div class="stats-layout">
+          <div class="stat-container border-gradient">
+            <div class="stat-num">2021</div>
+            <div class="stat-desc">FOUNDING YEAR</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">4+</div>
-            <div class="stat-label">Business Verticals</div>
+          <div class="stat-container border-gradient">
+            <div class="stat-num">4+</div>
+            <div class="stat-desc">DIVISIONS</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">Global</div>
-            <div class="stat-label">Market Reach</div>
+          <div class="stat-container border-gradient">
+            <div class="stat-num">Global</div>
+            <div class="stat-desc">OPERATIONS</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ==========================================
+       Divisions
+       ========================================== -->
   <!-- Divisions -->
-  <section id="divisions" class="divisions bg-grid" aria-label="Business Divisions">
+  <section id="divisions" style="background-color: var(--bg-dark);">
+    <!-- Dedicated Scroll Triggered 3D Area -->
+    <div id="divisions-3d-canvas" class="three-bg-canvas"></div>
+    <div class="cyber-grid-overlay"></div>
+
     <div class="container">
-      <div class="divisions-header">
-        <span class="section-eyebrow">Business Divisions</span>
-        <h2 class="section-title">Engineering Capabilities</h2>
-        <p class="section-subtitle" style="margin:0 auto;">Integrated solutions across industrial logistics and aerospace sectors</p>
-      </div>
+      <span class="mono-label">CAPABILITIES MATRIX</span>
+      <h2 class="section-title">Engineering Verticals</h2>
+      <p class="section-desc">Fully integrated design-to-build divisions serving international supply infrastructures and orbit payload missions.</p>
+
       <div class="divisions-grid">
-        <div class="division-card">
-          <div class="division-card-inner">
-            <div class="division-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
-                <path d="m3.3 7 8.7 5 8.7-5"></path>
-                <path d="M12 22V12"></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="division-title">Container Engineering</h3>
-              <p class="division-desc">Manufacturing industrial shipping containers and transport systems. Engineering solutions for global logistics infrastructure.</p>
-              <div class="division-caps">
-                <span class="cap-tag">20ft &amp; 40ft Containers</span>
-                <span class="cap-tag">Custom Specifications</span>
-                <span class="cap-tag">Industrial Transport</span>
-              </div>
-            </div>
+        <!-- Division Card 1 -->
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+              <path d="m3.3 7 8.7 5 8.7-5"></path>
+              <path d="M12 22V12"></path>
+            </svg>
+          </div>
+          <h3 class="div-card-title">Container Engineering</h3>
+          <p class="div-card-desc">Advanced production and load-bearing stress calculations for heavy duty 20ft and 40ft standard cargo enclosures built for maritime and overland logistics.</p>
+          <div class="div-tags">
+            <span class="tag">20ft / 40ft Platforms</span>
+            <span class="tag">Custom Structural Frames</span>
+            <span class="tag">FEA Finite Stress analysis</span>
           </div>
         </div>
-        <div class="division-card">
-          <div class="division-card-inner">
-            <div class="division-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
-                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-                <path d="M12 2v2"></path><path d="M12 22v-2"></path>
-                <path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path>
-                <path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path>
-                <path d="M14 12h8"></path><path d="M2 12h2"></path>
-                <path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path>
-                <path d="m17 3.34-1 1.73"></path><path d="m7 20.66 1-1.73"></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="division-title">Container Components</h3>
-              <p class="division-desc">Precision-engineered structural components and systems for the container industry. Supporting global manufacturing supply chains.</p>
-              <div class="division-caps">
-                <span class="cap-tag">Structural Systems</span>
-                <span class="cap-tag">Corner Castings</span>
-                <span class="cap-tag">Flooring Systems</span>
-              </div>
-            </div>
+
+        <!-- Division Card 2 -->
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+              <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+              <path d="M12 2v2"></path><path d="M12 22v-2"></path>
+              <path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path>
+              <path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path>
+              <path d="M14 12h8"></path><path d="M2 12h2"></path>
+              <path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path>
+              <path d="m17 3.34-1 1.73"></path><path d="m7 20.66 1-1.73"></path>
+            </svg>
+          </div>
+          <h3 class="div-card-title">Container Components</h3>
+          <p class="div-card-desc">Manufacture of core container structural component blocks. Corner castings, base frames, and composite floor layers delivering high shear strength resistance.</p>
+          <div class="div-tags">
+            <span class="tag">ISO Cast Blocks</span>
+            <span class="tag">High-Load Composites</span>
+            <span class="tag">Base Framing Blocks</span>
           </div>
         </div>
-        <div class="division-card">
-          <div class="division-card-inner">
-            <div class="division-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
-                <path d="M15 18H9"></path>
-                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
-                <circle cx="17" cy="18" r="2"></circle>
-                <circle cx="7" cy="18" r="2"></circle>
-              </svg>
-            </div>
-            <div>
-              <h3 class="division-title">Logistics Engineering</h3>
-              <p class="division-desc">Advanced engineering solutions for mobility and cargo transport. Optimizing supply chain efficiency through technical innovation.</p>
-              <div class="division-caps">
-                <span class="cap-tag">Supply Chain Solutions</span>
-                <span class="cap-tag">Transport Optimization</span>
-                <span class="cap-tag">Loading Systems</span>
-              </div>
-            </div>
+
+        <!-- Division Card 3 -->
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+              <path d="M15 18H9"></path>
+              <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+              <circle cx="17" cy="18" r="2"></circle>
+              <circle cx="7" cy="18" r="2"></circle>
+            </svg>
+          </div>
+          <h3 class="div-card-title">Logistics Engineering</h3>
+          <p class="div-card-desc">Optimizing transport flow via modular, mechanical configurations. Dynamic containerized stacking systems that minimize dead volume and cargo transit wear.</p>
+          <div class="div-tags">
+            <span class="tag">Volumetric Density Optimization</span>
+            <span class="tag">Loading Gear Assemblies</span>
+            <span class="tag">Intermodal Transfer Control</span>
           </div>
         </div>
-        <div class="division-card">
-          <div class="division-card-inner">
-            <div class="division-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="division-title">Aerospace Systems</h3>
-              <p class="division-desc">Satellite components and aerospace engineering. Contributing to national space programs and advanced technology development.</p>
-              <div class="division-caps">
-                <span class="cap-tag">Satellite Components</span>
-                <span class="cap-tag">Systems Engineering</span>
-                <span class="cap-tag">Advanced Materials</span>
-              </div>
-            </div>
+
+        <!-- Division Card 4 -->
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+            </svg>
+          </div>
+          <h3 class="div-card-title">Aerospace Systems</h3>
+          <p class="div-card-desc">Precision micro-component and mechanical subsystem assembly for orbital vehicles, communication payloads, and research satellite bus integrations.</p>
+          <div class="div-tags">
+            <span class="tag">Orbital Bus Components</span>
+            <span class="tag">Advanced Composite Structures</span>
+            <span class="tag">Mechanical Solar Deployers</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ==========================================
+       BIKE MAX
+       ========================================== -->
   <!-- BIKE MAX -->
-  <section id="bike-max" class="bike-max" aria-label="BIKE MAX Transport System">
+  <section id="bike-max" style="background-color: var(--bg-dark-secondary);">
+    <div class="cyber-grid-overlay"></div>
     <div class="container">
-      <div class="bike-max-header">
-        <span class="patent-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
-          </svg>
-          Patent Applied
-        </span>
-        <h2 class="section-title">BIKE MAX</h2>
-        <p class="section-subtitle" style="font-size:1.125rem;max-width:48rem;margin:0 auto;">Advanced bike transportation system designed for containerized logistics</p>
-      </div>
-      <div class="bike-max-grid">
-        <div class="bike-max-image">
-          <!-- Live Laser Welding Particle Canvas Overlay -->
-          <canvas id="welding-canvas"></canvas>
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BIKE%20MAX%20-bdybsqHTjgdSTDauvP8j6QJED1FlIH.png" alt="BIKE MAX - Advanced bike transportation system showing two-tier scooter stacking in shipping container">
+      <div class="bike-max-layout">
+        <!-- Welder & Frame Assembler (Canvas visual) -->
+        <div class="visual-wrapper-3d border-gradient">
+          <div id="bikemax-3d-canvas" style="width: 100%; height: 100%;"></div>
         </div>
+
         <div class="bike-max-content">
-          <h3>Engineered Mobility Logistics</h3>
-          <p>BIKE MAX is a patent-applied advanced transportation system engineered for efficient two-wheeler logistics. The system enables optimized stacking configurations within standard shipping containers, maximizing transport capacity while ensuring vehicle security.</p>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <span class="badge-patent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.25rem;">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+            </svg>
+            Intellectual Property: Patent Applied
+          </span>
+          <h2 class="section-title" style="margin-top: 1rem;">BIKE MAX</h2>
+          <p style="font-size: 1.2rem; margin-bottom: 2rem;">Engineered high-density stacking fixtures designed for secure containerized two-wheeler logistics operations.</p>
+          
+          <div class="feature-points">
+            <div class="feat-point">
+              <div class="feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
                   <polyline points="16 7 22 7 22 13"></polyline>
                 </svg>
               </div>
               <div>
-                <div class="feature-title">Optimized Capacity</div>
-                <div class="feature-desc">Maximize container utilization with engineered stacking systems</div>
+                <h4 class="feat-title">Maximized Space Density</h4>
+                <p style="font-size: 0.95rem;">Doubles transport payload volumes by integrating custom multi-tiered structural frames inside dry-van shipping containers.</p>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+
+            <div class="feat-point">
+              <div class="feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
               </div>
               <div>
-                <div class="feature-title">Operational Efficiency</div>
-                <div class="feature-desc">Streamlined loading and unloading processes</div>
+                <h4 class="feat-title">Integrated Slide Lift-Gates</h4>
+                <p style="font-size: 0.95rem;">Rapid mechanical slide assemblies minimize cycle times during vehicle loading, wheel lock anchoring, and frame unloading.</p>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+
+            <div class="feat-point">
+              <div class="feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
                 </svg>
               </div>
               <div>
-                <div class="feature-title">Secure Transport</div>
-                <div class="feature-desc">Engineered stability for safe two-wheeler logistics</div>
+                <h4 class="feat-title">Structural Vibration Shifting</h4>
+                <p style="font-size: 0.95rem;">Tension dampening elements absorb multi-axis transport vibration, eliminating panel-contact friction damage.</p>
               </div>
             </div>
           </div>
-          <div class="engagement-section">
-            <h4>Industry Engagement</h4>
-            <div class="engagement-list">
-              <span class="engagement-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                TVS Motor Company
-              </span>
-              <span class="engagement-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                Container Corporation of India (CONCOR)
-              </span>
+
+          <div class="partners-block">
+            <h5 class="partner-label">Enterprise Engagements</h5>
+            <div class="partner-flex">
+              <div class="partner-pill">TVS Motor Company</div>
+              <div class="partner-pill">CONCOR (Container Corporation of India)</div>
             </div>
           </div>
         </div>
@@ -1760,244 +1321,241 @@
     </div>
   </section>
 
+  <!-- ==========================================
+       Aerospace
+       ========================================== -->
   <!-- Aerospace -->
-  <section id="aerospace" class="aerospace bg-grid" aria-label="Aerospace Division">
-    <div class="aerospace-glow"></div>
-    <div class="container" style="position:relative;z-index:10;">
-      <div class="aerospace-header">
-        <span class="section-eyebrow">Aerospace Division</span>
-        <h2 class="section-title">Satellite Systems &amp; Aerospace Engineering</h2>
-        <p>Contributing to national aerospace programs through precision engineering. Our aerospace division develops satellite components and systems, supporting the advancement of space technology capabilities.</p>
-      </div>
-      <div class="aerospace-grid">
-        <div class="aerospace-card">
-          <div class="aerospace-card-icon">
+  <section id="aerospace" style="background-color: var(--bg-dark);">
+    <!-- Background Space Scene with orbital lines -->
+    <div id="aerospace-3d-canvas" class="three-bg-canvas"></div>
+    <div class="cyber-grid-overlay"></div>
+
+    <div class="container">
+      <span class="mono-label">FLIGHT PATH ORBITAL SYSTEMS</span>
+      <h2 class="section-title">Aerospace Engineering</h2>
+      <p class="section-desc">Partnering in national scale spacecraft manufacturing and payload housing development, with focus on modular subsystems.</p>
+
+      <div class="aerospace-grid-cards">
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M13 7 9 3 5 7l4 4"></path>
-              <path d="m17 11 4 4-4 4-4-4"></path>
-              <path d="m8 12 4 4 6-6-4-4Z"></path>
-              <path d="m16 8 3-3"></path>
-              <path d="M9 21a6 6 0 0 0-6-6"></path>
+              <path d="M12 2v2"></path><path d="M12 20v2"></path>
+              <path d="M4.93 4.93l1.41 1.41"></path>
+              <path d="M17.66 17.66l1.41 1.41"></path>
+              <path d="M2 12h2"></path><path d="M20 12h2"></path>
+              <path d="M6.34 17.66l-1.41 1.41"></path>
+              <path d="M19.07 4.93l-1.41 1.41"></path>
             </svg>
           </div>
-          <h3>Satellite Components</h3>
-          <p>Precision-engineered components for satellite systems and space applications</p>
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Satellite Frameworks</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5;">Structural core panels built from space-qualified alloy honeycombs to withstand liftoff resonance.</p>
         </div>
-        <div class="aerospace-card">
-          <div class="aerospace-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="16" height="16" x="4" y="4" rx="2"></rect>
-              <rect width="6" height="6" x="9" y="9" rx="1"></rect>
-              <path d="M15 2v2"></path><path d="M15 20v2"></path>
-              <path d="M2 15h2"></path><path d="M2 9h2"></path>
-              <path d="M20 15h2"></path><path d="M20 9h2"></path>
-              <path d="M9 2v2"></path><path d="M9 20v2"></path>
-            </svg>
-          </div>
-          <h3>Systems Engineering</h3>
-          <p>Integrated aerospace systems design and development</p>
-        </div>
-        <div class="aerospace-card">
-          <div class="aerospace-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
-              <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
-              <circle cx="12" cy="12" r="2"></circle>
-              <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
-              <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
-            </svg>
-          </div>
-          <h3>Communication Systems</h3>
-          <p>RF and communication subsystems for aerospace applications</p>
-        </div>
-        <div class="aerospace-card">
-          <div class="aerospace-card-icon">
+
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect width="18" height="18" x="3" y="3" rx="2"></rect>
-              <path d="M11 9h4a2 2 0 0 0 2-2V3"></path>
-              <circle cx="9" cy="9" r="2"></circle>
-              <path d="M7 21v-4a2 2 0 0 1 2-2h4"></path>
-              <circle cx="15" cy="15" r="2"></circle>
+              <path d="M9 12h6"></path><path d="M12 9v6"></path>
             </svg>
           </div>
-          <h3>Advanced Materials</h3>
-          <p>Aerospace-grade materials and manufacturing processes</p>
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Deployment Systems</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5;">Precision mechanical joints and pin pullers engineered to execute in vacuum environments.</p>
+        </div>
+
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+            </svg>
+          </div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">RF Integration</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5;">Component casing design optimized for electromagnetic compatibility (EMC) in deep space.</p>
+        </div>
+
+        <div class="cyber-card border-gradient">
+          <div class="div-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 22 22 22 12 2"></polygon>
+            </svg>
+          </div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Thermal Shields</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5;">Custom MLI (Multi-Layer Insulation) assembly configurations for localized heating mitigation.</p>
         </div>
       </div>
-      <div class="aerospace-banner">
-        <div class="aerospace-banner-inner">
-          <div>
-            <h3>Engineering for Space</h3>
-            <p>Delivering aerospace-grade engineering solutions for satellite systems, contributing to India's growing space technology sector.</p>
-          </div>
-          <span class="active-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+
+      <div class="aero-banner border-gradient">
+        <div>
+          <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">Space Development Operations</h3>
+          <p style="max-width: 32rem;">We build flight-ready, component assemblies tailored to demanding thermal ranges and telemetry load conditions.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 1rem;">
+          <span class="active-dev-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.25rem;">
               <path d="M13 7 9 3 5 7l4 4"></path>
               <path d="m17 11 4 4-4 4-4-4"></path>
               <path d="m8 12 4 4 6-6-4-4Z"></path>
               <path d="m16 8 3-3"></path>
               <path d="M9 21a6 6 0 0 0-6-6"></path>
             </svg>
-            Active Development
+            Active Assembly Phase
           </span>
-        </div>
-        <div class="engagement-section" style="margin-top:1.5rem;">
-          <h4>Industry Engagement</h4>
-          <div class="engagement-list">
-            <a href="https://www.maargin.in/" target="_blank" rel="noopener noreferrer" class="engagement-item" style="text-decoration:none;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              Maargin
-            </a>
+          <div class="partner-flex" style="justify-content: flex-end;">
+            <a href="https://www.maargin.in/" target="_blank" rel="noopener noreferrer" class="partner-pill">Maargin</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ==========================================
+       Leadership
+       ========================================== -->
   <!-- Leadership -->
-  <section id="leadership" class="leadership" aria-label="Leadership Team">
+  <section id="leadership" style="background-color: var(--bg-dark-secondary);">
+    <div class="cyber-grid-overlay"></div>
     <div class="container">
-      <div class="leadership-header">
-        <span class="section-eyebrow">Leadership</span>
-        <h2 class="section-title">Founding Team</h2>
-        <p class="section-subtitle" style="max-width:36rem;margin:0 auto;">Technical leadership building industrial engineering capabilities</p>
+      <div style="text-align: center; margin-bottom: 6rem;">
+        <span class="mono-label">EXECUTIVE MANAGEMENT</span>
+        <h2 class="section-title" style="margin-bottom: 1rem;">Founding Team</h2>
+        <p style="max-width: 36rem; margin: 0 auto;">Combining heavy structural design capabilities and dynamic satellite component operations.</p>
       </div>
-      <div class="leadership-grid">
-        <div class="leader-card">
-          <div class="leader-avatar">AH</div>
-          <h3 class="leader-name">Avanidhar Havaldar</h3>
-          <p class="leader-role">Managing Director</p>
-          <p class="leader-desc">Engineering leadership driving technical innovation across logistics and aerospace verticals.</p>
+
+      <div class="lead-grid">
+        <!-- Leader 1 -->
+        <div class="cyber-card border-gradient">
+          <div class="lead-card-header">
+            <div class="lead-initials">AH</div>
+            <div class="lead-title-block">
+              <h3>Avanidhar Havaldar</h3>
+              <p>Managing Director</p>
+            </div>
+          </div>
+          <p style="font-size: 1rem; margin-bottom: 2rem; line-height: 1.7;">Directs cross-disciplinary system architecture execution. Ensures engineering alignments comply with quality paradigms for both high-volume vehicle stacking projects and aerospace partner schedules.</p>
           <a href="https://www.linkedin.com/in/avanidhar-havaldar-72659936/" target="_blank" rel="noopener noreferrer" class="leader-linkedin">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect width="4" height="12" x="2" y="9"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
-            View on LinkedIn
+            LinkedIn Profile
           </a>
         </div>
-        <div class="leader-card">
-          <div class="leader-avatar">DH</div>
-          <h3 class="leader-name">Deepak Hurakadali</h3>
-          <p class="leader-role">Director</p>
-          <p class="leader-desc">Industrial operations and business development across container manufacturing and technology sectors.</p>
+
+        <!-- Leader 2 -->
+        <div class="cyber-card border-gradient">
+          <div class="lead-card-header">
+            <div class="lead-initials">DH</div>
+            <div class="lead-title-block">
+              <h3>Deepak Hurakadali</h3>
+              <p>Director</p>
+            </div>
+          </div>
+          <p style="font-size: 1rem; margin-bottom: 2rem; line-height: 1.7;">Supervises industrial supply logistics integration, automated manufacturing cell configurations, and material processing operations. Coordinates technical program executions with defense units and regional shipping enterprises.</p>
           <a href="https://www.linkedin.com/in/deepak-hv-hurakadali-10516220/" target="_blank" rel="noopener noreferrer" class="leader-linkedin">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect width="4" height="12" x="2" y="9"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
-            View on LinkedIn
+            LinkedIn Profile
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ==========================================
+       Contact
+       ========================================== -->
   <!-- Contact -->
-  <section id="contact" class="contact bg-grid" aria-label="Contact and Business Inquiries">
+  <section id="contact" style="background-color: var(--bg-dark);">
+    <div id="contact-3d-canvas" class="three-bg-canvas"></div>
+    <div class="cyber-grid-overlay"></div>
+
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <span class="section-eyebrow">Contact</span>
-          <h2 class="section-title">Business Inquiries</h2>
-          <p>Connect with UPINS for partnership discussions, technical inquiries, and business development opportunities across our logistics and aerospace divisions.</p>
-          <div class="contact-list">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="contact-main-grid">
+        <div class="contact-info-block">
+          <span class="mono-label">OPERATION CHANNELS</span>
+          <h2 class="section-title">Global Inquiries</h2>
+          <p style="margin-bottom: 3rem;">Initiate structural evaluations, secure prototype development pipelines, or discuss satellite flight component supply agreements.</p>
+          
+          <div class="contact-item-group">
+            <div class="c-item">
+              <div class="c-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
-                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
-                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
-                  <path d="M10 6h4"></path><path d="M10 10h4"></path>
-                  <path d="M10 14h4"></path><path d="M10 18h4"></path>
                 </svg>
               </div>
-              <div>
-                <h4>Headquarters</h4>
-                <p>India</p>
+              <div class="c-text">
+                <h4>Corporate HQ</h4>
+                <p>Karnataka, India</p>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                  <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
                 </svg>
               </div>
-              <div>
-                <h4>Business Areas</h4>
-                <p>Container Engineering, Logistics, Aerospace</p>
+              <div class="c-text">
+                <h4>System Domains</h4>
+                <p>Heavy Cargo Framing, Logistics Optimizations, Space Flight Engineering</p>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                  <path d="M2 12h20"></path>
                 </svg>
               </div>
-              <div>
-                <h4>Global Reach</h4>
-                <p>Serving international clients and partners</p>
+              <div class="c-text">
+                <h4>Intermodal Network</h4>
+                <p>Managing systems integrations and payloads for global clients</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div id="formContainer">
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-group">
-              <label class="form-label" for="name">
+        <div id="formContainer" class="form-wrapper border-gradient">
+          <form id="contactForm" novalidate>
+            <div class="input-field-group">
+              <label class="field-label" for="name">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                Full Name
+                Identifier Name
               </label>
-              <input type="text" id="name" name="name" required class="form-input" placeholder="Your name">
+              <input type="text" id="name" name="name" required placeholder="Full Name">
             </div>
-            <div class="form-group">
-              <label class="form-label" for="company">
+
+            <div class="input-field-group">
+              <label class="field-label" for="company">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
-                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
-                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
-                  <path d="M10 6h4"></path><path d="M10 10h4"></path>
-                  <path d="M10 14h4"></path><path d="M10 18h4"></path>
                 </svg>
-                Company
+                Corporate Entity
               </label>
-              <input type="text" id="company" name="company" required class="form-input" placeholder="Company name">
+              <input type="text" id="company" name="company" required placeholder="Company Name">
             </div>
-            <div class="form-group">
-              <label class="form-label" for="email">
+
+            <div class="input-field-group">
+              <label class="field-label" for="email">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
-                Email
+                Communication Link
               </label>
-              <input type="email" id="email" name="email" required class="form-input" placeholder="email@company.com">
+              <input type="email" id="email" name="email" required placeholder="email@company.com">
             </div>
-            <div class="form-row form-group">
-              <div>
-                <label class="form-label" for="country">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                    <path d="M2 12h20"></path>
-                  </svg>
-                  Country
-                </label>
-                <select id="country" name="country" required class="form-select">
-                  <option value="">Select country</option>
+
+            <div class="input-row">
+              <div class="input-field-group">
+                <label class="field-label" for="country">Region</label>
+                <select id="country" name="country" required>
+                  <option value="">Select Region</option>
                   <option value="India">India</option>
                   <option value="United States">United States</option>
                   <option value="United Kingdom">United Kingdom</option>
@@ -2007,16 +1565,11 @@
                   <option value="Other">Other</option>
                 </select>
               </div>
-              <div>
-                <label class="form-label" for="industry">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
-                  </svg>
-                  Industry
-                </label>
-                <select id="industry" name="industry" required class="form-select">
-                  <option value="">Select industry</option>
+
+              <div class="input-field-group">
+                <label class="field-label" for="industry">Vertical Focus</label>
+                <select id="industry" name="industry" required>
+                  <option value="">Select Segment</option>
                   <option value="Shipping & Logistics">Shipping &amp; Logistics</option>
                   <option value="Automotive OEM">Automotive OEM</option>
                   <option value="Government / Defense">Government / Defense</option>
@@ -2027,25 +1580,20 @@
                 </select>
               </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="message">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
-                Message
-              </label>
-              <textarea id="message" name="message" rows="4" required class="form-textarea" placeholder="Describe your inquiry..."></textarea>
+
+            <div class="input-field-group">
+              <label class="field-label" for="message">Detailed Payload Requirements</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Describe system components, parameters, or logistics constraints..."></textarea>
             </div>
 
-            <!-- hCaptcha -->
             <div class="captcha-wrapper">
               <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001"></div>
             </div>
 
-            <div id="formError" class="form-error" style="display:none;"></div>
+            <div id="formError" class="form-error" style="display:none; padding:1rem; margin-bottom:1.5rem; background:rgba(220,38,38,0.1); border:1px solid rgba(220,38,38,0.3); color:#f87171; border-radius:4px;"></div>
 
-            <button type="submit" class="form-submit" id="submitBtn">
-              Submit Inquiry
+            <button type="submit" class="btn-cyber btn-cyber-primary" style="width: 100%; justify-content: center;" id="submitBtn">
+              Transmit Inquiry
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m22 2-7 20-4-9-9-4Z"></path>
                 <path d="M22 2 11 13"></path>
@@ -2058,334 +1606,111 @@
   </section>
   </main>
 
+  <!-- ==========================================
+       Footer
+       ========================================== -->
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-main">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited">
-          <p>Engineering advanced logistics and aerospace systems. Shipping container manufacturing, mobility transport solutions, and satellite component development.</p>
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited" class="foot-logo" style="filter: brightness(0) invert(1);">
+          <p class="foot-desc">Manufacturing shipping cargo assemblies, customized mobility stacking configurations, and precision space system components since 2021.</p>
         </div>
-        <div class="footer-links">
-          <h4>Divisions</h4>
-          <ul>
-            <li><a href="#divisions">Container Engineering</a></li>
-            <li><a href="#divisions">Container Components</a></li>
-            <li><a href="#bike-max">BIKE MAX</a></li>
-            <li><a href="#aerospace">Aerospace Systems</a></li>
+        <div>
+          <h4 class="foot-header">Engineering Blocks</h4>
+          <ul class="foot-links-list">
+            <li><a href="#divisions" class="foot-link">Cargo Engineering</a></li>
+            <li><a href="#divisions" class="foot-link">Frame Components</a></li>
+            <li><a href="#bike-max" class="foot-link">BIKE MAX Platform</a></li>
+            <li><a href="#aerospace" class="foot-link">Space Modules</a></li>
           </ul>
         </div>
-        <div class="footer-links">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <div>
+          <h4 class="foot-header">Enterprise Linkages</h4>
+          <ul class="foot-links-list">
+            <li><a href="#about" class="foot-link">Corporate Profile</a></li>
+            <li><a href="#leadership" class="foot-link">Management Core</a></li>
+            <li><a href="#contact" class="foot-link">Operations Desk</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 UPINS Private Limited. All rights reserved.</p>
-        <p>Est. 2021 · India</p>
+
+      <div class="foot-bottom">
+        <p>&copy; 2026 UPINS Private Limited. Technical assemblies and properties reserved.</p>
+        <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">STABLE CHANNEL // IN</p>
       </div>
     </div>
   </footer>
 
+  <!-- ==========================================
+       Animations
+       ========================================== -->
+  <!-- Animations -->
   <script>
-    /* ── Header scroll shadow ── */
-    const header = document.getElementById('header');
+    /* Header Scroll Logic */
+    const headerEl = document.getElementById('header');
     window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 50);
+      headerEl.classList.toggle('scrolled', window.scrollY > 40);
+      
+      const scrollBar = document.getElementById('scrollBar');
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (window.scrollY / docHeight) * 100;
+      scrollBar.style.width = `${progress}%`;
     });
 
-    /* ── Mobile menu toggles ── */
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu    = document.getElementById('mobileMenu');
-    const menuIcon      = document.getElementById('menuIcon');
-    const closeIcon     = document.getElementById('closeIcon');
+    /* Mobile Menu Controller */
+    const mMenuBtn = document.getElementById('mobileMenuBtn');
+    const mMenu = document.getElementById('mobileMenu');
+    const mMenuIcon = document.getElementById('menuIcon');
+    const mCloseIcon = document.getElementById('closeIcon');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuIcon.style.display  = isOpen ? 'none'  : 'block';
-      closeIcon.style.display = isOpen ? 'block' : 'none';
+    mMenuBtn.addEventListener('click', () => {
+      const isVisible = mMenu.classList.toggle('open');
+      mMenuIcon.style.display = isVisible ? 'none' : 'block';
+      mCloseIcon.style.display = isVisible ? 'block' : 'none';
     });
 
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        menuIcon.style.display  = 'block';
-        closeIcon.style.display = 'none';
+    mMenu.querySelectorAll('a').forEach(l => {
+      l.addEventListener('click', () => {
+        mMenu.classList.remove('open');
+        mMenuIcon.style.display = 'block';
+        mCloseIcon.style.display = 'none';
       });
     });
 
-    /* ── Smooth scroll transitions ── */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-
-    /* ── Dynamic Top Progress Indicator ── */
-    window.addEventListener('scroll', () => {
-      const scrollIndicator = document.getElementById('scrollIndicator');
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      scrollIndicator.style.width = scrolled + "%";
-    });
-
-    /* ═══════════════════════════════════════════
-       GSAP SCROLL-TRIGGER ANIMATIONS (3D Objects)
-       ═══════════════════════════════════════════ */
-    gsap.registerPlugin(ScrollTrigger);
-
-    // 1. Moving 3D Shipping Container (Triggered by Divisions Section)
-    gsap.to("#scrolling-container-3d", {
-      scrollTrigger: {
-        trigger: "#divisions",
-        start: "top bottom", 
-        end: "bottom top",   
-        scrub: 1.2,          // Link rotation speed directly to scroll drag
-        onEnter: () => gsap.to("#scrolling-container-3d", { opacity: 0.85, duration: 0.4 }),
-        onLeave: () => gsap.to("#scrolling-container-3d", { opacity: 0, duration: 0.4 }),
-        onEnterBack: () => gsap.to("#scrolling-container-3d", { opacity: 0.85, duration: 0.4 }),
-        onLeaveBack: () => gsap.to("#scrolling-container-3d", { opacity: 0, duration: 0.4 })
-      },
-      x: "110vw",            // Translate horizontal coordinates across screen
-      y: "15vh",
-      rotationX: 380,        // Pure geometric axis spinning
-      rotationY: 760,
-      rotationZ: 140,
-      ease: "none"
-    });
-
-    // 2. Diagonal Passing 3D Satellite (Triggered by Aerospace Section)
-    gsap.to("#scrolling-satellite-3d", {
-      scrollTrigger: {
-        trigger: "#aerospace",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1.5,
-        onEnter: () => gsap.to("#scrolling-satellite-3d", { opacity: 0.9, duration: 0.4 }),
-        onLeave: () => gsap.to("#scrolling-satellite-3d", { opacity: 0, duration: 0.4 }),
-        onEnterBack: () => gsap.to("#scrolling-satellite-3d", { opacity: 0.9, duration: 0.4 }),
-        onLeaveBack: () => gsap.to("#scrolling-satellite-3d", { opacity: 0, duration: 0.4 })
-      },
-      x: "-110vw",           // Diagonally passing orbit route
-      y: "35vh",
-      rotationX: 420,
-      rotationY: -190,
-      rotationZ: 270,
-      ease: "none"
-    });
-
-    /* ═══════════════════════════════════════════
-       INTERACTIVE CANVAS WELDING SYSTEM (BIKE MAX)
-       ═══════════════════════════════════════════ */
-    const canvas = document.getElementById('welding-canvas');
-    if (canvas) {
-      const ctx = canvas.getContext('2d');
-      let sparks = [];
-      let width = canvas.width = canvas.offsetWidth;
-      let height = canvas.height = canvas.offsetHeight;
-
-      window.addEventListener('resize', () => {
-        if (!canvas) return;
-        width = canvas.width = canvas.offsetWidth;
-        height = canvas.height = canvas.offsetHeight;
-      });
-
-      // Linear physics variables
-      let weldX = width * 0.25;
-      let weldY = height * 0.35;
-      let targetX = weldX;
-      let targetY = weldY;
-
-      // Map geometric joints on structural container frame image
-      const joints = [
-        {x: 0.25, y: 0.32},
-        {x: 0.65, y: 0.32},
-        {x: 0.65, y: 0.58},
-        {x: 0.35, y: 0.58},
-        {x: 0.35, y: 0.76},
-        {x: 0.72, y: 0.76}
-      ];
-
-      let scrollVel = 0;
-      let lastScrollY = window.scrollY;
-
-      window.addEventListener('scroll', () => {
-        scrollVel = Math.abs(window.scrollY - lastScrollY);
-        lastScrollY = window.scrollY;
-      });
-
-      // Track exact position along index joints relative to page scroll depth
-      ScrollTrigger.create({
-        trigger: "#bike-max",
-        start: "top bottom",
-        end: "bottom top",
-        onUpdate: (self) => {
-          const progress = self.progress;
-          const totalJoints = joints.length;
-          const index = Math.min(Math.floor(progress * (totalJoints - 1)), totalJoints - 2);
-          const t = (progress * (totalJoints - 1)) % 1;
-
-          const p1 = joints[index];
-          const p2 = joints[index + 1];
-
-          targetX = width * (p1.x + (p2.x - p1.x) * t);
-          targetY = height * (p1.y + (p2.y - p1.y) * t);
-        }
-      });
-
-      // Spark properties
-      class Spark {
-        constructor(x, y) {
-          this.x = x;
-          this.y = y;
-          const angle = Math.random() * Math.PI * 2;
-          const speed = Math.random() * 5 + 3;
-          this.vx = Math.cos(angle) * speed;
-          this.vy = Math.sin(angle) * speed - Math.random() * 2.5;
-          this.alpha = 1;
-          this.decay = Math.random() * 0.02 + 0.015;
-          this.size = Math.random() * 3 + 1;
-          this.color = Math.random() > 0.35 ? '#ffaa00' : (Math.random() > 0.5 ? '#ffffdf' : '#ff4400');
-        }
-        update() {
-          this.x += this.vx;
-          this.y += this.vy;
-          this.vy += 0.22; // Gravity simulation downwards
-          this.alpha -= this.decay;
-        }
-        draw(c) {
-          c.save();
-          c.globalAlpha = this.alpha;
-          c.shadowBlur = 8;
-          c.shadowColor = this.color;
-          c.fillStyle = this.color;
-          c.beginPath();
-          c.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-          c.fill();
-          c.restore();
-        }
-      }
-
-      function renderWelding() {
-        ctx.clearRect(0, 0, width, height);
-
-        // Smoothly slide structural welding node positions
-        weldX += (targetX - weldX) * 0.12;
-        weldY += (targetY - weldY) * 0.12;
-
-        const isScrolling = scrollVel > 1.2;
-        scrollVel *= 0.94; // Velocity dampening
-
-        // Scale spark frequency depending on page scroll updates
-        const spawnSparks = isScrolling ? Math.min(Math.floor(scrollVel * 0.6) + 3, 12) : (Math.random() > 0.88 ? 1 : 0);
-
-        const bounding = canvas.getBoundingClientRect();
-        const inViewport = (bounding.top < window.innerHeight && bounding.bottom > 0);
-
-        if (inViewport) {
-          for (let i = 0; i < spawnSparks; i++) {
-            sparks.push(new Spark(weldX, weldY));
-          }
-
-          sparks = sparks.filter(s => {
-            s.update();
-            // Bound sparks to bottom of container boundary image
-            if (s.y > height - 12) {
-              s.y = height - 12;
-              s.vy = -s.vy * 0.35; // Friction bounce dampening
-              s.vx *= 0.5;
-            }
-            s.draw(ctx);
-            return s.alpha > 0;
-          });
-
-          // Draw neon arc core
-          ctx.save();
-          const radialGlow = ctx.createRadialGradient(weldX, weldY, 1, weldX, weldY, 16);
-          radialGlow.addColorStop(0, '#ffffff');
-          radialGlow.addColorStop(0.2, '#00ffff');
-          radialGlow.addColorStop(0.55, 'rgba(0, 255, 255, 0.3)');
-          radialGlow.addColorStop(1, 'rgba(0, 255, 255, 0)');
-          ctx.fillStyle = radialGlow;
-          ctx.beginPath();
-          ctx.arc(weldX, weldY, 16, 0, Math.PI * 2);
-          ctx.fill();
-
-          // Crackling electrical visual lines
-          if (isScrolling && Math.random() > 0.45) {
-            ctx.strokeStyle = '#a3f7ff';
-            ctx.lineWidth = 1.2;
-            ctx.beginPath();
-            ctx.moveTo(weldX, weldY);
-            ctx.lineTo(weldX + (Math.random() - 0.5) * 35, weldY + (Math.random() - 0.5) * 35);
-            ctx.stroke();
-          }
-          ctx.restore();
-        } else {
-          sparks = []; // Memory flush
-        }
-
-        requestAnimationFrame(renderWelding);
-      }
-      renderWelding();
-    }
-
-    /* ═══════════════════════════════════════════
-       INTERACTIVE TACTILE 3D CARD TILT
-       ═══════════════════════════════════════════ */
-    const cards = document.querySelectorAll('.division-card, .aerospace-card, .leader-card, .stat-card');
-    cards.forEach(card => {
-      card.style.transformStyle = "preserve-3d";
-      card.style.perspective = "1000px";
-
-      card.addEventListener('mousemove', (e) => {
-        const bounds = card.getBoundingClientRect();
-        const cursorX = e.clientX - bounds.left;
-        const cursorY = e.clientY - bounds.top;
-        const midX = bounds.width / 2;
-        const midY = bounds.height / 2;
+    /* Card Mouse-Reactive 3D Transform Effects */
+    const rawCards = document.querySelectorAll('.cyber-card, .stat-container');
+    rawCards.forEach(c => {
+      c.addEventListener('mousemove', (e) => {
+        const bounds = c.getBoundingClientRect();
+        const mouseX = e.clientX - bounds.left;
+        const mouseY = e.clientY - bounds.top;
+        const centerDistX = bounds.width / 2;
+        const centerDistY = bounds.height / 2;
         
-        // Compute tilt angles (12 degrees max threshold)
-        const angleX = (midY - cursorY) / 10;
-        const angleY = (cursorX - midX) / 12;
+        const rotationY = ((mouseX - centerDistX) / centerDistX) * 12; // 12deg Max
+        const rotationX = ((centerDistY - mouseY) / centerDistY) * 12;
 
-        card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1.025, 1.025, 1.025)`;
+        c.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg) scale3d(1.03, 1.03, 1.03)`;
         
-        // Z-axis parallax offsets for internal card assets
-        const innerIcon = card.querySelector('.division-icon, .aerospace-card-icon, .leader-avatar');
-        if (innerIcon) {
-          innerIcon.style.transform = "translateZ(30px)";
-          innerIcon.style.boxShadow = "0 8px 20px rgba(26,68,128,0.2)";
-        }
+        const shadowAmtX = ((mouseX - centerDistX) / centerDistX) * -15;
+        const shadowAmtY = ((mouseY - centerDistY) / centerDistY) * -15;
+        c.style.boxShadow = `${shadowAmtX}px ${shadowAmtY}px 30px rgba(0, 242, 254, 0.08), 0 15px 35px rgba(0, 0, 0, 0.6)`;
       });
 
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-        card.style.transition = "transform 0.4s ease";
-        
-        const innerIcon = card.querySelector('.division-icon, .aerospace-card-icon, .leader-avatar');
-        if (innerIcon) {
-          innerIcon.style.transform = "translateZ(0px)";
-          innerIcon.style.boxShadow = "none";
-          innerIcon.style.transition = "transform 0.4s ease";
-        }
+      c.addEventListener('mouseleave', () => {
+        c.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        c.style.boxShadow = 'none';
+        c.style.transition = 'transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s';
       });
 
-      card.addEventListener('mouseenter', () => {
-        card.style.transition = "none";
-        const innerIcon = card.querySelector('.division-icon, .aerospace-card-icon, .leader-avatar');
-        if (innerIcon) innerIcon.style.transition = "none";
+      c.addEventListener('mouseenter', () => {
+        c.style.transition = 'none';
       });
     });
 
-    /* ── Contact form with mailto + hCaptcha ── */
+    /* Contact Form Mailto and Validation Pipeline */
     const contactForm   = document.getElementById('contactForm');
     const formContainer = document.getElementById('formContainer');
     const submitBtn     = document.getElementById('submitBtn');
@@ -2395,15 +1720,15 @@
       e.preventDefault();
       formError.style.display = 'none';
 
-      // Verify hCaptcha
+      // Verify hCaptcha Response
       const captchaResponse = hcaptcha.getResponse();
       if (!captchaResponse) {
-        formError.textContent = 'Please complete the CAPTCHA verification before submitting.';
+        formError.textContent = 'Operational verification required: Complete hCaptcha validation.';
         formError.style.display = 'block';
         return;
       }
 
-      // Gather form values
+      // Read state
       const name     = document.getElementById('name').value.trim();
       const company  = document.getElementById('company').value.trim();
       const email    = document.getElementById('email').value.trim();
@@ -2411,42 +1736,606 @@
       const industry = document.getElementById('industry').value;
       const message  = document.getElementById('message').value.trim();
 
-      // Build mailto
-      const subject = encodeURIComponent('Business Inquiry from ' + name + ' at ' + company);
+      // Structuring operational parameters
+      const subject = encodeURIComponent('Technical Inquiry: ' + name + ' | ' + company);
       const body    = encodeURIComponent(
-        'Name: '     + name     + '\n' +
-        'Company: '  + company  + '\n' +
-        'Email: '    + email    + '\n' +
-        'Country: '  + country  + '\n' +
-        'Industry: ' + industry + '\n\n' +
-        'Message:\n' + message
+        'NAME: '     + name     + '\n' +
+        'COMPANY: '  + company  + '\n' +
+        'EMAIL: '    + email    + '\n' +
+        'REGION: '  + country  + '\n' +
+        'VERTICAL: ' + industry + '\n\n' +
+        'PAYLOAD PARAMETERS:\n' + message
       );
 
       const mailtoLink = 'mailto:avanidhar@upins.in?subject=' + subject + '&body=' + body;
 
-      // Open mail client
-      const a = document.createElement('a');
-      a.href = mailtoLink;
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      // Construct and execute anchor trigger
+      const dynamicAnchor = document.createElement('a');
+      dynamicAnchor.href = mailtoLink;
+      dynamicAnchor.style.display = 'none';
+      document.body.appendChild(dynamicAnchor);
+      dynamicAnchor.click();
+      document.body.removeChild(dynamicAnchor);
 
-      // Show success state
+      // Inject system success module
       formContainer.innerHTML = `
-        <div class="form-success">
-          <div>
-            <div class="form-success-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-            </div>
-            <h3>Inquiry Submitted Successfully</h3>
-            <p>Your email client has opened with the inquiry details. Please send the email to complete your submission. We will get back to you shortly.</p>
+        <div class="form-success border-gradient" style="padding: 4rem; text-align: center; background: rgba(11,15,25,0.7); backdrop-filter: blur(20px);">
+          <div class="form-success-icon" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#10b981; margin:0 auto 2rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
           </div>
+          <h3 style="font-size:1.75rem; margin-bottom:1rem; color:#ffffff;">Transmission Initialized</h3>
+          <p style="color:var(--text-secondary); max-width:28rem; margin:0 auto;">System has linked form values to your local email client. Complete and send the message to resolve the pipeline inquiry.</p>
         </div>`;
     });
+  </script>
+
+  <!-- ==========================================
+       Three.js
+       ========================================== -->
+  <!-- Three.js -->
+  <script>
+    /* ==========================================================
+       SCENE 1: HERO CANVAS (Aesthetic Grid network with Star Particles)
+       ========================================================== */
+    (function initHeroSpace() {
+      const container = document.getElementById('hero-canvas');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+      camera.position.z = 40;
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      // Star Particles
+      const starGeom = new THREE.BufferGeometry();
+      const starCount = 350;
+      const starPos = new Float32Array(starCount * 3);
+      for(let i = 0; i < starCount * 3; i++) {
+        starPos[i] = (Math.random() - 0.5) * 120;
+      }
+      starGeom.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+      
+      const starMat = new THREE.PointsMaterial({
+        color: 0x00f2fe,
+        size: 0.15,
+        transparent: true,
+        opacity: 0.6
+      });
+      const starField = new THREE.Points(starGeom, starMat);
+      scene.add(starField);
+
+      // Cyber Blueprint Grid (Rotating Plane)
+      const gridHelper = new THREE.GridHelper(80, 40, 0x00f2fe, 0x1f2937);
+      gridHelper.position.y = -10;
+      gridHelper.rotation.x = 0.2;
+      scene.add(gridHelper);
+
+      // Track cursor position to dynamically shift grid focus
+      let targetX = 0, targetY = 0;
+      window.addEventListener('mousemove', (e) => {
+        targetX = (e.clientX / window.innerWidth - 0.5) * 8;
+        targetY = (e.clientY / window.innerHeight - 0.5) * 8;
+      });
+
+      function anim() {
+        requestAnimationFrame(anim);
+        
+        starField.rotation.y += 0.0005;
+        gridHelper.rotation.y += 0.001;
+
+        // Smooth camera drift
+        camera.position.x += (targetX - camera.position.x) * 0.05;
+        camera.position.y += (-targetY - camera.position.y) * 0.05;
+        camera.lookAt(0, -5, 0);
+
+        renderer.render(scene, camera);
+      }
+      anim();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+      });
+    })();
+
+
+    /* ==========================================================
+       SCENE 2: HERO COMPONENT WIREFRAME (Right Side Blueprint Module)
+       ========================================================== */
+    (function initHeroModule() {
+      const container = document.getElementById('hero-blueprint-canvas');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 100);
+      camera.position.set(0, 0, 10);
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      const parentGroup = new THREE.Group();
+      scene.add(parentGroup);
+
+      // Procedural Hexagonal Wireframe Payload Container
+      const geom = new THREE.CylinderGeometry(2, 2, 4, 6);
+      const edge = new THREE.EdgesGeometry(geom);
+      const lineMat = new THREE.LineBasicMaterial({ color: 0x00f2fe, linewidth: 2 });
+      const wireframe = new THREE.LineSegments(edge, lineMat);
+      parentGroup.add(wireframe);
+
+      // Inner Rotating Mesh Node Core
+      const innerGeom = new THREE.IcosahedronGeometry(0.8, 1);
+      const innerWire = new THREE.LineSegments(
+        new THREE.EdgesGeometry(innerGeom),
+        new THREE.LineBasicMaterial({ color: 0x4f46e5 })
+      );
+      parentGroup.add(innerWire);
+
+      function anim() {
+        requestAnimationFrame(anim);
+        wireframe.rotation.y += 0.003;
+        wireframe.rotation.z += 0.001;
+        innerWire.rotation.y -= 0.006;
+        renderer.render(scene, camera);
+      }
+      anim();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+      });
+    })();
+
+
+    /* ==========================================================
+       SCENE 3: DIVISIONS SCROLLING 3D CONTAINER (Scroll Control)
+       ========================================================== */
+    (function initDivisionsCanvas() {
+      const container = document.getElementById('divisions-3d-canvas');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 100);
+      camera.position.set(0, 0, 8);
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      // Lights
+      const ambient = new THREE.AmbientLight(0xffffff, 0.2);
+      scene.add(ambient);
+
+      const pointLight1 = new THREE.PointLight(0x00f2fe, 1.5, 50);
+      pointLight1.position.set(10, 10, 10);
+      scene.add(pointLight1);
+
+      const pointLight2 = new THREE.PointLight(0x3b82f6, 1, 50);
+      pointLight2.position.set(-10, -5, 10);
+      scene.add(pointLight2);
+
+      // Procedural 3D Container Mesh
+      const containerGroup = new THREE.Group();
+      scene.add(containerGroup);
+
+      // Base Core
+      const baseGeom = new THREE.BoxGeometry(3, 1.4, 1.4);
+      const baseMat = new THREE.MeshStandardMaterial({
+        color: 0x111827,
+        metalness: 0.9,
+        roughness: 0.2
+      });
+      const containerBase = new THREE.Mesh(baseGeom, baseMat);
+      containerGroup.add(containerBase);
+
+      // Corrugated Panels (Side Ridges)
+      const ridgeGeom = new THREE.BoxGeometry(0.04, 1.38, 0.06);
+      const ridgeMat = new THREE.MeshStandardMaterial({
+        color: 0x00f2fe,
+        metalness: 0.9,
+        roughness: 0.3
+      });
+      
+      for(let i = -27; i <= 27; i++) {
+        if(Math.abs(i) > 2) {
+          const r1 = new THREE.Mesh(ridgeGeom, ridgeMat);
+          r1.position.set(i * 0.05, 0, 0.705);
+          containerGroup.add(r1);
+
+          const r2 = new THREE.Mesh(ridgeGeom, ridgeMat);
+          r2.position.set(i * 0.05, 0, -0.705);
+          containerGroup.add(r2);
+        }
+      }
+
+      // Initial alignment offscreen-ish
+      containerGroup.position.set(1.5, 0.2, 0);
+      containerGroup.rotation.set(0.4, -0.6, 0.1);
+
+      // GSAP ScrollTrigger Connection
+      gsap.to(containerGroup.rotation, {
+        scrollTrigger: {
+          trigger: "#divisions",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        },
+        y: Math.PI * 2 + 0.4,
+        x: Math.PI + 0.2,
+        z: -0.4
+      });
+
+      gsap.to(containerGroup.position, {
+        scrollTrigger: {
+          trigger: "#divisions",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        },
+        x: -2.0,
+        y: -0.4
+      });
+
+      function anim() {
+        requestAnimationFrame(anim);
+        renderer.render(scene, camera);
+      }
+      anim();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+      });
+    })();
+
+
+    /* ==========================================================
+       SCENE 4: BIKE MAX AUTOMATED ASSEMBLY & WELDING ENGINE
+       ========================================================== */
+    (function initBikeMaxCanvas() {
+      const container = document.getElementById('bikemax-3d-canvas');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 100);
+      camera.position.set(0, 0, 6);
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      const parentGroup = new THREE.Group();
+      scene.add(parentGroup);
+
+      // 3D Stacking Rack blueprint
+      const structureGeom = new THREE.BoxGeometry(2.4, 1.8, 1.4);
+      const structureEdges = new THREE.EdgesGeometry(structureGeom);
+      const lines = new THREE.LineSegments(
+        structureEdges,
+        new THREE.LineBasicMaterial({ color: 0x4f46e5, transparent: true, opacity: 0.8 })
+      );
+      parentGroup.add(lines);
+
+      // Platform Shelves
+      const platformGeom = new THREE.BoxGeometry(2.38, 0.05, 1.38);
+      const shelfMat = new THREE.MeshBasicMaterial({ color: 0x0f172a, transparent: true, opacity: 0.9 });
+      
+      const shelf1 = new THREE.Mesh(platformGeom, shelfMat);
+      shelf1.position.y = -0.8;
+      parentGroup.add(shelf1);
+
+      const shelf2 = new THREE.Mesh(platformGeom, shelfMat);
+      shelf2.position.y = 0.1;
+      parentGroup.add(shelf2);
+
+      // Laser Welding Particle Emitter
+      const sparkCount = 120;
+      const sparkGeom = new THREE.BufferGeometry();
+      const sparkPositions = new Float32Array(sparkCount * 3);
+      const sparkVelocities = [];
+
+      for(let i = 0; i < sparkCount; i++) {
+        sparkPositions[i*3] = 0;
+        sparkPositions[i*3+1] = 0;
+        sparkPositions[i*3+2] = 0;
+        sparkVelocities.push({
+          x: (Math.random() - 0.5) * 0.1,
+          y: (Math.random() - 0.5) * 0.1,
+          z: (Math.random() - 0.5) * 0.1
+        });
+      }
+
+      sparkGeom.setAttribute('position', new THREE.BufferAttribute(sparkPositions, 3));
+      const sparkMat = new THREE.PointsMaterial({
+        color: 0x00f2fe,
+        size: 0.06,
+        transparent: true,
+        blending: THREE.AdditiveBlending
+      });
+      const sparkPoints = new THREE.Points(sparkGeom, sparkMat);
+      parentGroup.add(sparkPoints);
+
+      // Moving laser beam emitter node
+      const nodeGeom = new THREE.SphereGeometry(0.08, 16, 16);
+      const nodeMat = new THREE.MeshBasicMaterial({ color: 0x00f2fe });
+      const laserNode = new THREE.Mesh(nodeGeom, nodeMat);
+      parentGroup.add(laserNode);
+
+      // Cycle points across joints
+      const targets = [
+        new THREE.Vector3(-1.2, 0.9, 0.7),
+        new THREE.Vector3(1.2, 0.9, 0.7),
+        new THREE.Vector3(1.2, -0.9, 0.7),
+        new THREE.Vector3(-1.2, -0.9, 0.7),
+        new THREE.Vector3(-1.2, -0.9, -0.7),
+        new THREE.Vector3(1.2, -0.9, -0.7),
+        new THREE.Vector3(1.2, 0.9, -0.7)
+      ];
+
+      let currentTargetIndex = 0;
+      let pathTimer = 0;
+
+      function anim() {
+        requestAnimationFrame(anim);
+
+        parentGroup.rotation.y += 0.002;
+
+        // Animate Laser Node tracking target joints
+        const dest = targets[currentTargetIndex];
+        laserNode.position.lerp(dest, 0.08);
+
+        if(laserNode.position.distanceTo(dest) < 0.15) {
+          currentTargetIndex = (currentTargetIndex + 1) % targets.length;
+        }
+
+        // Animate particles spitting out from the active laser point
+        const posArr = sparkPoints.geometry.attributes.position.array;
+        for(let i = 0; i < sparkCount; i++) {
+          const idx = i * 3;
+          
+          posArr[idx] += sparkVelocities[i].x;
+          posArr[idx+1] += sparkVelocities[i].y;
+          posArr[idx+2] += sparkVelocities[i].z;
+
+          // Drag/Decay
+          sparkVelocities[i].y -= 0.001; // Gravity pull on sparks
+
+          // Reset spark back to laser position
+          if(Math.abs(posArr[idx] - laserNode.position.x) > 1 || posArr[idx+1] < -2) {
+            posArr[idx] = laserNode.position.x;
+            posArr[idx+1] = laserNode.position.y;
+            posArr[idx+2] = laserNode.position.z;
+
+            sparkVelocities[i] = {
+              x: (Math.random() - 0.5) * 0.04,
+              y: (Math.random() * 0.05), // upward burst bias
+              z: (Math.random() - 0.5) * 0.04
+            };
+          }
+        }
+        sparkPoints.geometry.attributes.position.needsUpdate = true;
+
+        renderer.render(scene, camera);
+      }
+      anim();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+      });
+    })();
+
+
+    /* ==========================================================
+       SCENE 5: AEROSPACE FLIGHT MODULE (3D Starfield & Space Satellite)
+       ========================================================== */
+    (function initAerospaceCanvas() {
+      const container = document.getElementById('aerospace-3d-canvas');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 100);
+      camera.position.set(0, 0, 7);
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      const ambient = new THREE.AmbientLight(0xffffff, 0.25);
+      scene.add(ambient);
+
+      const directional = new THREE.DirectionalLight(0xfffbeb, 1.8);
+      directional.position.set(5, 5, 5);
+      scene.add(directional);
+
+      // Deep space system star particles
+      const starGeom = new THREE.BufferGeometry();
+      const starCount = 300;
+      const starPos = new Float32Array(starCount * 3);
+      for(let i = 0; i < starCount * 3; i++) {
+        starPos[i] = (Math.random() - 0.5) * 60;
+      }
+      starGeom.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+      const starMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.05, transparent: true, opacity: 0.5 });
+      const spaceStars = new THREE.Points(starGeom, starMat);
+      scene.add(spaceStars);
+
+      // Orbit route line
+      const orbitGeom = new THREE.RingGeometry(3.5, 3.51, 64);
+      const orbitMat = new THREE.MeshBasicMaterial({ color: 0x00f2fe, side: THREE.DoubleSide, transparent: true, opacity: 0.15 });
+      const orbitRing = new THREE.Mesh(orbitGeom, orbitMat);
+      orbitRing.rotation.x = Math.PI / 2.5;
+      scene.add(orbitRing);
+
+      // Procedural Space Satellite Payload Assembly
+      const satGroup = new THREE.Group();
+      scene.add(satGroup);
+
+      // Golden foil core bus body
+      const coreGeom = new THREE.BoxGeometry(0.8, 0.8, 0.8);
+      const coreMat = new THREE.MeshStandardMaterial({
+        color: 0xd97706,
+        metalness: 0.9,
+        roughness: 0.1,
+        emissive: 0x3a2200
+      });
+      const satelliteCore = new THREE.Mesh(coreGeom, coreMat);
+      satGroup.add(satelliteCore);
+
+      // Solar Array panels (Left & Right)
+      const panelGeom = new THREE.BoxGeometry(1.6, 0.35, 0.02);
+      const panelMat = new THREE.MeshStandardMaterial({
+        color: 0x1e3a8a,
+        metalness: 0.8,
+        roughness: 0.1,
+        emissive: 0x091e5a
+      });
+      
+      const lWingGroup = new THREE.Group();
+      const lWing = new THREE.Mesh(panelGeom, panelMat);
+      lWingGroup.add(lWing);
+      
+      // Detail blue grid on panels
+      const gridGeom = new THREE.BoxGeometry(0.015, 0.33, 0.03);
+      const gridMat = new THREE.MeshStandardMaterial({ color: 0x00f2fe });
+      for(let i = -4; i <= 4; i++) {
+        const lineBar = new THREE.Mesh(gridGeom, gridMat);
+        lineBar.position.set(i * 0.16, 0, 0);
+        lWingGroup.add(lineBar);
+      }
+      lWingGroup.position.set(-1.25, 0, 0);
+      satGroup.add(lWingGroup);
+
+      const rWingGroup = lWingGroup.clone();
+      rWingGroup.position.set(1.25, 0, 0);
+      satGroup.add(rWingGroup);
+
+      // Parabolic Antenna Dish
+      const dishGeom = new THREE.ConeGeometry(0.32, 0.15, 16);
+      const dishMat = new THREE.MeshStandardMaterial({ color: 0xe5e7eb, metalness: 0.6 });
+      const dish = new THREE.Mesh(dishGeom, dishMat);
+      dish.rotation.x = Math.PI / 2;
+      dish.position.set(0, 0.52, 0);
+      satGroup.add(dish);
+
+      const rodGeom = new THREE.CylinderGeometry(0.02, 0.02, 0.3, 8);
+      const rod = new THREE.Mesh(rodGeom, dishMat);
+      rod.position.set(0, 0.35, 0);
+      satGroup.add(rod);
+
+      // Space placement
+      satGroup.position.set(-1.6, 0.4, 0);
+      satGroup.rotation.set(0.2, -0.4, 0.2);
+
+      // GSAP flight route scrub mapping
+      gsap.to(satGroup.position, {
+        scrollTrigger: {
+          trigger: "#aerospace",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5
+        },
+        x: 1.8,
+        y: -0.4,
+        z: 0.5
+      });
+
+      gsap.to(satGroup.rotation, {
+        scrollTrigger: {
+          trigger: "#aerospace",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5
+        },
+        y: Math.PI + 0.5,
+        x: Math.PI / 3
+      });
+
+      function anim() {
+        requestAnimationFrame(anim);
+        spaceStars.rotation.y += 0.0003;
+        renderer.render(scene, camera);
+      }
+      anim();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+      });
+    })();
+
+
+    /* ==========================================================
+       SCENE 6: CONTACT INTERACTIVE VECTOR BLUEPRINT BACKGROUND
+       ========================================================== */
+    (function initContactCanvas() {
+      const container = document.getElementById('contact-3d-canvas');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(50, container.offsetWidth / container.offsetHeight, 0.1, 100);
+      camera.position.z = 15;
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      // Floating structural system components (Blueprint wireframes)
+      const group = new THREE.Group();
+      scene.add(group);
+
+      const geometries = [
+        new THREE.TorusGeometry(2.5, 0.05, 16, 100),
+        new THREE.RingGeometry(1.8, 1.82, 64),
+        new THREE.IcosahedronGeometry(1.2, 1)
+      ];
+
+      const edgeCollection = [];
+      geometries.forEach((g, idx) => {
+        const edge = new THREE.EdgesGeometry(g);
+        const edgesObj = new THREE.LineSegments(
+          edge,
+          new THREE.LineBasicMaterial({ color: 0x00f2fe, transparent: true, opacity: 0.15 })
+        );
+        edgesObj.position.set((idx - 1) * 6, (idx - 1) * 1.5, 0);
+        group.add(edgesObj);
+        edgeCollection.push(edgesObj);
+      });
+
+      function anim() {
+        requestAnimationFrame(anim);
+        edgeCollection.forEach((mesh, idx) => {
+          mesh.rotation.y += 0.002 * (idx + 1);
+          mesh.rotation.x += 0.001;
+        });
+        renderer.render(scene, camera);
+      }
+      anim();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+      });
+    })();
   </script>
 </body>
 </html>
