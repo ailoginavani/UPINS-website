@@ -46,7 +46,6 @@
 
   <!-- ═══════════════════════════════════════════
        STRUCTURED DATA – Organisation (JSON-LD)
-       Google uses this for Knowledge Panel & rich results
   ═══════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
@@ -154,6 +153,11 @@
 
   <!-- hCaptcha -->
   <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+  <!-- GSAP & ScrollTrigger for Scroll Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <style>
     /* Reset and Base */
     *, *::before, *::after {
@@ -189,6 +193,19 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--background);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
+      border-radius: 5px;
     }
 
     a {
@@ -214,12 +231,25 @@
       background-clip: text;
     }
 
-    /* Grid Background */
+    /* Grid Background with radial mask */
     .bg-grid {
       background-image: 
         linear-gradient(rgba(26, 68, 128, 0.04) 1px, transparent 1px),
         linear-gradient(90deg, rgba(26, 68, 128, 0.04) 1px, transparent 1px);
       background-size: 60px 60px;
+      position: relative;
+    }
+
+    /* Scroll Progress Glow Bar */
+    .scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      background: linear-gradient(90deg, #1a4480, #2563eb, #00ffcc);
+      z-index: 100;
+      box-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
     }
 
     /* Container */
@@ -492,7 +522,7 @@
     }
 
     /* ── Section Styles ── */
-    section { padding: 4rem 0; }
+    section { padding: 4rem 0; position: relative; }
 
     @media (min-width: 640px) { section { padding: 6rem 0; } }
     @media (min-width: 1024px) { section { padding: 8rem 0; } }
@@ -557,6 +587,11 @@
       border: 1px solid var(--border);
       background: var(--background);
       border-radius: 4px;
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s;
+    }
+    .stat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(26, 68, 128, 0.1);
     }
 
     @media (min-width: 640px) {
@@ -609,6 +644,8 @@
       background: #ffffff;
       transition: all 0.3s;
       border-radius: 4px;
+      transform-style: preserve-3d;
+      perspective: 1000px;
     }
 
     @media (min-width: 640px) {
@@ -618,13 +655,14 @@
     .division-card:hover {
       background: #f8faff;
       border-color: rgba(37,99,235,0.3);
-      box-shadow: 0 4px 20px rgba(26,68,128,0.08);
+      box-shadow: 0 10px 30px rgba(26,68,128,0.12);
     }
 
     .division-card-inner {
       display: flex;
       align-items: flex-start;
       gap: 1.25rem;
+      transform-style: preserve-3d;
     }
 
     .division-icon {
@@ -636,7 +674,7 @@
       border: 1px solid var(--border);
       background: var(--background);
       color: var(--accent);
-      transition: all 0.3s;
+      transition: all 0.3s ease-out;
       border-radius: 4px;
     }
 
@@ -708,12 +746,26 @@
       border: 1px solid var(--border);
       overflow: hidden;
       border-radius: 4px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
     .bike-max-image img {
       width: 100%; height: 100%;
       object-fit: contain;
       padding: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Interactive Sparks Overlay */
+    #welding-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
     }
 
     .bike-max-content h3 { font-size: 1.25rem; margin-bottom: 1rem; }
@@ -736,6 +788,12 @@
       background: var(--background);
       border: 1px solid var(--border);
       border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .feature-item:hover {
+      border-color: rgba(26,68,128,0.25);
+      background: #f8faff;
+      transform: translateX(5px);
     }
 
     .feature-icon {
@@ -775,6 +833,12 @@
       color: var(--foreground);
       font-size: 0.875rem;
       border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .engagement-item:hover {
+      background: #ffffff;
+      border-color: #059669;
+      transform: translateY(-2px);
     }
 
     .engagement-item svg { color: #059669; }
@@ -817,11 +881,13 @@
       background: #ffffff;
       transition: all 0.3s;
       border-radius: 4px;
+      transform-style: preserve-3d;
+      perspective: 1000px;
     }
 
     .aerospace-card:hover {
       border-color: rgba(37,99,235,0.3);
-      box-shadow: 0 4px 20px rgba(26,68,128,0.08);
+      box-shadow: 0 10px 30px rgba(26,68,128,0.12);
     }
 
     .aerospace-card-icon {
@@ -833,7 +899,7 @@
       background: var(--background);
       color: var(--accent);
       margin-bottom: 1rem;
-      transition: all 0.3s;
+      transition: all 0.3s ease-out;
       border-radius: 4px;
     }
 
@@ -910,6 +976,8 @@
       background: var(--background);
       transition: all 0.3s;
       border-radius: 4px;
+      transform-style: preserve-3d;
+      perspective: 1000px;
     }
 
     @media (min-width: 640px) {
@@ -918,7 +986,7 @@
 
     .leader-card:hover {
       border-color: rgba(37,99,235,0.3);
-      box-shadow: 0 4px 20px rgba(26,68,128,0.09);
+      box-shadow: 0 10px 30px rgba(26,68,128,0.12);
     }
 
     .leader-avatar {
@@ -932,6 +1000,7 @@
       font-weight: 700;
       margin-bottom: 1.5rem;
       border-radius: 4px;
+      transition: transform 0.3s ease-out;
     }
 
     .leader-name { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.25rem; }
@@ -1078,7 +1147,7 @@
       .captcha-wrapper {
         transform-origin: left top;
         transform: scale(0.85);
-        height: 78px; /* 92px * 0.85 */
+        height: 78px;
       }
     }
 
@@ -1243,9 +1312,172 @@
     }
 
     @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ═══════════════════════════════════════════
+       CSS 3D MODELS LAYER (Fixed Behind Content)
+       ═══════════════════════════════════════════ */
+    .scroll-3d-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2; /* Sits behind headers and interactive cards */
+      overflow: hidden;
+    }
+
+    /* 3D Shipping Container */
+    .container-3d-wrapper {
+      position: absolute;
+      top: 40%;
+      left: -300px;
+      transform-style: preserve-3d;
+      perspective: 1200px;
+      opacity: 0;
+    }
+    .container-3d {
+      width: 220px;
+      height: 90px;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+    .container-3d .face {
+      position: absolute;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: inset 0 0 25px rgba(0,0,0,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    /* Ribbed/Corrugated Industrial Container texture */
+    .container-3d .front, .container-3d .back {
+      width: 220px;
+      height: 90px;
+      background: repeating-linear-gradient(90deg, #1e4480, #1e4480 8px, #15325c 8px, #15325c 10px);
+    }
+    .container-3d .left, .container-3d .right {
+      width: 90px;
+      height: 90px;
+      background: repeating-linear-gradient(90deg, #15325c, #15325c 8px, #102647 8px, #102647 10px);
+    }
+    .container-3d .top, .container-3d .bottom {
+      width: 220px;
+      height: 90px;
+      background: #1e4480;
+    }
+    /* Centering transformations */
+    .container-3d .front  { transform: rotateY(0deg) translateZ(45px); }
+    .container-3d .back   { transform: rotateY(180deg) translateZ(45px); }
+    .container-3d .left   { left: 65px; transform: rotateY(-90deg) translateZ(110px); }
+    .container-3d .right  { left: 65px; transform: rotateY(90deg) translateZ(110px); }
+    .container-3d .top    { top: 0; transform: rotateX(90deg) translateZ(45px); }
+    .container-3d .bottom { top: 0; transform: rotateX(-90deg) translateZ(45px); }
+
+    /* 3D Satellite */
+    .satellite-3d-wrapper {
+      position: absolute;
+      top: 25%;
+      right: -300px;
+      transform-style: preserve-3d;
+      perspective: 1200px;
+      opacity: 0;
+    }
+    .satellite-3d {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+    .satellite-3d .sat-core {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+    .satellite-3d .sat-core .face {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+      /* Gold thermal space foil texture */
+      background: linear-gradient(135deg, #f59e0b 30%, #b45309 90%);
+    }
+    .satellite-3d .sat-core .front  { transform: rotateY(0deg) translateZ(40px); }
+    .satellite-3d .sat-core .back   { transform: rotateY(180deg) translateZ(40px); }
+    .satellite-3d .sat-core .left   { transform: rotateY(-90deg) translateZ(40px); }
+    .satellite-3d .sat-core .right  { transform: rotateY(90deg) translateZ(40px); }
+    .satellite-3d .sat-core .top    { transform: rotateX(90deg) translateZ(40px); }
+    .satellite-3d .sat-core .bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+    .satellite-3d .solar-panel {
+      position: absolute;
+      width: 160px;
+      height: 32px;
+      background: repeating-linear-gradient(90deg, #1e3a8a, #1e3a8a 12px, #3b82f6 12px, #3b82f6 14px);
+      border: 1.5px solid #60a5fa;
+      border-radius: 2px;
+      box-shadow: 0 0 15px rgba(37,99,235,0.45);
+      top: 24px;
+    }
+    .satellite-3d .left-panel { left: -165px; transform: rotateY(15deg); }
+    .satellite-3d .right-panel { right: -165px; transform: rotateY(-15deg); }
+
+    .satellite-3d .dish-antenna {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #e5e7eb 30%, #4b5563 80%);
+      top: -30px;
+      left: 17.5px;
+      transform: rotateX(90deg);
+      border: 1px solid #d1d5db;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollIndicator"></div>
+
+  <!-- 3D Background Models Layer (Fixed behind text interactions) -->
+  <div class="scroll-3d-overlay">
+    <!-- Sliding CSS 3D Shipping Container -->
+    <div id="scrolling-container-3d" class="container-3d-wrapper">
+      <div class="container-3d">
+        <div class="face front"><span>UPINS</span></div>
+        <div class="face back"><span>UPINS</span></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
+
+    <!-- Orbiting CSS 3D Space Satellite -->
+    <div id="scrolling-satellite-3d" class="satellite-3d-wrapper">
+      <div class="satellite-3d">
+        <div class="sat-core">
+          <div class="face front"></div>
+          <div class="face back"></div>
+          <div class="face left"></div>
+          <div class="face right"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+        <div class="solar-panel left-panel"></div>
+        <div class="solar-panel right-panel"></div>
+        <div class="dish-antenna"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header id="header">
@@ -1287,8 +1519,8 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <main>
+  <!-- Hero -->
   <section class="hero bg-grid" aria-label="Introduction">
     <div class="hero-bg"></div>
     <div class="hero-glow-1"></div>
@@ -1461,6 +1693,8 @@
       </div>
       <div class="bike-max-grid">
         <div class="bike-max-image">
+          <!-- Live Laser Welding Particle Canvas Overlay -->
+          <canvas id="welding-canvas"></canvas>
           <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BIKE%20MAX%20-bdybsqHTjgdSTDauvP8j6QJED1FlIH.png" alt="BIKE MAX - Advanced bike transportation system showing two-tier scooter stacking in shipping container">
         </div>
         <div class="bike-max-content">
@@ -1822,7 +2056,6 @@
       </div>
     </div>
   </section>
-
   </main>
 
   <!-- Footer -->
@@ -1859,13 +2092,13 @@
   </footer>
 
   <script>
-    /* ── Header scroll ── */
+    /* ── Header scroll shadow ── */
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    /* ── Mobile menu ── */
+    /* ── Mobile menu toggles ── */
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu    = document.getElementById('mobileMenu');
     const menuIcon      = document.getElementById('menuIcon');
@@ -1885,12 +2118,270 @@
       });
     });
 
-    /* ── Smooth scroll ── */
+    /* ── Smooth scroll transitions ── */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    /* ── Dynamic Top Progress Indicator ── */
+    window.addEventListener('scroll', () => {
+      const scrollIndicator = document.getElementById('scrollIndicator');
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      scrollIndicator.style.width = scrolled + "%";
+    });
+
+    /* ═══════════════════════════════════════════
+       GSAP SCROLL-TRIGGER ANIMATIONS (3D Objects)
+       ═══════════════════════════════════════════ */
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Moving 3D Shipping Container (Triggered by Divisions Section)
+    gsap.to("#scrolling-container-3d", {
+      scrollTrigger: {
+        trigger: "#divisions",
+        start: "top bottom", 
+        end: "bottom top",   
+        scrub: 1.2,          // Link rotation speed directly to scroll drag
+        onEnter: () => gsap.to("#scrolling-container-3d", { opacity: 0.85, duration: 0.4 }),
+        onLeave: () => gsap.to("#scrolling-container-3d", { opacity: 0, duration: 0.4 }),
+        onEnterBack: () => gsap.to("#scrolling-container-3d", { opacity: 0.85, duration: 0.4 }),
+        onLeaveBack: () => gsap.to("#scrolling-container-3d", { opacity: 0, duration: 0.4 })
+      },
+      x: "110vw",            // Translate horizontal coordinates across screen
+      y: "15vh",
+      rotationX: 380,        // Pure geometric axis spinning
+      rotationY: 760,
+      rotationZ: 140,
+      ease: "none"
+    });
+
+    // 2. Diagonal Passing 3D Satellite (Triggered by Aerospace Section)
+    gsap.to("#scrolling-satellite-3d", {
+      scrollTrigger: {
+        trigger: "#aerospace",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1.5,
+        onEnter: () => gsap.to("#scrolling-satellite-3d", { opacity: 0.9, duration: 0.4 }),
+        onLeave: () => gsap.to("#scrolling-satellite-3d", { opacity: 0, duration: 0.4 }),
+        onEnterBack: () => gsap.to("#scrolling-satellite-3d", { opacity: 0.9, duration: 0.4 }),
+        onLeaveBack: () => gsap.to("#scrolling-satellite-3d", { opacity: 0, duration: 0.4 })
+      },
+      x: "-110vw",           // Diagonally passing orbit route
+      y: "35vh",
+      rotationX: 420,
+      rotationY: -190,
+      rotationZ: 270,
+      ease: "none"
+    });
+
+    /* ═══════════════════════════════════════════
+       INTERACTIVE CANVAS WELDING SYSTEM (BIKE MAX)
+       ═══════════════════════════════════════════ */
+    const canvas = document.getElementById('welding-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let sparks = [];
+      let width = canvas.width = canvas.offsetWidth;
+      let height = canvas.height = canvas.offsetHeight;
+
+      window.addEventListener('resize', () => {
+        if (!canvas) return;
+        width = canvas.width = canvas.offsetWidth;
+        height = canvas.height = canvas.offsetHeight;
+      });
+
+      // Linear physics variables
+      let weldX = width * 0.25;
+      let weldY = height * 0.35;
+      let targetX = weldX;
+      let targetY = weldY;
+
+      // Map geometric joints on structural container frame image
+      const joints = [
+        {x: 0.25, y: 0.32},
+        {x: 0.65, y: 0.32},
+        {x: 0.65, y: 0.58},
+        {x: 0.35, y: 0.58},
+        {x: 0.35, y: 0.76},
+        {x: 0.72, y: 0.76}
+      ];
+
+      let scrollVel = 0;
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        scrollVel = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+      });
+
+      // Track exact position along index joints relative to page scroll depth
+      ScrollTrigger.create({
+        trigger: "#bike-max",
+        start: "top bottom",
+        end: "bottom top",
+        onUpdate: (self) => {
+          const progress = self.progress;
+          const totalJoints = joints.length;
+          const index = Math.min(Math.floor(progress * (totalJoints - 1)), totalJoints - 2);
+          const t = (progress * (totalJoints - 1)) % 1;
+
+          const p1 = joints[index];
+          const p2 = joints[index + 1];
+
+          targetX = width * (p1.x + (p2.x - p1.x) * t);
+          targetY = height * (p1.y + (p2.y - p1.y) * t);
+        }
+      });
+
+      // Spark properties
+      class Spark {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 5 + 3;
+          this.vx = Math.cos(angle) * speed;
+          this.vy = Math.sin(angle) * speed - Math.random() * 2.5;
+          this.alpha = 1;
+          this.decay = Math.random() * 0.02 + 0.015;
+          this.size = Math.random() * 3 + 1;
+          this.color = Math.random() > 0.35 ? '#ffaa00' : (Math.random() > 0.5 ? '#ffffdf' : '#ff4400');
+        }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          this.vy += 0.22; // Gravity simulation downwards
+          this.alpha -= this.decay;
+        }
+        draw(c) {
+          c.save();
+          c.globalAlpha = this.alpha;
+          c.shadowBlur = 8;
+          c.shadowColor = this.color;
+          c.fillStyle = this.color;
+          c.beginPath();
+          c.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          c.fill();
+          c.restore();
+        }
+      }
+
+      function renderWelding() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Smoothly slide structural welding node positions
+        weldX += (targetX - weldX) * 0.12;
+        weldY += (targetY - weldY) * 0.12;
+
+        const isScrolling = scrollVel > 1.2;
+        scrollVel *= 0.94; // Velocity dampening
+
+        // Scale spark frequency depending on page scroll updates
+        const spawnSparks = isScrolling ? Math.min(Math.floor(scrollVel * 0.6) + 3, 12) : (Math.random() > 0.88 ? 1 : 0);
+
+        const bounding = canvas.getBoundingClientRect();
+        const inViewport = (bounding.top < window.innerHeight && bounding.bottom > 0);
+
+        if (inViewport) {
+          for (let i = 0; i < spawnSparks; i++) {
+            sparks.push(new Spark(weldX, weldY));
+          }
+
+          sparks = sparks.filter(s => {
+            s.update();
+            // Bound sparks to bottom of container boundary image
+            if (s.y > height - 12) {
+              s.y = height - 12;
+              s.vy = -s.vy * 0.35; // Friction bounce dampening
+              s.vx *= 0.5;
+            }
+            s.draw(ctx);
+            return s.alpha > 0;
+          });
+
+          // Draw neon arc core
+          ctx.save();
+          const radialGlow = ctx.createRadialGradient(weldX, weldY, 1, weldX, weldY, 16);
+          radialGlow.addColorStop(0, '#ffffff');
+          radialGlow.addColorStop(0.2, '#00ffff');
+          radialGlow.addColorStop(0.55, 'rgba(0, 255, 255, 0.3)');
+          radialGlow.addColorStop(1, 'rgba(0, 255, 255, 0)');
+          ctx.fillStyle = radialGlow;
+          ctx.beginPath();
+          ctx.arc(weldX, weldY, 16, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Crackling electrical visual lines
+          if (isScrolling && Math.random() > 0.45) {
+            ctx.strokeStyle = '#a3f7ff';
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.moveTo(weldX, weldY);
+            ctx.lineTo(weldX + (Math.random() - 0.5) * 35, weldY + (Math.random() - 0.5) * 35);
+            ctx.stroke();
+          }
+          ctx.restore();
+        } else {
+          sparks = []; // Memory flush
+        }
+
+        requestAnimationFrame(renderWelding);
+      }
+      renderWelding();
+    }
+
+    /* ═══════════════════════════════════════════
+       INTERACTIVE TACTILE 3D CARD TILT
+       ═══════════════════════════════════════════ */
+    const cards = document.querySelectorAll('.division-card, .aerospace-card, .leader-card, .stat-card');
+    cards.forEach(card => {
+      card.style.transformStyle = "preserve-3d";
+      card.style.perspective = "1000px";
+
+      card.addEventListener('mousemove', (e) => {
+        const bounds = card.getBoundingClientRect();
+        const cursorX = e.clientX - bounds.left;
+        const cursorY = e.clientY - bounds.top;
+        const midX = bounds.width / 2;
+        const midY = bounds.height / 2;
+        
+        // Compute tilt angles (12 degrees max threshold)
+        const angleX = (midY - cursorY) / 10;
+        const angleY = (cursorX - midX) / 12;
+
+        card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1.025, 1.025, 1.025)`;
+        
+        // Z-axis parallax offsets for internal card assets
+        const innerIcon = card.querySelector('.division-icon, .aerospace-card-icon, .leader-avatar');
+        if (innerIcon) {
+          innerIcon.style.transform = "translateZ(30px)";
+          innerIcon.style.boxShadow = "0 8px 20px rgba(26,68,128,0.2)";
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        card.style.transition = "transform 0.4s ease";
+        
+        const innerIcon = card.querySelector('.division-icon, .aerospace-card-icon, .leader-avatar');
+        if (innerIcon) {
+          innerIcon.style.transform = "translateZ(0px)";
+          innerIcon.style.boxShadow = "none";
+          innerIcon.style.transition = "transform 0.4s ease";
+        }
+      });
+
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = "none";
+        const innerIcon = card.querySelector('.division-icon, .aerospace-card-icon, .leader-avatar');
+        if (innerIcon) innerIcon.style.transition = "none";
       });
     });
 
