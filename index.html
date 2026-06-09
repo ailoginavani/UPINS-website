@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ==========================================
+       SEO 
+       ========================================== -->
+  <!-- SEO -->
   <title>UPINS Private Limited | Engineering Advanced Logistics and Aerospace Systems</title>
   <meta name="description" content="UPINS Private Limited is an India-based engineering company specialising in shipping container manufacturing, BIKE MAX two-wheeler transport systems, and satellite aerospace component development. Founded 2021.">
   <meta name="keywords" content="UPINS, UPINS Private Limited, shipping container manufacturer India, BIKE MAX, two wheeler logistics, container engineering, aerospace systems India, satellite components, logistics engineering, container components, Up India Solutions">
@@ -138,8 +142,8 @@
 
   <style>
     :root {
-      --bg-dark: #030712;
-      --bg-dark-secondary: #0b0f19;
+      --bg-dark: #02040a;
+      --bg-dark-secondary: #080c14;
       --accent: #00f2fe;
       --accent-secondary: #0072ff;
       --accent-amber: #f59e0b;
@@ -168,7 +172,9 @@
       font-family: var(--font-display);
       background-color: var(--bg-dark);
       -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
+      line-height: 1.75;
+      letter-spacing: -0.01em;
+      overflow-x: hidden;
     }
 
     ::-selection {
@@ -191,15 +197,27 @@
     .container {
       max-width: 1340px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 1.5rem;
       position: relative;
       z-index: 5;
     }
 
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 2.5rem;
+      }
+    }
+
     section {
-      padding: 10rem 0;
+      padding: 6rem 0;
       position: relative;
       overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        padding: 10rem 0;
+      }
     }
 
     .border-gradient {
@@ -211,7 +229,7 @@
       inset: 0;
       border-radius: inherit;
       padding: 1px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,242,254,0.15) 50%, rgba(255,255,255,0.05));
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,242,254,0.15) 50%, rgba(255,255,255,0.03));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
@@ -221,26 +239,29 @@
     h1, h2, h3, h4 {
       font-family: var(--font-display);
       font-weight: 600;
-      letter-spacing: -0.02em;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
       color: #ffffff;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-secondary);
       font-weight: 300;
+      line-height: 1.75;
+      letter-spacing: -0.01em;
     }
 
     .mono-label {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.18em;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
     }
 
     .mono-label::before {
@@ -254,22 +275,19 @@
     }
 
     .section-title {
-      font-size: 3.5rem;
+      font-size: clamp(2.25rem, 6vw, 3.5rem);
       margin-bottom: 1.5rem;
-      line-height: 1.1;
+      line-height: 1.15;
       background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    @media (max-width: 768px) {
-      .section-title { font-size: 2.5rem; }
-    }
-
     .section-desc {
-      font-size: 1.25rem;
+      font-size: clamp(1.1rem, 2.5vw, 1.25rem);
       max-width: 42rem;
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
+      line-height: 1.7;
     }
 
     .three-bg-canvas {
@@ -285,9 +303,9 @@
       position: absolute;
       inset: 0;
       background-image: 
-        radial-gradient(circle at 50% 50%, transparent 60%, var(--bg-dark) 100%),
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        radial-gradient(circle at 50% 50%, transparent 50%, var(--bg-dark) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
       background-size: 100% 100%, 40px 40px, 40px 40px;
       pointer-events: none;
       z-index: 2;
@@ -296,13 +314,13 @@
     .btn-cyber {
       position: relative;
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 1.25rem 2.5rem;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.1rem 2.2rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       color: #ffffff;
       cursor: pointer;
       display: inline-flex;
@@ -337,12 +355,12 @@
     }
 
     .btn-cyber-primary {
-      background: linear-gradient(135deg, rgba(0, 114, 255, 0.2) 0%, rgba(0, 242, 254, 0.2) 100%);
-      border-color: rgba(0, 242, 254, 0.4);
+      background: linear-gradient(135deg, rgba(0, 114, 255, 0.15) 0%, rgba(0, 242, 254, 0.15) 100%);
+      border-color: rgba(0, 242, 254, 0.3);
     }
 
     .btn-cyber-primary:hover {
-      background: linear-gradient(135deg, rgba(0, 114, 255, 0.4) 0%, rgba(0, 242, 254, 0.4) 100%);
+      background: linear-gradient(135deg, rgba(0, 114, 255, 0.3) 0%, rgba(0, 242, 254, 0.3) 100%);
       border-color: var(--accent);
     }
 
@@ -354,26 +372,39 @@
       z-index: 100;
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       border-bottom: 1px solid transparent;
+      padding: 0.5rem 0;
     }
 
     header.scrolled {
       background: rgba(3, 7, 18, 0.85);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 0.5rem 0;
+      padding: 0.25rem 0;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 90px;
+      height: 70px;
+    }
+
+    @media (min-width: 1024px) {
+      .header-inner {
+        height: 90px;
+      }
     }
 
     .logo-img {
-      height: 56px;
+      height: 48px;
       width: auto;
       transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    @media (min-width: 1024px) {
+      .logo-img {
+        height: 56px;
+      }
     }
 
     .logo-img:hover {
@@ -381,9 +412,15 @@
     }
 
     .nav-desktop {
-      display: flex;
-      gap: 3rem;
+      display: none;
+      gap: 2.5rem;
       align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+      }
     }
 
     .nav-link {
@@ -418,12 +455,19 @@
     }
 
     .mobile-menu-btn {
-      display: none;
+      display: block;
       background: none;
       border: none;
       color: #ffffff;
       cursor: pointer;
       z-index: 110;
+      padding: 0.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
     }
 
     .mobile-menu {
@@ -432,13 +476,14 @@
       right: -100%;
       width: 100%;
       height: 100vh;
-      background: var(--bg-dark);
+      background: rgba(2, 4, 10, 0.95);
+      backdrop-filter: blur(24px);
       z-index: 95;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 2.5rem;
+      gap: 2rem;
       transition: right 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
@@ -447,12 +492,7 @@
     }
 
     .mobile-menu .nav-link {
-      font-size: 1.25rem;
-    }
-
-    @media (max-width: 1024px) {
-      .nav-desktop { display: none; }
-      .mobile-menu-btn { display: block; }
+      font-size: 1.15rem;
     }
 
     .scroll-bar {
@@ -466,61 +506,78 @@
     }
 
     .cyber-card {
-      background: rgba(11, 15, 25, 0.5);
+      background: rgba(11, 15, 25, 0.4);
       backdrop-filter: blur(10px);
       border-radius: 8px;
-      padding: 3rem;
+      padding: 2rem;
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       transform-style: preserve-3d;
       will-change: transform, box-shadow;
     }
 
+    @media (min-width: 768px) {
+      .cyber-card {
+        padding: 3rem;
+      }
+    }
+
     .cyber-card:hover {
-      background: rgba(11, 15, 25, 0.8);
+      background: rgba(11, 15, 25, 0.7);
       transform: translateY(-8px) scale(1.01);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 242, 254, 0.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 242, 254, 0.03);
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 6rem;
+      grid-template-columns: 1fr;
+      gap: 4rem;
       align-items: center;
     }
 
-    @media (max-width: 1024px) {
-      .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+    @media (min-width: 1024px) {
+      .about-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 6rem;
+      }
     }
 
     .stats-layout {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
     }
 
-    @media (max-width: 640px) {
-      .stats-layout { grid-template-columns: 1fr; }
+    @media (min-width: 640px) {
+      .stats-layout {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .stats-layout {
+        grid-template-columns: 1fr;
+      }
     }
 
     .stat-container {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.04);
       border-radius: 6px;
-      padding: 2.5rem 1.5rem;
+      padding: 2rem 1.25rem;
       text-align: center;
       transition: all 0.3s ease;
     }
 
     .stat-container:hover {
-      background: rgba(0, 242, 254, 0.03);
-      border-color: rgba(0, 242, 254, 0.2);
+      background: rgba(0, 242, 254, 0.02);
+      border-color: rgba(0, 242, 254, 0.15);
     }
 
     .stat-num {
-      font-size: 3rem;
+      font-size: clamp(2.25rem, 5vw, 3rem);
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       font-family: var(--font-display);
       background: linear-gradient(135deg, #ffffff, var(--accent));
       -webkit-background-clip: text;
@@ -529,80 +586,98 @@
 
     .stat-desc {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       color: var(--text-secondary);
     }
 
     .divisions-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    @media (max-width: 1024px) {
-      .divisions-grid { grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .divisions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
     }
 
     .div-card-icon {
-      width: 64px;
-      height: 64px;
-      background: rgba(0, 242, 254, 0.05);
-      border: 1px solid rgba(0, 242, 254, 0.15);
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 242, 254, 0.03);
+      border: 1px solid rgba(0, 242, 254, 0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent);
-      margin-bottom: 2rem;
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+      margin-bottom: 1.75rem;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.05);
     }
 
     .div-card-title {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
+      font-size: clamp(1.4rem, 4vw, 1.75rem);
+      margin-bottom: 0.75rem;
     }
 
     .div-card-desc {
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
+      font-size: 1rem;
+      margin-bottom: 1.75rem;
     }
 
     .div-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 0.6rem;
     }
 
     .tag {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       color: var(--accent);
-      background: rgba(0, 242, 254, 0.05);
-      border: 1px solid rgba(0, 242, 254, 0.1);
-      padding: 0.35rem 0.85rem;
+      background: rgba(0, 242, 254, 0.03);
+      border: 1px solid rgba(0, 242, 254, 0.08);
+      padding: 0.3rem 0.75rem;
       border-radius: 4px;
     }
 
     .bike-max-layout {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 6rem;
+      grid-template-columns: 1fr;
+      gap: 4rem;
       align-items: center;
     }
 
-    @media (max-width: 1024px) {
-      .bike-max-layout { grid-template-columns: 1fr; gap: 4rem; }
+    @media (min-width: 1024px) {
+      .bike-max-layout {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 6rem;
+      }
     }
 
     .visual-wrapper-3d {
       width: 100%;
-      height: 500px;
+      height: 320px;
       position: relative;
       border-radius: 12px;
       overflow: hidden;
-      background: rgba(11, 15, 25, 0.3);
+      background: rgba(11, 15, 25, 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .visual-wrapper-3d {
+        height: 420px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .visual-wrapper-3d {
+        height: 500px;
+      }
     }
 
     .badge-patent {
@@ -610,131 +685,143 @@
       align-items: center;
       gap: 0.5rem;
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--accent-green);
-      background: rgba(16, 185, 129, 0.08);
-      border: 1px solid rgba(16, 185, 129, 0.2);
-      padding: 0.5rem 1rem;
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      padding: 0.4rem 0.85rem;
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .feature-points {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
     }
 
     .feat-point {
       display: flex;
-      gap: 1.5rem;
-      padding: 1.5rem;
+      gap: 1.25rem;
+      padding: 1.25rem;
       background: rgba(255, 255, 255, 0.01);
-      border: 1px solid rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.03);
       border-radius: 6px;
       transition: all 0.3s ease;
     }
 
     .feat-point:hover {
-      background: rgba(255, 255, 255, 0.02);
-      border-color: rgba(0, 242, 254, 0.1);
+      background: rgba(255, 255, 255, 0.015);
+      border-color: rgba(0, 242, 254, 0.08);
     }
 
     .feat-icon {
       color: var(--accent);
       flex-shrink: 0;
-      margin-top: 0.25rem;
+      margin-top: 0.2rem;
     }
 
     .feat-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 0.25rem;
     }
 
     .partners-block {
       border-top: 1px solid var(--border-color);
-      padding-top: 2rem;
+      padding-top: 1.75rem;
     }
 
     .partner-label {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       color: var(--text-secondary);
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: 0.85rem;
       letter-spacing: 0.05em;
     }
 
     .partner-flex {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.85rem;
     }
 
     .partner-pill {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 0.6rem 1.25rem;
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.5rem 1rem;
       border-radius: 6px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #ffffff;
       display: flex;
       align-items: center;
       gap: 0.5rem;
       transition: all 0.3s ease;
     }
+    
     .partner-pill:hover {
       border-color: var(--accent);
-      background: rgba(0, 242, 254, 0.02);
+      background: rgba(0, 242, 254, 0.01);
     }
 
     .partner-pill::before {
       content: '';
       display: block;
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       background: var(--accent-green);
       border-radius: 50%;
     }
 
     .aerospace-grid-cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
-    @media (max-width: 1200px) {
-      .aerospace-grid-cards { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 640px) {
+      .aerospace-grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
-    @media (max-width: 640px) {
-      .aerospace-grid-cards { grid-template-columns: 1fr; }
+
+    @media (min-width: 1200px) {
+      .aerospace-grid-cards {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     .aero-banner {
-      margin-top: 4rem;
-      padding: 4rem;
+      margin-top: 3.5rem;
+      padding: 2.25rem;
       background: linear-gradient(135deg, rgba(3, 7, 18, 0.95), rgba(11, 15, 25, 0.95));
       border-radius: 12px;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      gap: 4rem;
+      align-items: flex-start;
+      gap: 2rem;
     }
 
-    @media (max-width: 1024px) {
-      .aero-banner { flex-direction: column; text-align: center; gap: 2.5rem; padding: 3rem; }
+    @media (min-width: 1024px) {
+      .aero-banner {
+        flex-direction: row;
+        align-items: center;
+        padding: 4rem;
+        gap: 4rem;
+      }
     }
 
     .active-dev-badge {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--accent-amber);
-      background: rgba(245, 158, 11, 0.08);
-      border: 1px solid rgba(245, 158, 11, 0.2);
-      padding: 0.6rem 1.25rem;
+      background: rgba(245, 158, 11, 0.06);
+      border: 1px solid rgba(245, 158, 11, 0.15);
+      padding: 0.5rem 1rem;
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -745,44 +832,47 @@
 
     .lead-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
       max-width: 64rem;
       margin: 0 auto;
     }
 
-    @media (max-width: 768px) {
-      .lead-grid { grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     .lead-card-header {
       display: flex;
       align-items: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
+      gap: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
     .lead-initials {
-      width: 70px;
-      height: 70px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--accent-secondary), var(--accent));
       color: #ffffff;
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+      flex-shrink: 0;
     }
 
     .lead-title-block h3 {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
     }
 
     .lead-title-block p {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--accent);
       text-transform: uppercase;
     }
@@ -792,49 +882,52 @@
       align-items: center;
       gap: 0.5rem;
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       font-weight: 500;
       color: var(--accent);
       transition: color 0.2s;
-      padding: 0.5rem 1rem;
-      border: 1px solid rgba(0, 242, 254, 0.25);
+      padding: 0.45rem 0.9rem;
+      border: 1px solid rgba(0, 242, 254, 0.2);
       border-radius: 4px;
-      background: rgba(0, 242, 254, 0.05);
+      background: rgba(0, 242, 254, 0.03);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .leader-linkedin:hover {
       color: #ffffff;
-      background: rgba(0, 242, 254, 0.15);
+      background: rgba(0, 242, 254, 0.12);
       border-color: var(--accent);
     }
 
     .contact-main-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 6rem;
+      grid-template-columns: 1fr;
+      gap: 4rem;
     }
 
-    @media (max-width: 1024px) {
-      .contact-main-grid { grid-template-columns: 1fr; gap: 4rem; }
+    @media (min-width: 1024px) {
+      .contact-main-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 6rem;
+      }
     }
 
     .contact-item-group {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     .c-item {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .c-icon {
-      width: 50px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.02);
+      width: 46px;
+      height: 46px;
+      background: rgba(255, 255, 255, 0.015);
       border: 1px solid var(--border-color);
       border-radius: 50%;
       display: flex;
@@ -845,37 +938,47 @@
     }
 
     .c-text h4 {
-      font-size: 1.15rem;
-      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
     }
 
     .c-text p {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     .form-wrapper {
-      background: rgba(11, 15, 25, 0.5);
+      background: rgba(11, 15, 25, 0.4);
       backdrop-filter: blur(20px);
       border-radius: 12px;
-      padding: 4rem;
+      padding: 2rem;
     }
 
-    @media (max-width: 640px) {
-      .form-wrapper { padding: 2rem; }
+    @media (min-width: 640px) {
+      .form-wrapper {
+        padding: 3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .form-wrapper {
+        padding: 4rem;
+      }
     }
 
     .input-row {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
-    @media (max-width: 640px) {
-      .input-row { grid-template-columns: 1fr; }
+    @media (min-width: 640px) {
+      .input-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     .input-field-group {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       position: relative;
     }
 
@@ -883,12 +986,12 @@
     .input-field-group select,
     .input-field-group textarea {
       width: 100%;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 6px;
-      padding: 1.25rem 1.5rem;
+      padding: 1.1rem 1.35rem;
       font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #ffffff;
       transition: all 0.3s ease;
     }
@@ -903,20 +1006,20 @@
     .input-field-group textarea:focus {
       outline: none;
       border-color: var(--accent);
-      background: rgba(0, 242, 254, 0.01);
-      box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+      background: rgba(0, 242, 254, 0.005);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.08);
     }
 
     .field-label {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       color: var(--text-secondary);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
     .field-label svg {
@@ -926,50 +1029,66 @@
     footer {
       background-color: #02040a;
       border-top: 1px solid var(--border-color);
-      padding: 6rem 0 3rem;
+      padding: 4rem 0 2rem;
       position: relative;
+    }
+
+    @media (min-width: 1024px) {
+      footer {
+        padding: 6rem 0 3rem;
+      }
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 4rem;
-      margin-bottom: 4rem;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
     }
 
-    @media (max-width: 1024px) {
-      .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 4rem;
+      }
     }
 
     .foot-logo {
-      height: 52px;
-      margin-bottom: 1.5rem;
+      height: 44px;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 1024px) {
+      .foot-logo {
+        height: 52px;
+        margin-bottom: 1.5rem;
+      }
     }
 
     .foot-desc {
       max-width: 24rem;
-      font-size: 1rem;
+      font-size: 0.95rem;
       line-height: 1.7;
     }
 
     .foot-header {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       color: #ffffff;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .foot-links-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.85rem;
     }
 
     .foot-link {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--text-secondary);
       transition: color 0.3s ease;
     }
@@ -979,52 +1098,61 @@
     }
 
     .foot-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      padding-top: 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .foot-bottom p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .hero-panel {
       position: relative;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       z-index: 5;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-panel {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 100vh;
+      }
     }
 
     .hero-tech-container {
-      position: absolute;
-      right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 45%;
-      height: 60vh;
+      position: relative;
+      width: 100%;
+      height: 300px;
+      margin-top: 2.5rem;
       z-index: 10;
       pointer-events: none;
     }
 
-    @media (max-width: 1024px) {
+    @media (min-width: 768px) {
       .hero-tech-container {
-        position: relative;
-        transform: none;
-        width: 100%;
-        height: 40vh;
-        top: 0;
-        right: 0;
-        margin-top: 2rem;
+        height: 400px;
       }
-      .hero-panel {
-        height: auto;
-        padding-top: 10rem;
-        padding-bottom: 6rem;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-tech-container {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45%;
+        height: 60vh;
+        margin-top: 0;
       }
     }
   </style>
@@ -1033,6 +1161,10 @@
 
   <div class="scroll-bar" id="scrollBar"></div>
 
+  <!-- ==========================================
+       Header
+       ========================================== -->
+  <!-- Header -->
   <header id="header">
     <div class="container">
       <div class="header-inner">
@@ -1071,20 +1203,24 @@
   </header>
 
   <main>
+  <!-- ==========================================
+       Hero
+       ========================================== -->
+  <!-- Hero -->
   <section class="hero-panel" aria-label="Introduction">
     <div class="cyber-grid-overlay"></div>
     <div id="hero-canvas" class="three-bg-canvas"></div>
     
-    <div class="container">
+    <div class="container" style="width:100%;">
       <div style="max-width: 50rem;">
         <span class="mono-label">Est. 2021 · Engineering Excellence</span>
-        <h1 style="font-size: 5.5rem; line-height: 1.0; margin-bottom: 2rem; background: linear-gradient(135deg, #ffffff 40%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <h1 style="font-size: clamp(2.5rem, 8vw, 5.25rem); line-height: 1.05; margin-bottom: 1.75rem; background: linear-gradient(135deg, #ffffff 40%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
           Engineering Advanced Logistics and Aerospace Systems.
         </h1>
-        <p class="hero-subtitle" style="font-size: 1.4rem; max-width: 42rem; margin-bottom: 3.5rem; line-height: 1.6;">
+        <p class="hero-subtitle" style="font-size: clamp(1.1rem, 3vw, 1.35rem); max-width: 42rem; margin-bottom: 3rem; line-height: 1.65;">
           Shipping container manufacturing, mobility transport systems, and aerospace engineering solutions.
         </p>
-        <div class="hero-buttons" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+        <div class="hero-buttons" style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
           <a href="#divisions" class="btn-cyber btn-cyber-primary">
             Explore Solutions
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1102,6 +1238,10 @@
     </div>
   </section>
 
+  <!-- ==========================================
+       About
+       ========================================== -->
+  <!-- About -->
   <section id="about" style="background-color: var(--bg-dark-secondary);">
     <div class="cyber-grid-overlay"></div>
     <div class="container">
@@ -1131,6 +1271,10 @@
     </div>
   </section>
 
+  <!-- ==========================================
+       Divisions
+       ========================================== -->
+  <!-- Divisions -->
   <section id="divisions" style="background-color: var(--bg-dark);">
     <div id="divisions-3d-canvas" class="three-bg-canvas"></div>
     <div class="cyber-grid-overlay"></div>
@@ -1220,6 +1364,10 @@
     </div>
   </section>
 
+  <!-- ==========================================
+       BIKE MAX
+       ========================================== -->
+  <!-- BIKE MAX -->
   <section id="bike-max" style="background-color: var(--bg-dark-secondary);">
     <div class="cyber-grid-overlay"></div>
     <div class="container">
@@ -1289,6 +1437,10 @@
     </div>
   </section>
 
+  <!-- ==========================================
+       Aerospace
+       ========================================== -->
+  <!-- Aerospace -->
   <section id="aerospace" style="background-color: var(--bg-dark);">
     <div id="aerospace-3d-canvas" class="three-bg-canvas"></div>
     <div class="cyber-grid-overlay"></div>
@@ -1359,10 +1511,10 @@
 
       <div class="aero-banner border-gradient">
         <div>
-          <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">Engineering for Space</h3>
+          <h3 style="font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 0.5rem;">Engineering for Space</h3>
           <p style="max-width: 32rem;">Delivering aerospace-grade engineering solutions for satellite systems, contributing to India's growing space technology sector.</p>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 1rem;">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;">
           <span class="active-dev-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.25rem;">
               <path d="M13 7 9 3 5 7l4 4"></path>
@@ -1373,18 +1525,19 @@
             </svg>
             Active Development
           </span>
-          <div class="partner-flex" style="justify-content: flex-end;">
-            <a href="https://www.maargin.in/" target="_blank" rel="noopener noreferrer" class="partner-pill">Maargin</a>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ==========================================
+       Leadership
+       ========================================== -->
+  <!-- Leadership -->
   <section id="leadership" style="background-color: var(--bg-dark-secondary);">
     <div class="cyber-grid-overlay"></div>
     <div class="container">
-      <div style="text-align: center; margin-bottom: 6rem;">
+      <div style="text-align: center; margin-bottom: 4rem;">
         <span class="mono-label">Leadership</span>
         <h2 class="section-title" style="margin-bottom: 1rem;">Founding Team</h2>
         <p style="max-width: 36rem; margin: 0 auto;">Technical leadership building industrial engineering capabilities</p>
@@ -1432,6 +1585,10 @@
     </div>
   </section>
 
+  <!-- ==========================================
+       Contact
+       ========================================== -->
+  <!-- Contact -->
   <section id="contact" style="background-color: var(--bg-dark);">
     <div id="contact-3d-canvas" class="three-bg-canvas"></div>
     <div class="cyber-grid-overlay"></div>
@@ -1577,6 +1734,10 @@
   </section>
   </main>
 
+  <!-- ==========================================
+       Footer
+       ========================================== -->
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -1610,6 +1771,10 @@
     </div>
   </footer>
 
+  <!-- ==========================================
+       Animations
+       ========================================== -->
+  <!-- Animations -->
   <script>
     /* Header Scroll Logic */
     const headerEl = document.getElementById('header');
@@ -1642,10 +1807,13 @@
       });
     });
 
-    /* Card Mouse-Reactive 3D Transform Effects */
+    /* Card Mouse-Reactive 3D Transform Effects with Performance Protection */
     const rawCards = document.querySelectorAll('.cyber-card, .stat-container');
     rawCards.forEach(c => {
       c.addEventListener('mousemove', (e) => {
+        // Bypass 3D tilts on small touch viewports to guarantee page scroll performance
+        if (window.innerWidth < 1024) return;
+        
         const bounds = c.getBoundingClientRect();
         const mouseX = e.clientX - bounds.left;
         const mouseY = e.clientY - bounds.top;
@@ -1735,7 +1903,20 @@
     });
   </script>
 
+  <!-- ==========================================
+       Three.js
+       ========================================== -->
+  <!-- Three.js -->
   <script>
+    /* Helper: Set exact responsive dimensions on render frames */
+    function setFrameSize(container, renderer, camera) {
+      const width = container.offsetWidth;
+      const height = container.offsetHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+
     /* ==========================================================
        SCENE 1: HERO CANVAS (Aesthetic Grid network with Star Particles)
        ========================================================== */
@@ -1749,11 +1930,11 @@
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(container.offsetWidth, container.offsetHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
       const starGeom = new THREE.BufferGeometry();
-      const starCount = 350;
+      const starCount = window.innerWidth < 768 ? 150 : 350; // Optimized particle counts for mobile
       const starPos = new Float32Array(starCount * 3);
       for(let i = 0; i < starCount * 3; i++) {
         starPos[i] = (Math.random() - 0.5) * 120;
@@ -1776,6 +1957,7 @@
 
       let targetX = 0, targetY = 0;
       window.addEventListener('mousemove', (e) => {
+        if (window.innerWidth < 1024) return;
         targetX = (e.clientX / window.innerWidth - 0.5) * 8;
         targetY = (e.clientY / window.innerHeight - 0.5) * 8;
       });
@@ -1786,8 +1968,10 @@
         starField.rotation.y += 0.0005;
         gridHelper.rotation.y += 0.001;
 
-        camera.position.x += (targetX - camera.position.x) * 0.05;
-        camera.position.y += (-targetY - camera.position.y) * 0.05;
+        if (window.innerWidth >= 1024) {
+          camera.position.x += (targetX - camera.position.x) * 0.05;
+          camera.position.y += (-targetY - camera.position.y) * 0.05;
+        }
         camera.lookAt(0, -5, 0);
 
         renderer.render(scene, camera);
@@ -1795,9 +1979,7 @@
       anim();
 
       window.addEventListener('resize', () => {
-        camera.aspect = container.offsetWidth / container.offsetHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        setFrameSize(container, renderer, camera);
       });
     })();
 
@@ -1814,7 +1996,7 @@
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(container.offsetWidth, container.offsetHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
       const parentGroup = new THREE.Group();
@@ -1843,9 +2025,7 @@
       anim();
 
       window.addEventListener('resize', () => {
-        camera.aspect = container.offsetWidth / container.offsetHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        setFrameSize(container, renderer, camera);
       });
     })();
 
@@ -1862,7 +2042,7 @@
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(container.offsetWidth, container.offsetHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
       const ambient = new THREE.AmbientLight(0xffffff, 0.2);
@@ -1895,7 +2075,9 @@
         roughness: 0.3
       });
       
-      for(let i = -27; i <= 27; i++) {
+      const ridgeDensity = window.innerWidth < 768 ? 14 : 27; // Drop polycount slightly on phones
+      const stepValue = window.innerWidth < 768 ? 2 : 1;
+      for(let i = -27; i <= 27; i += stepValue) {
         if(Math.abs(i) > 2) {
           const r1 = new THREE.Mesh(ridgeGeom, ridgeMat);
           r1.position.set(i * 0.05, 0, 0.705);
@@ -1907,7 +2089,18 @@
         }
       }
 
-      containerGroup.position.set(1.5, 0.2, 0);
+      // Configure responsive sizing parameters for layout shifts
+      function layoutConfig() {
+        if (window.innerWidth < 1024) {
+          containerGroup.position.set(0, 2.2, 0); // Reposition out of text way on tablets/mobiles
+          containerGroup.scale.set(0.75, 0.75, 0.75);
+        } else {
+          containerGroup.position.set(1.5, 0.2, 0);
+          containerGroup.scale.set(1, 1, 1);
+        }
+      }
+      layoutConfig();
+
       containerGroup.rotation.set(0.4, -0.6, 0.1);
 
       gsap.to(containerGroup.rotation, {
@@ -1922,16 +2115,18 @@
         z: -0.4
       });
 
-      gsap.to(containerGroup.position, {
-        scrollTrigger: {
-          trigger: "#divisions",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true
-        },
-        x: -2.0,
-        y: -0.4
-      });
+      if (window.innerWidth >= 1024) {
+        gsap.to(containerGroup.position, {
+          scrollTrigger: {
+            trigger: "#divisions",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          },
+          x: -2.0,
+          y: -0.4
+        });
+      }
 
       function anim() {
         requestAnimationFrame(anim);
@@ -1940,9 +2135,8 @@
       anim();
 
       window.addEventListener('resize', () => {
-        camera.aspect = container.offsetWidth / container.offsetHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        setFrameSize(container, renderer, camera);
+        layoutConfig();
       });
     })();
 
@@ -1959,7 +2153,7 @@
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(container.offsetWidth, container.offsetHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
       const parentGroup = new THREE.Group();
@@ -1984,7 +2178,7 @@
       shelf2.position.y = 0.1;
       parentGroup.add(shelf2);
 
-      const sparkCount = 120;
+      const sparkCount = window.innerWidth < 768 ? 60 : 120; // Halved for mobile GPUs
       const sparkGeom = new THREE.BufferGeometry();
       const sparkPositions = new Float32Array(sparkCount * 3);
       const sparkVelocities = [];
@@ -2068,9 +2262,7 @@
       anim();
 
       window.addEventListener('resize', () => {
-        camera.aspect = container.offsetWidth / container.offsetHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        setFrameSize(container, renderer, camera);
       });
     })();
 
@@ -2087,7 +2279,7 @@
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(container.offsetWidth, container.offsetHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
       const ambient = new THREE.AmbientLight(0xffffff, 0.25);
@@ -2098,7 +2290,7 @@
       scene.add(directional);
 
       const starGeom = new THREE.BufferGeometry();
-      const starCount = 300;
+      const starCount = window.innerWidth < 768 ? 100 : 300;
       const starPos = new Float32Array(starCount * 3);
       for(let i = 0; i < starCount * 3; i++) {
         starPos[i] = (Math.random() - 0.5) * 60;
@@ -2165,20 +2357,32 @@
       rod.position.set(0, 0.35, 0);
       satGroup.add(rod);
 
-      satGroup.position.set(-1.6, 0.4, 0);
+      function spaceLayout() {
+        if (window.innerWidth < 1024) {
+          satGroup.position.set(0, 1.8, 0);
+          satGroup.scale.set(0.7, 0.7, 0.7);
+        } else {
+          satGroup.position.set(-1.6, 0.4, 0);
+          satGroup.scale.set(1, 1, 1);
+        }
+      }
+      spaceLayout();
+
       satGroup.rotation.set(0.2, -0.4, 0.2);
 
-      gsap.to(satGroup.position, {
-        scrollTrigger: {
-          trigger: "#aerospace",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.5
-        },
-        x: 1.8,
-        y: -0.4,
-        z: 0.5
-      });
+      if (window.innerWidth >= 1024) {
+        gsap.to(satGroup.position, {
+          scrollTrigger: {
+            trigger: "#aerospace",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.5
+          },
+          x: 1.8,
+          y: -0.4,
+          z: 0.5
+        });
+      }
 
       gsap.to(satGroup.rotation, {
         scrollTrigger: {
@@ -2199,9 +2403,8 @@
       anim();
 
       window.addEventListener('resize', () => {
-        camera.aspect = container.offsetWidth / container.offsetHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        setFrameSize(container, renderer, camera);
+        spaceLayout();
       });
     })();
 
@@ -2218,7 +2421,7 @@
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(container.offsetWidth, container.offsetHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
       const group = new THREE.Group();
@@ -2253,9 +2456,7 @@
       anim();
 
       window.addEventListener('resize', () => {
-        camera.aspect = container.offsetWidth / container.offsetHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        setFrameSize(container, renderer, camera);
       });
     })();
   </script>
