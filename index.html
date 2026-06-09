@@ -426,7 +426,7 @@
       align-items: center;
     }
 
-    @media (min-width: 1100px) { /* Increased desktop nav breakpoint threshold to prevent overlapping text */
+    @media (min-width: 1150px) { /* Increased desktop nav breakpoint threshold to prevent overlapping text */
       .nav-desktop {
         display: flex;
       }
@@ -473,7 +473,7 @@
       padding: 0.5rem;
     }
 
-    @media (min-width: 1100px) {
+    @media (min-width: 1150px) {
       .mobile-menu-btn {
         display: none;
       }
@@ -1183,10 +1183,6 @@
 
   <div class="scroll-bar" id="scrollBar"></div>
 
-  <!-- ==========================================
-       Header
-       ========================================== -->
-  <!-- Header -->
   <header id="header">
     <div class="container">
       <div class="header-inner">
@@ -1225,10 +1221,6 @@
   </header>
 
   <main>
-  <!-- ==========================================
-       Hero
-       ========================================== -->
-  <!-- Hero -->
   <section class="hero-panel" aria-label="Introduction">
     <div class="cyber-grid-overlay"></div>
     <div id="hero-canvas" class="three-bg-canvas"></div>
@@ -1260,10 +1252,6 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       About
-       ========================================== -->
-  <!-- About -->
   <section id="about" style="background-color: var(--bg-dark-secondary);">
     <div class="cyber-grid-overlay"></div>
     <div class="container">
@@ -1293,10 +1281,6 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       Divisions
-       ========================================== -->
-  <!-- Divisions -->
   <section id="divisions" style="background-color: var(--bg-dark);">
     <div id="divisions-3d-canvas" class="three-bg-canvas"></div>
     <div class="cyber-grid-overlay"></div>
@@ -1386,10 +1370,6 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       BIKE MAX
-       ========================================== -->
-  <!-- BIKE MAX -->
   <section id="bike-max" style="background-color: var(--bg-dark-secondary);">
     <div class="cyber-grid-overlay"></div>
     <div class="container">
@@ -1459,10 +1439,6 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       Aerospace
-       ========================================== -->
-  <!-- Aerospace -->
   <section id="aerospace" style="background-color: var(--bg-dark);">
     <div id="aerospace-3d-canvas" class="three-bg-canvas"></div>
     <div class="cyber-grid-overlay"></div>
@@ -1531,7 +1507,6 @@
         </div>
       </div>
 
-      <!-- Aero Banner Redesign: Handled without the Maargin link pill -->
       <div class="aero-banner border-gradient">
         <div>
           <h3 style="font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 0.5rem;">Engineering for Space</h3>
@@ -1737,6 +1712,7 @@
               <textarea id="message" name="message" rows="4" required placeholder="Describe your inquiry..."></textarea>
             </div>
 
+            <!-- Removed textual fallbacks causing bugs. Standard validation placeholder layout. -->
             <div class="captcha-wrapper">
               <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001"></div>
             </div>
@@ -1757,10 +1733,6 @@
   </section>
   </main>
 
-  <!-- ==========================================
-       Footer
-       ========================================== -->
-  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -2053,7 +2025,7 @@
     })();
 
     /* ==========================================================
-       SCENE 3: DIVISIONS SCROLLING 3D CONTAINER (Scroll Control)
+       SCENE 3: DIVISIONS SCROLLING CONTAINER STACKER & UPINS BADGE
        ========================================================== */
     (function initDivisionsCanvas() {
       const container = document.getElementById('divisions-3d-canvas');
@@ -2061,40 +2033,95 @@
 
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 100);
-      camera.position.set(0, 0, 8);
+      camera.position.set(0, 0.3, 8);
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(container.offsetWidth, container.offsetHeight);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
-      // Boosted light parameters to make the container elements clearly visible
-      const ambient = new THREE.AmbientLight(0xffffff, 0.7);
+      // Enhanced lighting matrix to render highly visible, glowing elements
+      const ambient = new THREE.AmbientLight(0xffffff, 0.8);
       scene.add(ambient);
 
       const pointLight1 = new THREE.PointLight(0x00f2fe, 3, 50);
-      pointLight1.position.set(10, 10, 10);
+      pointLight1.position.set(10, 12, 10);
       scene.add(pointLight1);
 
       const dirLight = new THREE.DirectionalLight(0xffffff, 2);
-      dirLight.position.set(5, 5, 8);
+      dirLight.position.set(5, 8, 8);
       scene.add(dirLight);
 
-      const containerGroup = new THREE.Group();
-      scene.add(containerGroup);
+      // Create Container Stacker parent group
+      const stackerGroup = new THREE.Group();
+      scene.add(stackerGroup);
 
-      // Modified body material values to render as a brilliant reflective electric blue
-      const baseGeom = new THREE.BoxGeometry(3, 1.4, 1.4);
+      // 1. Stacker Chassis (Heavy Forklift Body)
+      const chassisGeom = new THREE.BoxGeometry(1.6, 0.8, 1.1);
+      const chassisMat = new THREE.MeshStandardMaterial({
+        color: 0x1e293b,
+        metalness: 0.85,
+        roughness: 0.2
+      });
+      const chassis = new THREE.Mesh(chassisGeom, chassisMat);
+      chassis.position.set(-1.4, 0.4, 0);
+      stackerGroup.add(chassis);
+
+      // 2. Spinning Stacker Wheels
+      const wheelGeom = new THREE.CylinderGeometry(0.38, 0.35, 0.28, 16);
+      const wheelMat = new THREE.MeshStandardMaterial({ color: 0x090d16, roughness: 0.8 });
+      const wheels = [];
+      const wheelOffsets = [
+        {x: -1.9, y: 0.1, z: 0.6},
+        {x: -1.9, y: 0.1, z: -0.6},
+        {x: -0.9, y: 0.1, z: 0.6},
+        {x: -0.9, y: 0.1, z: -0.6}
+      ];
+      wheelOffsets.forEach(pos => {
+        const wheel = new THREE.Mesh(wheelGeom, wheelMat);
+        wheel.rotation.x = Math.PI / 2;
+        wheel.position.set(pos.x, pos.y, pos.z);
+        stackerGroup.add(wheel);
+        wheels.push(wheel);
+      });
+
+      // 3. Stacker Telescopic Boom Arm
+      const boomGeom = new THREE.BoxGeometry(2.2, 0.16, 0.28);
+      const boomMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, metalness: 0.9, roughness: 0.15 });
+      const boom = new THREE.Mesh(boomGeom, boomMat);
+      boom.position.set(-0.3, 1.2, 0);
+      boom.rotation.z = -0.32; // Angled forward
+      stackerGroup.add(boom);
+
+      // 4. Heavy Spreader Frame Attachment
+      const spreaderGeom = new THREE.BoxGeometry(2.2, 0.1, 0.9);
+      const spreaderMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.9, roughness: 0.25 });
+      const spreader = new THREE.Mesh(spreaderGeom, spreaderMat);
+      spreader.position.set(0.75, 0.9, 0);
+      stackerGroup.add(spreader);
+
+      // Structural Hydraulic Pistons connecting spreader to boom
+      const linkGeom = new THREE.CylinderGeometry(0.04, 0.04, 0.35, 8);
+      const linkMat = new THREE.MeshStandardMaterial({ color: 0x00f2fe, emissive: 0x002222 });
+      const link1 = new THREE.Mesh(linkGeom, linkMat);
+      link1.position.set(0.75, 1.05, 0);
+      stackerGroup.add(link1);
+
+      // 5. Highly Visible 3D Electric Blue Container with UPINS Badge
+      const containerObj = new THREE.Group();
+      containerObj.position.set(0.75, 0.15, 0);
+
+      const baseGeom = new THREE.BoxGeometry(2.3, 1.2, 1.0);
       const baseMat = new THREE.MeshStandardMaterial({
-        color: 0x0052cc, // Striking Electric Blue base
+        color: 0x0052cc, // Striking Electric Blue
         metalness: 0.95,
         roughness: 0.15,
         emissive: 0x001d4a
       });
       const containerBase = new THREE.Mesh(baseGeom, baseMat);
-      containerGroup.add(containerBase);
+      containerObj.add(containerBase);
 
-      const ridgeGeom = new THREE.BoxGeometry(0.04, 1.38, 0.06);
+      const ridgeGeom = new THREE.BoxGeometry(0.03, 1.18, 0.05);
       const ridgeMat = new THREE.MeshStandardMaterial({
         color: 0x00f2fe, // Vibrant glowing neon cyan ridge accents
         metalness: 0.9,
@@ -2103,58 +2130,107 @@
       });
       
       const stepValue = window.innerWidth < 768 ? 2 : 1;
-      for(let i = -27; i <= 27; i += stepValue) {
+      for(let i = -20; i <= 20; i += stepValue) {
         if(Math.abs(i) > 2) {
           const r1 = new THREE.Mesh(ridgeGeom, ridgeMat);
-          r1.position.set(i * 0.05, 0, 0.705);
-          containerGroup.add(r1);
+          r1.position.set(i * 0.05, 0, 0.505);
+          containerObj.add(r1);
 
           const r2 = new THREE.Mesh(ridgeGeom, ridgeMat);
-          r2.position.set(i * 0.05, 0, -0.705);
-          containerGroup.add(r2);
+          r2.position.set(i * 0.05, 0, -0.505);
+          containerObj.add(r2);
         }
       }
 
+      // 6. Glowing "UPINS" custom pixel-matrix brand badge on the front container face
+      const badgeGroup = new THREE.Group();
+      badgeGroup.position.set(0, 0, 0.51); // Placed exactly on the front facing wall
+
+      const plateGeom = new THREE.PlaneGeometry(1.2, 0.42);
+      const plateMat = new THREE.MeshBasicMaterial({ color: 0x040812, side: THREE.DoubleSide });
+      const plate = new THREE.Mesh(plateGeom, plateMat);
+      badgeGroup.add(plate);
+
+      const borderGeom = new THREE.BoxGeometry(1.24, 0.46, 0.01);
+      const borderMat = new THREE.MeshBasicMaterial({ color: 0x00f2fe });
+      const border = new THREE.Mesh(borderGeom, borderMat);
+      badgeGroup.add(border);
+
+      const pixelMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const pxGeom = new THREE.BoxGeometry(0.045, 0.045, 0.02);
+
+      function drawPixelLetter(matrix, offsetX) {
+        for (let row = 0; row < matrix.length; row++) {
+          for (let col = 0; col < matrix[row].length; col++) {
+            if (matrix[row][col] === 1) {
+              const px = new THREE.Mesh(pxGeom, pixelMat);
+              px.position.set(offsetX + col * 0.045, 0.09 - row * 0.045, 0.01);
+              badgeGroup.add(px);
+            }
+          }
+        }
+      }
+
+      // 3x5 Pixel fonts U, P, I, N, S
+      const charU = [[1,0,1],[1,0,1],[1,0,1],[1,0,1],[1,1,1]];
+      const charP = [[1,1,1],[1,0,1],[1,1,1],[1,0,0],[1,0,0]];
+      const charI = [[1,1,1],[0,1,0],[0,1,0],[0,1,0],[1,1,1]];
+      const charN = [[1,0,1],[1,1,1],[1,1,1],[1,0,1],[1,0,1]];
+      const charS = [[1,1,1],[1,0,0],[1,1,1],[0,0,1],[1,1,1]];
+
+      drawPixelLetter(charU, -0.42);
+      drawPixelLetter(charP, -0.21);
+      drawPixelLetter(charI, 0.03);
+      drawPixelLetter(charN, 0.18);
+      drawPixelLetter(charS, 0.39);
+
+      containerObj.add(badgeGroup);
+      stackerGroup.add(containerObj);
+
+      // Mobile scale and position constraints
       function layoutConfig() {
         if (window.innerWidth < 1024) {
-          containerGroup.position.set(0, 2.2, 0);
-          containerGroup.scale.set(0.75, 0.75, 0.75);
+          stackerGroup.position.y = 1.3;
+          stackerGroup.scale.set(0.7, 0.7, 0.7);
         } else {
-          containerGroup.position.set(1.5, 0.2, 0);
-          containerGroup.scale.set(1, 1, 1);
+          stackerGroup.position.y = -0.2;
+          stackerGroup.scale.set(1.15, 1.15, 1.15);
         }
       }
       layoutConfig();
 
-      containerGroup.rotation.set(0.4, -0.6, 0.1);
+      // Configure off-screen start/end parameters
+      const startX = -5.0;
+      const endX = 4.0;
+      stackerGroup.position.x = startX;
+      stackerGroup.rotation.y = -0.3; // Slight angle for perspective depth
 
-      gsap.to(containerGroup.rotation, {
+      // GSAP ScrollTrigger timeline to handle stacker movement from one side to another
+      gsap.to(stackerGroup.position, {
         scrollTrigger: {
           trigger: "#divisions",
           start: "top bottom",
           end: "bottom top",
           scrub: true
         },
-        y: Math.PI * 2 + 0.4,
-        x: Math.PI + 0.2,
-        z: -0.4
+        x: endX
       });
 
-      if (window.innerWidth >= 1024) {
-        gsap.to(containerGroup.position, {
-          scrollTrigger: {
-            trigger: "#divisions",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
-          },
-          x: -2.0,
-          y: -0.4
-        });
-      }
+      // Map rolling wheel rotation based on stacker horizontal movement progress
+      let lastX = startX;
 
       function anim() {
         requestAnimationFrame(anim);
+
+        // Spin wheels based on change in position (rolling mechanism)
+        const deltaX = stackerGroup.position.x - lastX;
+        if (Math.abs(deltaX) > 0.001) {
+          wheels.forEach(w => {
+            w.rotation.y -= deltaX * 2.8; // Rolling angular speed
+          });
+        }
+        lastX = stackerGroup.position.x;
+
         renderer.render(scene, camera);
       }
       anim();
