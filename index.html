@@ -395,10 +395,19 @@
       }
     }
 
+    /* Fixed logo color and spacing properties to prevent layout overlaps */
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: 2rem;
+    }
+
     .logo-img {
       height: 48px;
       width: auto;
       transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      filter: brightness(0) invert(1); /* Made Logo Pure White */
     }
 
     @media (min-width: 1024px) {
@@ -413,11 +422,11 @@
 
     .nav-desktop {
       display: none;
-      gap: 2.5rem;
+      gap: clamp(1rem, 2vw, 2.5rem); /* Dynamic fluid gap preventing overlaps */
       align-items: center;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1100px) { /* Increased desktop nav breakpoint threshold to prevent overlapping text */
       .nav-desktop {
         display: flex;
       }
@@ -464,7 +473,7 @@
       padding: 0.5rem;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1100px) {
       .mobile-menu-btn {
         display: none;
       }
@@ -1026,6 +1035,19 @@
       color: var(--accent);
     }
 
+    /* Fixed the Captcha text layout overlap and default iframe style parameters */
+    .captcha-wrapper {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      min-height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
     footer {
       background-color: #02040a;
       border-top: 1px solid var(--border-color);
@@ -1509,6 +1531,7 @@
         </div>
       </div>
 
+      <!-- Aero Banner Redesign: Handled without the Maargin link pill -->
       <div class="aero-banner border-gradient">
         <div>
           <h3 style="font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 0.5rem;">Engineering for Space</h3>
@@ -1934,7 +1957,7 @@
       container.appendChild(renderer.domElement);
 
       const starGeom = new THREE.BufferGeometry();
-      const starCount = window.innerWidth < 768 ? 150 : 350; // Optimized particle counts for mobile
+      const starCount = window.innerWidth < 768 ? 150 : 350;
       const starPos = new Float32Array(starCount * 3);
       for(let i = 0; i < starCount * 3; i++) {
         starPos[i] = (Math.random() - 0.5) * 120;
@@ -2045,37 +2068,40 @@
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       container.appendChild(renderer.domElement);
 
-      const ambient = new THREE.AmbientLight(0xffffff, 0.2);
+      // Boosted light parameters to make the container elements clearly visible
+      const ambient = new THREE.AmbientLight(0xffffff, 0.7);
       scene.add(ambient);
 
-      const pointLight1 = new THREE.PointLight(0x00f2fe, 1.5, 50);
+      const pointLight1 = new THREE.PointLight(0x00f2fe, 3, 50);
       pointLight1.position.set(10, 10, 10);
       scene.add(pointLight1);
 
-      const pointLight2 = new THREE.PointLight(0x3b82f6, 1, 50);
-      pointLight2.position.set(-10, -5, 10);
-      scene.add(pointLight2);
+      const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+      dirLight.position.set(5, 5, 8);
+      scene.add(dirLight);
 
       const containerGroup = new THREE.Group();
       scene.add(containerGroup);
 
+      // Modified body material values to render as a brilliant reflective electric blue
       const baseGeom = new THREE.BoxGeometry(3, 1.4, 1.4);
       const baseMat = new THREE.MeshStandardMaterial({
-        color: 0x111827,
-        metalness: 0.9,
-        roughness: 0.2
+        color: 0x0052cc, // Striking Electric Blue base
+        metalness: 0.95,
+        roughness: 0.15,
+        emissive: 0x001d4a
       });
       const containerBase = new THREE.Mesh(baseGeom, baseMat);
       containerGroup.add(containerBase);
 
       const ridgeGeom = new THREE.BoxGeometry(0.04, 1.38, 0.06);
       const ridgeMat = new THREE.MeshStandardMaterial({
-        color: 0x00f2fe,
+        color: 0x00f2fe, // Vibrant glowing neon cyan ridge accents
         metalness: 0.9,
-        roughness: 0.3
+        roughness: 0.1,
+        emissive: 0x003333
       });
       
-      const ridgeDensity = window.innerWidth < 768 ? 14 : 27; // Drop polycount slightly on phones
       const stepValue = window.innerWidth < 768 ? 2 : 1;
       for(let i = -27; i <= 27; i += stepValue) {
         if(Math.abs(i) > 2) {
@@ -2089,10 +2115,9 @@
         }
       }
 
-      // Configure responsive sizing parameters for layout shifts
       function layoutConfig() {
         if (window.innerWidth < 1024) {
-          containerGroup.position.set(0, 2.2, 0); // Reposition out of text way on tablets/mobiles
+          containerGroup.position.set(0, 2.2, 0);
           containerGroup.scale.set(0.75, 0.75, 0.75);
         } else {
           containerGroup.position.set(1.5, 0.2, 0);
@@ -2178,7 +2203,7 @@
       shelf2.position.y = 0.1;
       parentGroup.add(shelf2);
 
-      const sparkCount = window.innerWidth < 768 ? 60 : 120; // Halved for mobile GPUs
+      const sparkCount = window.innerWidth < 768 ? 60 : 120;
       const sparkGeom = new THREE.BufferGeometry();
       const sparkPositions = new Float32Array(sparkCount * 3);
       const sparkVelocities = [];
