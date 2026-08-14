@@ -3,352 +3,1001 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UPINS Private Limited | Advanced Container & Satellite Manufacturing</title>
+
+  <!-- ==========================================
+       SEO & META DATA
+       ========================================== -->
+  <title>UPINS Private Limited | Engineering Advanced Logistics and Aerospace Systems</title>
+  <meta name="description" content="UPINS Private Limited is an India-based engineering company specialising in shipping container manufacturing, BIKE MAX two-wheeler transport systems, and satellite aerospace component development. Founded 2021.">
+  <meta name="keywords" content="UPINS, UPINS Private Limited, shipping container manufacturer India, BIKE MAX, two wheeler logistics, container engineering, aerospace systems India, satellite components, logistics engineering, container components, Up India Solutions">
+  <meta name="author" content="UPINS Private Limited">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.upins.in/">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.upins.in/">
+  <meta property="og:site_name" content="UPINS Private Limited">
+  <meta property="og:title" content="UPINS Private Limited | Engineering Advanced Logistics and Aerospace Systems">
+  <meta property="og:description" content="India-based engineering company delivering shipping container manufacturing, BIKE MAX mobility logistics, and aerospace satellite component solutions. Est. 2021.">
+  <meta property="og:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png">
+  <meta property="og:image:alt" content="UPINS Private Limited Logo">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- TWITTER / X CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UPINS Private Limited | Engineering Advanced Logistics and Aerospace Systems">
+  <meta name="twitter:description" content="India-based engineering company delivering shipping container manufacturing, BIKE MAX mobility logistics, and aerospace satellite component solutions.">
+  <meta name="twitter:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png">
+
+  <!-- GEO / LOCAL SEO -->
+  <meta name="geo.region" content="IN">
+  <meta name="geo.country" content="India">
+  <meta name="language" content="English">
+
+  <!-- STRUCTURED DATA – Organisation (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UPINS Private Limited",
+    "alternateName": "Up India Solutions",
+    "url": "https://www.upins.in/",
+    "logo": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png",
+    "description": "UPINS Private Limited is an India-based engineering company specialising in shipping container manufacturing, BIKE MAX two-wheeler transport logistics, and aerospace satellite component development.",
+    "foundingDate": "2021",
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Avanidhar Havaldar",
+        "jobTitle": "Managing Director",
+        "sameAs": "https://www.linkedin.com/in/avanidhar-havaldar-72659936/"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressRegion": "India"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "avanidhar@upins.in",
+      "contactType": "business inquiries"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/avanidhar-havaldar-72659936/",
+      "https://www.linkedin.com/in/deepak-hv-hurakadali-10516220/"
+    ]
+  }
+  </script>
+
+  <!-- STRUCTURED DATA – WebPage (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "UPINS Private Limited",
+    "url": "https://www.upins.in/",
+    "description": "Official website of UPINS Private Limited – engineering advanced logistics and aerospace systems.",
+    "inLanguage": "en"
+  }
+  </script>
+
+  <!-- Fonts & CDN Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- GSAP & ScrollTrigger CDN -->
+
+  <!-- Animation & Math Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-    
+    :root {
+      --bg-dark: #030712;
+      --bg-dark-secondary: #0b0f19;
+      --accent: #00f2fe;
+      --accent-secondary: #0072ff;
+      --accent-amber: #f59e0b;
+      --accent-green: #10b981;
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #080c14;
-      color: #f1f5f9;
+      font-family: 'Inter', var(--font-display);
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
       overflow-x: hidden;
     }
-    
-    h1, h2, h3, .font-heading {
-      font-family: 'Space Grotesk', sans-serif;
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
-    
-    /* Glassmorphism Card Style */
-    .glass-card {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
     }
-    
-    /* Scroll track height */
-    .scroll-container {
+
+    .mono-label::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    /* Scroll progress bar */
+    .scroll-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-secondary) 100%);
+      z-index: 101;
+      width: 0;
+    }
+
+    /* United Carriers Style Pinning Stage */
+    .scroll-stage-container {
       height: 500vh;
+      position: relative;
     }
-    
-    /* Fixed viewport animation canvas */
-    .sticky-stage {
+
+    .sticky-viewport {
       position: sticky;
       top: 0;
       height: 100vh;
       width: 100vw;
       overflow: hidden;
     }
-    
-    /* Grid Background Overlay */
-    .tech-grid {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
+
+    .glass-card {
+      background: rgba(11, 15, 25, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
     }
+
+    .border-gradient {
+      position: relative;
+    }
+    .border-gradient::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,242,254,0.15) 50%, rgba(255,255,255,0.05));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* Buttons */
+    .btn-cyber {
+      position: relative;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.4s ease;
+      clip-path: polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px);
+    }
+
+    .btn-cyber-primary {
+      background: linear-gradient(135deg, rgba(0, 114, 255, 0.3) 0%, rgba(0, 242, 254, 0.3) 100%);
+      border-color: rgba(0, 242, 254, 0.4);
+    }
+
+    .btn-cyber-primary:hover {
+      background: linear-gradient(135deg, rgba(0, 114, 255, 0.6) 0%, rgba(0, 242, 254, 0.6) 100%);
+      border-color: var(--accent);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);
+    }
+
+    /* Mobile Nav */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-dark);
+      z-index: 95;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      transition: right 0.4s ease;
+    }
+    .mobile-menu.open { right: 0; }
   </style>
 </head>
-<body class="tech-grid">
+<body>
 
-  <!-- Header / Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 px-8 py-5 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between glass-card rounded-2xl px-6 py-3">
-      <div class="flex items-center gap-3">
-        <span class="text-2xl font-bold tracking-wider text-sky-400 font-heading">UPINS</span>
-        <span class="text-xs text-slate-400 uppercase tracking-widest border-l border-slate-700 pl-3">PVT LTD</span>
-      </div>
-      <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
-        <a href="#containers" class="hover:text-sky-400 transition-colors">Container Manufacturing</a>
-        <a href="#logistics" class="hover:text-sky-400 transition-colors">Rail & Freight Systems</a>
-        <a href="#satellite" class="hover:text-sky-400 transition-colors">Satellite Aerospace</a>
-        <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
-      </nav>
-      <a href="#contact" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs uppercase px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-sky-500/20">
-        Consult Direct
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-bar" id="scrollBar"></div>
+
+  <!-- ==========================================
+       Header / Navigation
+       ========================================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between glass-card rounded-2xl py-3">
+      <a href="#" class="flex items-center gap-3">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited" class="h-10 w-auto">
       </a>
+      <nav class="hidden lg:flex gap-8 text-xs font-mono uppercase tracking-widest text-slate-300">
+        <a href="#hero-journey" class="hover:text-cyan-400 transition-colors">Journey Engine</a>
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+        <a href="#divisions" class="hover:text-cyan-400 transition-colors">Divisions</a>
+        <a href="#bike-max" class="hover:text-cyan-400 transition-colors">BIKE MAX</a>
+        <a href="#aerospace" class="hover:text-cyan-400 transition-colors">Aerospace</a>
+        <a href="#leadership" class="hover:text-cyan-400 transition-colors">Leadership</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
+      <a href="mailto:avanidhar@upins.in" class="hidden sm:inline-flex btn-cyber btn-cyber-primary text-xs">
+        Operations Direct
+      </a>
+      <button class="lg:hidden text-white" id="mobileMenuBtn" aria-label="Toggle Menu">
+        <svg id="menuIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="closeIcon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
     </div>
   </header>
 
-  <!-- Main Scroll Container -->
-  <div class="scroll-container" id="scrollContainer">
-    
-    <!-- Sticky Interactive Viewport -->
-    <div class="sticky-stage flex flex-col justify-between">
-      
-      <!-- Stage 1 Background: Land / Highway -->
-      <div id="landBg" class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-100 z-0">
-        <div class="absolute bottom-0 w-full h-32 bg-slate-800 border-t-2 border-dashed border-slate-600"></div>
-      </div>
-      
-      <!-- Stage 2 Background: Ocean Horizon -->
-      <div id="oceanBg" class="absolute inset-0 bg-gradient-to-b from-sky-950 via-slate-900 to-blue-950 opacity-0 z-0">
-        <div class="absolute bottom-0 w-full h-48 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
-        <div id="oceanWaves" class="absolute bottom-0 w-full h-12 bg-sky-500/10 backdrop-blur-sm border-t border-sky-400/30"></div>
-      </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#hero-journey" class="text-lg font-mono text-slate-200">Journey Engine</a>
+    <a href="#about" class="text-lg font-mono text-slate-200">About</a>
+    <a href="#divisions" class="text-lg font-mono text-slate-200">Divisions</a>
+    <a href="#bike-max" class="text-lg font-mono text-slate-200">BIKE MAX</a>
+    <a href="#aerospace" class="text-lg font-mono text-slate-200">Aerospace</a>
+    <a href="#leadership" class="text-lg font-mono text-slate-200">Leadership</a>
+    <a href="#contact" class="text-lg font-mono text-slate-200">Contact</a>
+  </nav>
 
-      <!-- Stage 3 Background: Sky & Cloud Lift -->
-      <div id="cloudBg" class="absolute inset-0 bg-gradient-to-b from-slate-900 via-sky-900 to-indigo-950 opacity-0 z-0">
-        <svg class="absolute inset-0 w-full h-full text-slate-300/10 pointer-events-none" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-          <circle cx="200" cy="300" r="250" fill="currentColor"/>
-          <circle cx="800" cy="400" r="300" fill="currentColor"/>
-          <circle cx="500" cy="700" r="350" fill="currentColor"/>
-        </svg>
-      </div>
-
-      <!-- Stage 4 Background: Low Earth Orbit Space -->
-      <div id="spaceBg" class="absolute inset-0 bg-gradient-to-b from-black via-slate-950 to-indigo-950 opacity-0 z-0">
-        <!-- Stars -->
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-900/20 via-slate-950 to-black"></div>
-        <!-- Earth Curvature at Bottom -->
-        <div class="absolute -bottom-[600px] left-1/2 -translate-x-1/2 w-[1800px] h-[800px] rounded-[100%] bg-gradient-to-t from-cyan-500/20 via-sky-600/40 to-transparent border-t-2 border-cyan-300/50 shadow-[0_-50px_100px_rgba(56,189,248,0.3)]"></div>
-      </div>
-
-      <!-- ANIMATED MOVING VEHICLES / OBJECTS -->
-
-      <!-- 1. Truck with 40ft Container -->
-      <div id="truckContainer" class="absolute bottom-16 -left-[600px] z-10 w-[500px] transition-transform">
-        <svg viewBox="0 0 800 300" class="w-full drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]">
-          <!-- Truck Cabin -->
-          <path d="M 600 180 L 680 180 L 730 220 L 730 260 L 600 260 Z" fill="#0284c7"/>
-          <path d="M 660 190 L 710 225 L 660 225 Z" fill="#38bdf8"/>
-          <!-- 40ft Shipping Container -->
-          <rect x="50" y="100" width="540" height="160" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
-          <path d="M 80 100 V 260 M 110 100 V 260 M 140 100 V 260 M 170 100 V 260 M 200 100 V 260 M 230 100 V 260 M 260 100 V 260 M 290 100 V 260 M 320 100 V 260 M 350 100 V 260 M 380 100 V 260 M 410 100 V 260 M 440 100 V 260 M 470 100 V 260 M 500 100 V 260 M 530 100 V 260" stroke="#1e293b" stroke-width="3"/>
-          <text x="320" y="190" fill="#f8fafc" font-size="28" font-weight="bold" font-family="Space Grotesk" text-anchor="middle" letter-spacing="4">UPINS 40FT MULTI-TIER</text>
-          <!-- Wheels -->
-          <circle cx="120" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
-          <circle cx="180" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
-          <circle cx="480" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
-          <circle cx="540" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
-          <circle cx="640" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
-          <circle cx="700" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
-        </svg>
-      </div>
-
-      <!-- 2. Ocean Cargo Ship -->
-      <div id="shipContainer" class="absolute bottom-12 -left-[700px] z-10 w-[650px]">
-        <svg viewBox="0 0 900 300" class="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]">
-          <!-- Ship Hull -->
-          <path d="M 50 180 L 800 180 L 720 270 L 150 270 Z" fill="#0f172a" stroke="#0284c7" stroke-width="3"/>
-          <!-- Stacked Containers -->
-          <rect x="180" y="110" width="160" height="70" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
-          <rect x="350" y="110" width="160" height="70" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
-          <rect x="520" y="110" width="160" height="70" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
-          <rect x="260" y="40" width="160" height="70" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
-          <rect x="430" y="40" width="160" height="70" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
-          <text x="340" y="82" fill="#0f172a" font-size="16" font-weight="bold" font-family="Space Grotesk">UPINS LOGISTICS</text>
-          <!-- Bridge / Tower -->
-          <rect x="700" y="80" width="70" height="100" fill="#f8fafc"/>
-          <rect x="710" y="100" width="50" height="15" fill="#38bdf8"/>
-        </svg>
-      </div>
-
-      <!-- 3. LEO Satellite -->
-      <div id="satelliteContainer" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[600px] opacity-0 scale-50">
-        <svg viewBox="0 0 800 500" class="w-full filter drop-shadow-[0_0_30px_rgba(56,189,248,0.5)]">
-          <!-- Solar Array Left -->
-          <rect x="50" y="200" width="220" height="100" fill="#0284c7" stroke="#38bdf8" stroke-width="3" rx="4"/>
-          <path d="M 105 200 V 300 M 160 200 V 300 M 215 200 V 300 M 50 250 H 270" stroke="#38bdf8" stroke-width="2"/>
-          <!-- Solar Array Right -->
-          <rect x="530" y="200" width="220" height="100" fill="#0284c7" stroke="#38bdf8" stroke-width="3" rx="4"/>
-          <path d="M 585 200 V 300 M 640 200 V 300 M 695 200 V 300 M 530 250 H 750" stroke="#38bdf8" stroke-width="2"/>
-          <!-- Central Satellite Bus Body -->
-          <rect x="320" y="170" width="160" height="160" rx="12" fill="#0f172a" stroke="#f8fafc" stroke-width="4"/>
-          <!-- Gold Thermal Layer Accent -->
-          <rect x="340" y="190" width="120" height="120" rx="6" fill="#eab308" opacity="0.8"/>
-          <!-- High-Gain Antenna Dish -->
-          <path d="M 400 170 C 350 110, 450 110, 400 170 Z" fill="none" stroke="#38bdf8" stroke-width="4"/>
-          <line x1="400" y1="170" x2="400" y2="100" stroke="#38bdf8" stroke-width="3"/>
-          <circle cx="400" cy="100" r="8" fill="#f8fafc"/>
-          <!-- Optical Sensor Array -->
-          <circle cx="400" cy="250" r="28" fill="#0284c7" stroke="#f8fafc" stroke-width="3"/>
-          <circle cx="400" cy="250" r="14" fill="#080c14"/>
-        </svg>
-      </div>
-
-      <!-- DYNAMIC DUAL-PANEL CONTENT DISPLAY -->
-      <div class="relative z-30 max-w-7xl mx-auto px-6 h-full flex items-center">
+  <main>
+    <!-- ==========================================
+         HERO SCROLL JOURNEY (UNITED CARRIERS STYLE)
+         ========================================== -->
+    <section id="hero-journey" class="scroll-stage-container">
+      <div class="sticky-viewport flex flex-col justify-between">
         
-        <!-- SECTION 1: TRUCK & CONTAINER MANUFACTURING -->
-        <div id="infoSection1" class="glass-card p-8 md:p-12 rounded-3xl max-w-xl transition-all duration-500">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            Heavy Manufacturing & Logistics
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-            Advanced Container Manufacturing Systems
-          </h2>
-          <p class="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">
-            UPINS Private Limited specializes in high-durability 40ft container solutions, customized ISO freight modifications, and high-density transport fixtures like <strong>BIKE MAX</strong> for multi-tier rail and highway logistics.
-          </p>
-          <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
-            <div>
-              <div class="text-2xl font-bold text-sky-400 font-heading">40ft Multi-Tier</div>
-              <div class="text-xs text-slate-400">High-Density Freight Racks</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold text-sky-400 font-heading">Rail Integration</div>
-              <div class="text-xs text-slate-400">CONCOR & Automotive Standard</div>
-            </div>
-          </div>
+        <!-- Stage 1 Background: Land / Highway -->
+        <div id="landBg" class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-100 z-0">
+          <div class="absolute bottom-0 w-full h-32 bg-slate-800 border-t-2 border-dashed border-slate-600"></div>
+        </div>
+        
+        <!-- Stage 2 Background: Ocean Horizon -->
+        <div id="oceanBg" class="absolute inset-0 bg-gradient-to-b from-sky-950 via-slate-900 to-blue-950 opacity-0 z-0">
+          <div class="absolute bottom-0 w-full h-48 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
+          <div class="absolute bottom-0 w-full h-12 bg-sky-500/10 backdrop-blur-sm border-t border-sky-400/30"></div>
         </div>
 
-        <!-- SECTION 2: OCEAN & CARGO LOGISTICS -->
-        <div id="infoSection2" class="glass-card p-8 md:p-12 rounded-3xl max-w-xl transition-all duration-500 absolute opacity-0 pointer-events-none">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            Intermodal Shipping & Structures
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-            Global Cargo & Heavy Steel Fabrication
-          </h2>
-          <p class="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">
-            Engineered to withstand extreme marine and rail environments. Our structural container designs deliver zero-deflection integrity, modular locking mechanisms, and scalable fleet deployment.
-          </p>
-          <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
-            <div>
-              <div class="text-2xl font-bold text-blue-400 font-heading">ISO Certified</div>
-              <div class="text-xs text-slate-400">Structural Safety Standards</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold text-blue-400 font-heading">Custom Fixtures</div>
-              <div class="text-xs text-slate-400">Heavy Equipment Modular Fixtures</div>
-            </div>
-          </div>
+        <!-- Stage 3 Background: Sky & Cloud Lift -->
+        <div id="cloudBg" class="absolute inset-0 bg-gradient-to-b from-slate-900 via-sky-900 to-indigo-950 opacity-0 z-0">
+          <svg class="absolute inset-0 w-full h-full text-slate-300/10 pointer-events-none" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <circle cx="200" cy="300" r="250" fill="currentColor"/>
+            <circle cx="800" cy="400" r="300" fill="currentColor"/>
+            <circle cx="500" cy="700" r="350" fill="currentColor"/>
+          </svg>
         </div>
 
-        <!-- SECTION 3: SATELLITE & AEROSPACE MANUFACTURING -->
-        <div id="infoSection3" class="glass-card p-8 md:p-12 rounded-3xl max-w-xl transition-all duration-500 absolute opacity-0 pointer-events-none right-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
-            Aerospace Precision Engineering
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-            LEO Satellite Structural Manufacturing
-          </h2>
-          <p class="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">
-            Partnering with pioneers like Maargin, UPINS manufactures high-precision satellite buses, flight-grade structural frames, and payload housing for Low Earth Orbit (LEO) satellite constellations.
-          </p>
-          <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
-            <div>
-              <div class="text-2xl font-bold text-cyan-400 font-heading">LEO Constellations</div>
-              <div class="text-xs text-slate-400">Precision Sub-Assembly</div>
+        <!-- Stage 4 Background: Low Earth Orbit Space -->
+        <div id="spaceBg" class="absolute inset-0 bg-gradient-to-b from-black via-slate-950 to-indigo-950 opacity-0 z-0">
+          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-900/20 via-slate-950 to-black"></div>
+          <div class="absolute -bottom-[600px] left-1/2 -translate-x-1/2 w-[1800px] h-[800px] rounded-[100%] bg-gradient-to-t from-cyan-500/20 via-sky-600/40 to-transparent border-t-2 border-cyan-300/50 shadow-[0_-50px_100px_rgba(56,189,248,0.3)]"></div>
+        </div>
+
+        <!-- VEHICLE & ORBITAL ANIMATIONS -->
+
+        <!-- 1. Truck with 40ft Container -->
+        <div id="truckContainer" class="absolute bottom-16 -left-[600px] z-10 w-[500px]">
+          <svg viewBox="0 0 800 300" class="w-full drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]">
+            <path d="M 600 180 L 680 180 L 730 220 L 730 260 L 600 260 Z" fill="#0284c7"/>
+            <path d="M 660 190 L 710 225 L 660 225 Z" fill="#38bdf8"/>
+            <rect x="50" y="100" width="540" height="160" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+            <path d="M 80 100 V 260 M 110 100 V 260 M 140 100 V 260 M 170 100 V 260 M 200 100 V 260 M 230 100 V 260 M 260 100 V 260 M 290 100 V 260 M 320 100 V 260 M 350 100 V 260 M 380 100 V 260 M 410 100 V 260 M 440 100 V 260 M 470 100 V 260 M 500 100 V 260 M 530 100 V 260" stroke="#1e293b" stroke-width="3"/>
+            <text x="320" y="190" fill="#f8fafc" font-size="28" font-weight="bold" font-family="Space Grotesk" text-anchor="middle" letter-spacing="4">UPINS 40FT MULTI-TIER</text>
+            <circle cx="120" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
+            <circle cx="180" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
+            <circle cx="480" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
+            <circle cx="540" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
+            <circle cx="640" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
+            <circle cx="700" cy="265" r="22" fill="#334155" stroke="#f8fafc" stroke-width="4"/>
+          </svg>
+        </div>
+
+        <!-- 2. Ocean Cargo Ship -->
+        <div id="shipContainer" class="absolute bottom-12 -left-[700px] z-10 w-[650px]">
+          <svg viewBox="0 0 900 300" class="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]">
+            <path d="M 50 180 L 800 180 L 720 270 L 150 270 Z" fill="#0f172a" stroke="#0284c7" stroke-width="3"/>
+            <rect x="180" y="110" width="160" height="70" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="350" y="110" width="160" height="70" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="520" y="110" width="160" height="70" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="260" y="40" width="160" height="70" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="430" y="40" width="160" height="70" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+            <text x="340" y="82" fill="#0f172a" font-size="16" font-weight="bold" font-family="Space Grotesk">UPINS LOGISTICS</text>
+            <rect x="700" y="80" width="70" height="100" fill="#f8fafc"/>
+            <rect x="710" y="100" width="50" height="15" fill="#38bdf8"/>
+          </svg>
+        </div>
+
+        <!-- 3. LEO Satellite in Space -->
+        <div id="satelliteContainer" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[600px] opacity-0 scale-50">
+          <svg viewBox="0 0 800 500" class="w-full filter drop-shadow-[0_0_30px_rgba(56,189,248,0.5)]">
+            <rect x="50" y="200" width="220" height="100" fill="#0284c7" stroke="#38bdf8" stroke-width="3" rx="4"/>
+            <path d="M 105 200 V 300 M 160 200 V 300 M 215 200 V 300 M 50 250 H 270" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="530" y="200" width="220" height="100" fill="#0284c7" stroke="#38bdf8" stroke-width="3" rx="4"/>
+            <path d="M 585 200 V 300 M 640 200 V 300 M 695 200 V 300 M 530 250 H 750" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="320" y="170" width="160" height="160" rx="12" fill="#0f172a" stroke="#f8fafc" stroke-width="4"/>
+            <rect x="340" y="190" width="120" height="120" rx="6" fill="#eab308" opacity="0.8"/>
+            <path d="M 400 170 C 350 110, 450 110, 400 170 Z" fill="none" stroke="#38bdf8" stroke-width="4"/>
+            <line x1="400" y1="170" x2="400" y2="100" stroke="#38bdf8" stroke-width="3"/>
+            <circle cx="400" cy="100" r="8" fill="#f8fafc"/>
+            <circle cx="400" cy="250" r="28" fill="#0284c7" stroke="#f8fafc" stroke-width="3"/>
+            <circle cx="400" cy="250" r="14" fill="#080c14"/>
+          </svg>
+        </div>
+
+        <!-- DYNAMIC CONTENT PANELS ACCORDING TO STAGE -->
+        <div class="relative z-30 max-w-7xl mx-auto px-6 h-full flex items-center">
+          
+          <!-- Stage 1 Info: Land Freight -->
+          <div id="infoSection1" class="glass-card p-8 md:p-12 rounded-3xl max-w-xl transition-all duration-500">
+            <span class="mono-label">UPINS ENTERPRISE CREDIBILITY</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-none font-heading">
+              Engineering Advanced Systems.
+            </h1>
+            <p class="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">
+              Delivering heavy 40ft shipping container manufacturing, advanced BIKE MAX mobility logistics infrastructure, and satellite aerospace components at national scale.
+            </p>
+            <div class="flex gap-4">
+              <a href="#divisions" class="btn-cyber btn-cyber-primary">Explore Verticals</a>
+              <a href="#contact" class="btn-cyber">Contact HQ</a>
             </div>
-            <div>
-              <div class="text-2xl font-bold text-cyan-400 font-heading">Sub-Micron Tolerances</div>
-              <div class="text-xs text-slate-400">Aerospace-Grade Fabrication</div>
+          </div>
+
+          <!-- Stage 2 Info: Ocean Cargo -->
+          <div id="infoSection2" class="glass-card p-8 md:p-12 rounded-3xl max-w-xl transition-all duration-500 absolute opacity-0 pointer-events-none">
+            <span class="mono-label">INTERMODAL MARITIME FREIGHT</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight font-heading">
+              Heavy Cargo Enclosures & Intermodal Engineering
+            </h2>
+            <p class="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">
+              Manufacturing ISO-compliant 20ft and 40ft standard cargo enclosures, base frames, and high-load composite floor layers engineered for extreme marine environments.
+            </p>
+            <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
+              <div>
+                <div class="text-2xl font-bold text-cyan-400 font-heading">20ft / 40ft</div>
+                <div class="text-xs text-slate-400">Custom ISO Frames</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-cyan-400 font-heading">FEA Validated</div>
+                <div class="text-xs text-slate-400">Finite Stress Analysis</div>
+              </div>
             </div>
           </div>
+
+          <!-- Stage 3 Info: Aerospace / Orbit -->
+          <div id="infoSection3" class="glass-card p-8 md:p-12 rounded-3xl max-w-xl transition-all duration-500 absolute opacity-0 pointer-events-none right-6">
+            <span class="mono-label">FLIGHT PATH ORBITAL SYSTEMS</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight font-heading">
+              LEO Satellite Structural Manufacturing
+            </h2>
+            <p class="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">
+              Partnering with aerospace innovators like Maargin, UPINS manufactures flight-grade satellite buses, solar panel deployment joints, and RF payload housings for orbital constellations.
+            </p>
+            <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
+              <div>
+                <div class="text-2xl font-bold text-amber-400 font-heading">LEO Bus Cores</div>
+                <div class="text-xs text-slate-400">Sub-Micron Assembly</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-amber-400 font-heading">Active Phase</div>
+                <div class="text-xs text-slate-400">Partnered with Maargin</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Scroll Stage HUD Indicator -->
+        <div class="relative z-30 max-w-7xl mx-auto w-full px-6 pb-6 flex items-center justify-between text-xs font-mono text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>CURRENT OPERATIONAL STAGE: <span id="stageName" class="text-white font-bold">LAND FREIGHT & HEAVY MANUFACTURING</span></span>
+          </div>
+          <div>SCROLL DOWN TO PROGRESS ENGINE</div>
         </div>
 
       </div>
+    </section>
 
-      <!-- Bottom Status Indicator Bar -->
-      <div class="relative z-30 max-w-7xl mx-auto w-full px-6 pb-6 flex items-center justify-between text-xs text-slate-400 font-mono">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>STAGE: <span id="stageName" class="text-white font-bold">LAND FREIGHT</span></span>
+    <!-- ==========================================
+         ABOUT SECTION
+         ========================================== -->
+    <section id="about" class="py-24 bg-slate-950 relative border-t border-slate-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7">
+            <span class="mono-label">ENGINEERING PROFILE</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">Up India Solutions</h2>
+            <p class="text-slate-300 text-lg mb-4 leading-relaxed">
+              UPINS Private Limited is a high-tech engineering enterprise operating at the leading edge of heavy container structures, automated cargo configurations, and national aerospace systems.
+            </p>
+            <p class="text-slate-400 mb-4 leading-relaxed">
+              Founded in 2021, we deploy advanced materials science, high-precision CAD modeling, and industrial operations methodology to supply commercial transport giants, defense units, and critical aerospace initiatives.
+            </p>
+            <p class="text-slate-400 leading-relaxed">
+              Our cross-functional technical teams deliver container engineering assemblies, dynamic loading systems, and orbit-qualified space mechanism modules.
+            </p>
+          </div>
+          <div class="lg:col-span-5 grid grid-cols-1 gap-6">
+            <div class="glass-card border-gradient p-8 rounded-2xl text-center">
+              <div class="text-4xl font-bold text-cyan-400 font-heading mb-1">2021</div>
+              <div class="text-xs font-mono text-slate-400 uppercase tracking-widest">Founding Year</div>
+            </div>
+            <div class="glass-card border-gradient p-8 rounded-2xl text-center">
+              <div class="text-4xl font-bold text-cyan-400 font-heading mb-1">4+ Verticals</div>
+              <div class="text-xs font-mono text-slate-400 uppercase tracking-widest">Core Divisions</div>
+            </div>
+            <div class="glass-card border-gradient p-8 rounded-2xl text-center">
+              <div class="text-4xl font-bold text-cyan-400 font-heading mb-1">Global</div>
+              <div class="text-xs font-mono text-slate-400 uppercase tracking-widest">Operations Reach</div>
+            </div>
+          </div>
         </div>
-        <div>SCROLL TO NAVIGATE ENGINE</div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         DIVISIONS MATRIX
+         ========================================== -->
+    <section id="divisions" class="py-24 bg-slate-900/50 relative border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <span class="mono-label">CAPABILITIES MATRIX</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">Engineering Verticals</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mb-12">Fully integrated design-to-build divisions serving international supply infrastructures and orbit payload missions.</p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Division 1 -->
+          <div class="glass-card border-gradient p-8 rounded-3xl">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3 font-heading">Container Engineering</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Advanced production and load-bearing stress calculations for heavy duty 20ft and 40ft standard cargo enclosures built for maritime and overland logistics.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-400">
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">20ft / 40ft Platforms</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Custom Structural Frames</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">FEA Stress Analysis</span>
+            </div>
+          </div>
+
+          <!-- Division 2 -->
+          <div class="glass-card border-gradient p-8 rounded-3xl">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3 font-heading">Container Components</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Manufacture of core container structural component blocks. Corner castings, base frames, and composite floor layers delivering high shear strength resistance.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-400">
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">ISO Cast Blocks</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">High-Load Composites</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Base Framing Blocks</span>
+            </div>
+          </div>
+
+          <!-- Division 3 -->
+          <div class="glass-card border-gradient p-8 rounded-3xl">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3 font-heading">Logistics Engineering</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Optimizing transport flow via modular, mechanical configurations. Dynamic containerized stacking systems that minimize dead volume and cargo transit wear.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-400">
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Volumetric Optimization</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Loading Assemblies</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Intermodal Transfer</span>
+            </div>
+          </div>
+
+          <!-- Division 4 -->
+          <div class="glass-card border-gradient p-8 rounded-3xl">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3 font-heading">Aerospace Systems</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Precision micro-component and mechanical subsystem assembly for orbital vehicles, communication payloads, and research satellite bus integrations.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-400">
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Orbital Bus Components</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Composite Structures</span>
+              <span class="bg-cyan-950/60 border border-cyan-500/20 px-3 py-1 rounded-md">Solar Deployers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         BIKE MAX SECTION
+         ========================================== -->
+    <section id="bike-max" class="py-24 bg-slate-950 relative border-t border-slate-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-400/30 text-emerald-400 font-mono text-xs uppercase mb-4">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              Intellectual Property: Patent Applied
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">BIKE MAX</h2>
+            <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+              Engineered high-density stacking fixtures designed for secure containerized two-wheeler logistics operations across rail and road networks.
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+                <div class="text-cyan-400 mt-1">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-base mb-1">Maximized Space Density</h4>
+                  <p class="text-slate-400 text-sm">Doubles transport payload volumes by integrating custom multi-tiered structural frames inside dry-van shipping containers.</p>
+                </div>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+                <div class="text-cyan-400 mt-1">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-base mb-1">Integrated Slide Lift-Gates</h4>
+                  <p class="text-slate-400 text-sm">Rapid mechanical slide assemblies minimize cycle times during vehicle loading, wheel lock anchoring, and frame unloading.</p>
+                </div>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+                <div class="text-cyan-400 mt-1">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-base mb-1">Structural Vibration Shifting</h4>
+                  <p class="text-slate-400 text-sm">Tension dampening elements absorb multi-axis transport vibration, eliminating panel-contact friction damage.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6">
+              <h5 class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-3">Enterprise Engagements</h5>
+              <div class="flex flex-wrap gap-3">
+                <span class="glass-card px-4 py-2 rounded-xl text-sm font-medium text-white flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  TVS Motor Company
+                </span>
+                <span class="glass-card px-4 py-2 rounded-xl text-sm font-medium text-white flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  CONCOR (Container Corporation of India)
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="glass-card border-gradient p-8 rounded-3xl h-[480px] flex flex-col justify-between relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-indigo-500/10 pointer-events-none"></div>
+              <div>
+                <span class="font-mono text-xs text-cyan-400 uppercase tracking-widest">RAIL FREIGHT OPTIMIZATION</span>
+                <h3 class="text-2xl font-bold text-white mt-2 mb-4 font-heading">BIKE MAX Structural Fixture</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Engineered specifically to maximize cargo volume for 2-wheeler manufacturers shipping via Indian Railways and CONCOR container networks.
+                </p>
+              </div>
+              <div class="space-y-3 font-mono text-xs border-t border-slate-800 pt-6">
+                <div class="flex justify-between text-slate-400">
+                  <span>DEPLOYMENT METHOD:</span>
+                  <span class="text-white">Intermodal Rail Racks</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>PAYLOAD INCREMENT:</span>
+                  <span class="text-emerald-400 font-bold">+100% Density</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>FRAME INTEGRITY:</span>
+                  <span class="text-white">FEA Stress Verified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         AEROSPACE SYSTEMS
+         ========================================== -->
+    <section id="aerospace" class="py-24 bg-slate-900/40 relative border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <span class="mono-label">FLIGHT PATH ORBITAL SYSTEMS</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">Aerospace Engineering</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mb-12">Partnering in national scale spacecraft manufacturing and payload housing development, with focus on modular subsystems.</p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div class="glass-card border-gradient p-6 rounded-2xl">
+            <h4 class="text-lg font-bold text-white mb-2 font-heading">Satellite Frameworks</h4>
+            <p class="text-slate-400 text-xs leading-relaxed">Structural core panels built from space-qualified alloy honeycombs to withstand liftoff resonance.</p>
+          </div>
+          <div class="glass-card border-gradient p-6 rounded-2xl">
+            <h4 class="text-lg font-bold text-white mb-2 font-heading">Deployment Systems</h4>
+            <p class="text-slate-400 text-xs leading-relaxed">Precision mechanical joints and pin pullers engineered to execute in vacuum environments.</p>
+          </div>
+          <div class="glass-card border-gradient p-6 rounded-2xl">
+            <h4 class="text-lg font-bold text-white mb-2 font-heading">RF Integration</h4>
+            <p class="text-slate-400 text-xs leading-relaxed">Component casing design optimized for electromagnetic compatibility (EMC) in deep space.</p>
+          </div>
+          <div class="glass-card border-gradient p-6 rounded-2xl">
+            <h4 class="text-lg font-bold text-white mb-2 font-heading">Thermal Shields</h4>
+            <p class="text-slate-400 text-xs leading-relaxed">Custom MLI (Multi-Layer Insulation) assembly configurations for localized heating mitigation.</p>
+          </div>
+        </div>
+
+        <div class="glass-card border-gradient p-8 md:p-12 rounded-3xl flex flex-col md:flex-row justify-between items-center gap-8">
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-2 font-heading">Space Development Operations</h3>
+            <p class="text-slate-300 text-sm max-w-xl">We build flight-ready, component assemblies tailored to demanding thermal ranges and telemetry load conditions.</p>
+          </div>
+          <div class="flex flex-col items-end gap-3">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-400/30 text-amber-400 font-mono text-xs uppercase">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+              Active Assembly Phase
+            </span>
+            <a href="https://www.maargin.in/" target="_blank" rel="noopener noreferrer" class="glass-card px-5 py-2 rounded-xl text-sm font-semibold text-white hover:text-cyan-400 transition-colors">
+              Aerospace Partner: Maargin
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         LEADERSHIP
+         ========================================== -->
+    <section id="leadership" class="py-24 bg-slate-950 relative border-t border-slate-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="mono-label">EXECUTIVE MANAGEMENT</span>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">Founding Team</h2>
+          <p class="text-slate-400 text-base">Combining heavy structural design capabilities and dynamic satellite component operations.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Leader 1 -->
+          <div class="glass-card border-gradient p-8 rounded-3xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-400 text-white font-bold text-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                  AH
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white font-heading">Avanidhar Havaldar</h3>
+                  <p class="font-mono text-xs text-cyan-400 uppercase tracking-wider">Managing Director</p>
+                </div>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Directs cross-disciplinary system architecture execution. Ensures engineering alignments comply with quality paradigms for both high-volume vehicle stacking projects and aerospace partner schedules.
+              </p>
+            </div>
+            <a href="https://www.linkedin.com/in/avanidhar-havaldar-72659936/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn Profile
+            </a>
+          </div>
+
+          <!-- Leader 2 -->
+          <div class="glass-card border-gradient p-8 rounded-3xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-400 text-white font-bold text-xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                  DH
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white font-heading">Deepak Hurakadali</h3>
+                  <p class="font-mono text-xs text-cyan-400 uppercase tracking-wider">Director</p>
+                </div>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Supervises industrial supply logistics integration, automated manufacturing cell configurations, and material processing operations. Coordinates technical program executions with defense units and regional shipping enterprises.
+              </p>
+            </div>
+            <a href="https://www.linkedin.com/in/deepak-hv-hurakadali-10516220/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT SECTION
+         ========================================== -->
+    <section id="contact" class="py-24 bg-slate-900/60 relative border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-5">
+            <span class="mono-label">OPERATION CHANNELS</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">Global Inquiries</h2>
+            <p class="text-slate-300 text-base mb-8">Initiate structural evaluations, secure prototype development pipelines, or discuss satellite flight component supply agreements.</p>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold">Corporate HQ</h4>
+                  <p class="text-slate-400 text-sm">Karnataka, India</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold">Direct Engineering Dispatch</h4>
+                  <p class="text-slate-400 text-sm">avanidhar@upins.in</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold">System Domains</h4>
+                  <p class="text-slate-400 text-sm">Heavy Cargo Framing, Logistics Optimizations, Space Flight Engineering</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div id="formContainer" class="glass-card border-gradient p-8 md:p-10 rounded-3xl">
+              <form id="contactForm" class="space-y-6" novalidate>
+                <div>
+                  <label class="block font-mono text-xs uppercase text-slate-300 mb-2" for="name">Identifier Name</label>
+                  <input type="text" id="name" required placeholder="Full Name" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm">
+                </div>
+
+                <div>
+                  <label class="block font-mono text-xs uppercase text-slate-300 mb-2" for="company">Corporate Entity</label>
+                  <input type="text" id="company" required placeholder="Company Name" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm">
+                </div>
+
+                <div>
+                  <label class="block font-mono text-xs uppercase text-slate-300 mb-2" for="email">Communication Link</label>
+                  <input type="email" id="email" required placeholder="email@company.com" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block font-mono text-xs uppercase text-slate-300 mb-2" for="country">Region</label>
+                    <select id="country" required class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm">
+                      <option value="">Select Region</option>
+                      <option value="India">India</option>
+                      <option value="United States">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Germany">Germany</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block font-mono text-xs uppercase text-slate-300 mb-2" for="industry">Vertical Focus</label>
+                    <select id="industry" required class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm">
+                      <option value="">Select Segment</option>
+                      <option value="Shipping & Logistics">Shipping &amp; Logistics</option>
+                      <option value="Automotive OEM">Automotive OEM</option>
+                      <option value="Government / Defense">Government / Defense</option>
+                      <option value="Aerospace">Aerospace</option>
+                      <option value="Railway & Ports">Railway &amp; Ports</option>
+                      <option value="Investment">Investment</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block font-mono text-xs uppercase text-slate-300 mb-2" for="message">Detailed Payload Requirements</label>
+                  <textarea id="message" rows="4" required placeholder="Describe system components, parameters, or logistics constraints..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 text-sm"></textarea>
+                </div>
+
+                <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001"></div>
+
+                <div id="formError" class="hidden p-4 bg-red-950/40 border border-red-500/30 text-red-400 rounded-xl text-xs"></div>
+
+                <button type="submit" id="submitBtn" class="btn-cyber btn-cyber-primary w-full justify-center py-4">
+                  Transmit Inquiry
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-black border-t border-slate-900 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 mb-12">
+        <div class="lg:col-span-6">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-PFHXKFaLMR6tjG4rws0XhMlC8qy1hW.png" alt="UPINS Private Limited" class="h-10 w-auto mb-4">
+          <p class="text-slate-400 text-sm max-w-md leading-relaxed">
+            Manufacturing shipping cargo assemblies, customized mobility stacking configurations, and precision space system components since 2021.
+          </p>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs uppercase tracking-widest text-white mb-4">Engineering Blocks</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#divisions" class="hover:text-cyan-400 transition-colors">Cargo Engineering</a></li>
+            <li><a href="#divisions" class="hover:text-cyan-400 transition-colors">Frame Components</a></li>
+            <li><a href="#bike-max" class="hover:text-cyan-400 transition-colors">BIKE MAX Platform</a></li>
+            <li><a href="#aerospace" class="hover:text-cyan-400 transition-colors">Space Modules</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs uppercase tracking-widest text-white mb-4">Enterprise Linkages</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#about" class="hover:text-cyan-400 transition-colors">Corporate Profile</a></li>
+            <li><a href="#leadership" class="hover:text-cyan-400 transition-colors">Management Core</a></li>
+            <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Operations Desk</a></li>
+          </ul>
+        </div>
       </div>
 
+      <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-mono">
+        <p>&copy; 2026 UPINS Private Limited. Technical assemblies and properties reserved.</p>
+        <p class="text-cyan-400">STABLE CHANNEL // IN</p>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- Contact Section -->
-  <section id="contact" class="relative z-40 bg-slate-950 border-t border-slate-800 py-24">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 font-heading">Partner with UPINS</h2>
-      <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
-        Whether you require heavy 40ft container multi-tier transport systems or high-precision satellite constellation assembly, our engineering teams are ready.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="mailto:contact@upins.in" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-8 py-4 rounded-2xl transition-all shadow-xl shadow-sky-500/20">
-          Request Quotation & Engineering Review
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GSAP Animation Controller Script -->
+  <!-- ==========================================
+       GSAP SCROLL & FORM CONTROLLER SCRIPT
+       ========================================== -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    // Create Main Master Timeline tied to scroll position
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#scrollContainer",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1, // Smooth scrolling response
+    // Scroll Progress Indicator
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (window.scrollY / docHeight) * 100;
+      document.getElementById('scrollBar').style.width = `${progress}%`;
+      
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('py-2');
+      } else {
+        header.classList.remove('py-2');
       }
     });
 
-    // -------------------------------------------------------------
-    // STAGE 1: TRUCK MOVES ACROSS LAND (0% to 30%)
-    // -------------------------------------------------------------
+    // Mobile Menu Toggle
+    const mMenuBtn = document.getElementById('mobileMenuBtn');
+    const mMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mMenuBtn.addEventListener('click', () => {
+      const isOpen = mMenu.classList.toggle('open');
+      menuIcon.classList.toggle('hidden', isOpen);
+      closeIcon.classList.toggle('hidden', !isOpen);
+    });
+
+    mMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mMenu.classList.remove('open');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // HERO STAGE GSAP TIMELINE (UNITED CARRIERS JOURNEY)
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#hero-journey",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+      }
+    });
+
+    // 1. Truck Animation (Land Stage)
     tl.to("#truckContainer", {
       x: window.innerWidth + 700,
       duration: 3,
       ease: "power1.inOut"
     }, 0);
 
-    // Fade out Section 1 info card as truck leaves
-    tl.to("#infoSection1", {
-      opacity: 0,
-      scale: 0.9,
-      duration: 1,
-      pointerEvents: "none"
-    }, 2);
+    tl.to("#infoSection1", { opacity: 0, scale: 0.9, duration: 1, pointerEvents: "none" }, 2);
 
-    // -------------------------------------------------------------
-    // STAGE 2: TRANSITION TO OCEAN & SHIP (30% to 60%)
-    // -------------------------------------------------------------
+    // 2. Ocean Transition
     tl.to("#landBg", { opacity: 0, duration: 1 }, 2.5);
     tl.to("#oceanBg", { opacity: 1, duration: 1 }, 2.5);
 
-    // Move Ocean Ship
     tl.to("#shipContainer", {
       x: window.innerWidth + 800,
       duration: 3,
       ease: "power1.inOut"
     }, 3);
 
-    // Fade in Section 2 Info Card
     tl.to("#infoSection2", {
       opacity: 1,
       scale: 1,
       duration: 1,
       pointerEvents: "auto",
-      onStart: () => updateStage("MARITIME & OCEAN FREIGHT")
+      onStart: () => updateHUD("OCEAN FREIGHT & CONTAINER STRUCTURES")
     }, 3);
 
-    tl.to("#infoSection2", {
-      opacity: 0,
-      scale: 0.9,
-      duration: 1,
-      pointerEvents: "none"
-    }, 5);
+    tl.to("#infoSection2", { opacity: 0, scale: 0.9, duration: 1, pointerEvents: "none" }, 5);
 
-    // -------------------------------------------------------------
-    // STAGE 3: ASCEND THROUGH CLOUDS TO SKY (60% to 75%)
-    // -------------------------------------------------------------
+    // 3. Cloud Ascent
     tl.to("#oceanBg", { opacity: 0, duration: 1 }, 5.5);
     tl.to("#cloudBg", { opacity: 1, duration: 1 }, 5.5);
 
-    // -------------------------------------------------------------
-    // STAGE 4: ENTER LOW EARTH ORBIT SATELLITE (75% to 100%)
-    // -------------------------------------------------------------
+    // 4. Space / LEO Orbit
     tl.to("#cloudBg", { opacity: 0, duration: 1 }, 7);
     tl.to("#spaceBg", { opacity: 1, duration: 1 }, 7);
 
-    // Satellite Zoom In & Deploy
     tl.to("#satelliteContainer", {
       opacity: 1,
       scale: 1,
@@ -357,18 +1006,71 @@
       ease: "power2.out"
     }, 7.5);
 
-    // Fade in Section 3 Satellite Info Card
     tl.to("#infoSection3", {
       opacity: 1,
       scale: 1,
       duration: 1,
       pointerEvents: "auto",
-      onStart: () => updateStage("LEO SATELLITE ORBIT")
+      onStart: () => updateHUD("LOW EARTH ORBIT SATELLITE ASSEMBLY")
     }, 8);
 
-    function updateStage(name) {
-      document.getElementById("stageName").innerText = name;
+    function updateHUD(text) {
+      document.getElementById("stageName").innerText = text;
     }
+
+    // Contact Form Logic - Transmitting to avanidhar@upins.in
+    const contactForm = document.getElementById('contactForm');
+    const formContainer = document.getElementById('formContainer');
+    const formError = document.getElementById('formError');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      formError.classList.add('hidden');
+
+      const captchaResponse = typeof hcaptcha !== 'undefined' ? hcaptcha.getResponse() : null;
+      if (!captchaResponse) {
+        formError.textContent = 'Operational verification required: Complete hCaptcha validation.';
+        formError.classList.remove('hidden');
+        return;
+      }
+
+      const name = document.getElementById('name').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const country = document.getElementById('country').value;
+      const industry = document.getElementById('industry').value;
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Technical Inquiry: ' + name + ' | ' + company);
+      const body = encodeURIComponent(
+        'NAME: ' + name + '\n' +
+        'COMPANY: ' + company + '\n' +
+        'EMAIL: ' + email + '\n' +
+        'REGION: ' + country + '\n' +
+        'VERTICAL: ' + industry + '\n\n' +
+        'PAYLOAD PARAMETERS:\n' + message
+      );
+
+      const mailtoLink = 'mailto:avanidhar@upins.in?subject=' + subject + '&body=' + body;
+
+      const dynamicAnchor = document.createElement('a');
+      dynamicAnchor.href = mailtoLink;
+      dynamicAnchor.style.display = 'none';
+      document.body.appendChild(dynamicAnchor);
+      dynamicAnchor.click();
+      document.body.removeChild(dynamicAnchor);
+
+      formContainer.innerHTML = `
+        <div class="text-center py-12">
+          <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-2 font-heading">Transmission Initialized</h3>
+          <p class="text-slate-400 text-sm max-w-sm mx-auto">
+            Form parameters linked to your email client. Send message to complete delivery to <strong>avanidhar@upins.in</strong>.
+          </p>
+        </div>`;
+    });
   </script>
 </body>
 </html>
